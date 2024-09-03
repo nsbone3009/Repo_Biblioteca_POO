@@ -27,7 +27,11 @@ namespace Proyecto_Biblioteca_Poo
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            new frmListaPrestamosLibros().ShowDialog();
+            frmListaPrestamosLibros frmLibros = new frmListaPrestamosLibros();
+            frmLibros.btnAgregarPrestamo.Visible = false;
+            frmLibros.btnModificarPrestamo.Visible = false;
+            frmLibros.bandera = true;
+            frmLibros.ShowDialog();
             this.Close();
         }
 
@@ -40,12 +44,12 @@ namespace Proyecto_Biblioteca_Poo
                 obj.Update("insert into Movimientos(id_mvt, cedula_usr, isbn_lb, fecha_mvt, hora_mvt, descipcion_mvt) values ('" + a + "','" + 67890123 + "','" + txtISBN.Text.Trim() + "','" + txtFechaActual.Text.Trim() + "','" + DateTime.Now.ToString("HH:mm:ss") + "','" + "Se devolvió un libro" + "')");
                 obj.Update("update Prestamos set estado_ = 0 where isbn_lb =  '" + txtISBN.Text.Trim() + "'");
                 ObtenerDato("select cantidad_lb from Libros where isbn_lb =  '" + txtISBN.Text.Trim() + "'", txtISBN.Text.Trim());
-                MessageBox.Show("Libro devuelto correctamente");
+                MessageBox.Show("Libro devuelto correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 Limpiar_Y_Cargar();
             }
             else
-                MessageBox.Show("Primero Seleccione un libro");
+                MessageBox.Show("Primero seleccione un libro.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
         private void ObtenerDato(string consulta, string isbn)
         {
@@ -56,8 +60,8 @@ namespace Proyecto_Biblioteca_Poo
             while (leer.Read())
                 a = leer.GetInt32(0);
             a += 1;
-            obj.Update("update Libros set cantidad_lb='" + a + "' where isbn_lb =  '" + isbn.Trim() + "'");
             obj.CerrarConexion();
+            obj.Update("update Libros set cantidad_lb='" + a + "' where isbn_lb =  '" + isbn.Trim() + "'");
         }
         private void Limpiar_Y_Cargar()
         {

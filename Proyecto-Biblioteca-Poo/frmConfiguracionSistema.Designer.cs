@@ -104,7 +104,7 @@
             // ptbxImagen
             // 
             this.ptbxImagen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ptbxImagen.Location = new System.Drawing.Point(414, 259);
+            this.ptbxImagen.Location = new System.Drawing.Point(417, 259);
             this.ptbxImagen.Name = "ptbxImagen";
             this.ptbxImagen.Size = new System.Drawing.Size(313, 176);
             this.ptbxImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

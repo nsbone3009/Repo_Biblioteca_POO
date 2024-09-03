@@ -46,10 +46,10 @@
             this.btnSeleccionarLibro = new System.Windows.Forms.Button();
             this.btnSeleccionarLector = new System.Windows.Forms.Button();
             this.btnCalendario = new System.Windows.Forms.Button();
-            this.lbTituloVentana = new System.Windows.Forms.Label();
             this.lbNombreLector = new System.Windows.Forms.Label();
             this.lbDetallesLibro = new System.Windows.Forms.Label();
             this.calDevolucion = new System.Windows.Forms.MonthCalendar();
+            this.lbTituloVentana = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnCancelar
@@ -271,18 +271,6 @@
             this.btnCalendario.UseVisualStyleBackColor = false;
             this.btnCalendario.Click += new System.EventHandler(this.btnCalendario_Click);
             // 
-            // lbTituloVentana
-            // 
-            this.lbTituloVentana.AutoSize = true;
-            this.lbTituloVentana.BackColor = System.Drawing.Color.Transparent;
-            this.lbTituloVentana.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTituloVentana.ForeColor = System.Drawing.Color.White;
-            this.lbTituloVentana.Location = new System.Drawing.Point(104, 29);
-            this.lbTituloVentana.Name = "lbTituloVentana";
-            this.lbTituloVentana.Size = new System.Drawing.Size(94, 24);
-            this.lbTituloVentana.TabIndex = 51;
-            this.lbTituloVentana.Text = "XXXXXX";
-            // 
             // lbNombreLector
             // 
             this.lbNombreLector.AutoSize = true;
@@ -312,6 +300,18 @@
             this.calDevolucion.TabIndex = 54;
             this.calDevolucion.Visible = false;
             this.calDevolucion.DateSelected += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar1_DateSelected);
+            // 
+            // lbTituloVentana
+            // 
+            this.lbTituloVentana.AutoSize = true;
+            this.lbTituloVentana.BackColor = System.Drawing.Color.Transparent;
+            this.lbTituloVentana.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTituloVentana.ForeColor = System.Drawing.Color.White;
+            this.lbTituloVentana.Location = new System.Drawing.Point(104, 29);
+            this.lbTituloVentana.Name = "lbTituloVentana";
+            this.lbTituloVentana.Size = new System.Drawing.Size(262, 24);
+            this.lbTituloVentana.TabIndex = 51;
+            this.lbTituloVentana.Text = "MODIFICAR PRESTAMOS";
             // 
             // frmAgregarODetallesPrestamosLibros
             // 
@@ -369,9 +369,9 @@
         public System.Windows.Forms.Button btnSeleccionarLibro;
         public System.Windows.Forms.Button btnSeleccionarLector;
         public System.Windows.Forms.Button btnCalendario;
-        public System.Windows.Forms.Label lbTituloVentana;
         public System.Windows.Forms.Label lbNombreLector;
         public System.Windows.Forms.Label lbDetallesLibro;
         private System.Windows.Forms.MonthCalendar calDevolucion;
+        public System.Windows.Forms.Label lbTituloVentana;
     }
 }

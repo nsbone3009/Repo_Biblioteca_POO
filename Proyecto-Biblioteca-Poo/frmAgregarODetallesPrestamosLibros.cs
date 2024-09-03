@@ -25,6 +25,11 @@ namespace Proyecto_Biblioteca_Poo
         static Random random = new Random(DateTime.Now.Millisecond);
         csPrestamos prestamos;
         static int numeroAleatorio = random.Next(10000000, 100000000);
+        public string LabelText
+        {
+            get { return lbTituloVentana.Text; }
+            set { lbTituloVentana.Text = value; }
+        }
         public frmAgregarODetallesPrestamosLibros(string Cedula, string Nombre)
         {
             InitializeComponent();
@@ -87,12 +92,16 @@ namespace Proyecto_Biblioteca_Poo
         private void btnSeleccionarLector_Click(object sender, EventArgs e)
         {
             frmListaLectores frmLectores = new frmListaLectores();
+            frmLectores.btnAgregarLector.Visible = false;
             frmLectores.Owner = this;
+            frmLectores.banderaLectores = true;
             frmLectores.ShowDialog();
         }
         private void btnSeleccionarLibro_Click(object sender, EventArgs e)
         {
             frmListaLibros frmLibros = new frmListaLibros();
+            frmLibros.btnAgregarLibro.Visible = false;
+            frmLibros.banderaLibros = true;
             frmLibros.Owner = this;
             frmLibros.ShowDialog();
         }

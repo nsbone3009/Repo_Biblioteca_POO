@@ -163,7 +163,7 @@
             // 
             this.txtCorreo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtCorreo.Font = new System.Drawing.Font("Arial", 18F);
-            this.txtCorreo.Location = new System.Drawing.Point(51, 307);
+            this.txtCorreo.Location = new System.Drawing.Point(51, 296);
             this.txtCorreo.Multiline = true;
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(371, 32);
