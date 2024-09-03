@@ -50,17 +50,17 @@ namespace Proyecto_Biblioteca_Poo
         }
         private void btnModificarPrestamo_Click(object sender, EventArgs e)
         {
-            if (dgvPrestamos.SelectedRows.Count > 0)
-            {
-                DataGridViewRow selectedRow = dgvPrestamos.SelectedRows[0];
-                int idPrestamo = int.Parse(selectedRow.Cells[0].Value.ToString());
-                new frmAgregarODetallesPrestamosLibros(idPrestamo).ShowDialog();
-            }
-            else
-            {
-                MessageBox.Show("Por favor, seleccione una fila primero.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            CargarDatos();
+            //if (dgvPrestamos.SelectedRows.Count > 0)
+            //{
+            //    DataGridViewRow selectedRow = dgvPrestamos.SelectedRows[0];
+            //    int idPrestamo = int.Parse(selectedRow.Cells[0].Value.ToString());
+            //    new frmAgregarODetallesPrestamosLibros(idPrestamo).ShowDialog();
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Por favor, seleccione una fila primero.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            //}
+            //CargarDatos();
         }
         private void btnEliminarPrestamo_Click(object sender, EventArgs e)
         {
@@ -109,6 +109,25 @@ namespace Proyecto_Biblioteca_Poo
                     datitos.ShowDialog();
                 }
             }
+            else 
+            {
+                if (dgvPrestamos.SelectedRows.Count > 0)
+                {
+                    DataGridViewRow selectedRow = dgvPrestamos.SelectedRows[0];
+                    int idPrestamo = int.Parse(selectedRow.Cells[0].Value.ToString());
+                    new frmAgregarODetallesPrestamosLibros(idPrestamo).ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("Por favor, seleccione una fila primero.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                CargarDatos();
+            }
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -53,15 +53,19 @@ namespace Proyecto_Biblioteca_Poo
 
         private void btnVerificar_Click(object sender, EventArgs e)
         {
-            if (long.Parse(txtCodigo.Text) == codigo) 
+            if (txtCodigo.Text != "")
             {
-
-                frmActualizarContraseña frm = new frmActualizarContraseña();
-                frm.txtCorreo.Text = correo;
-                frm.ShowDialog();
-                this.Close(); 
+                if (long.Parse(txtCodigo.Text) == codigo)
+                {
+                    frmActualizarContraseña frm = new frmActualizarContraseña();
+                    frm.txtCorreo.Text = correo;
+                    frm.ShowDialog();
+                    this.Close();
+                }
+                else { MessageBox.Show("ERROR, CODIGO INCORRECTO, VERIFIQUE."); }
             }
-            else { MessageBox.Show("ERROR, CODIGO INCORRECTO, VERIFIQUE."); }
+            else { MessageBox.Show("SE DEBE INGRESAR UN CODIGO."); }
+            
         }
 
         private void txtCodigo_KeyPress(object sender, KeyPressEventArgs e)
