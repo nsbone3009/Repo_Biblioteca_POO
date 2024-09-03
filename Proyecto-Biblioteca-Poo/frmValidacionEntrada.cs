@@ -74,28 +74,28 @@ namespace Proyecto_Biblioteca_Poo
         }
         private void Ingreso(string usu, string contra)
         {
-          csLogin login = new csLogin();
-            csUsuarios verificador = new csUsuarios();
-             string cifrado = verificador.Encriptar(contra);
-            if (login.VerificarLogin(usu, cifrado))
-            {
-                string cedulaUsuario = login.Cedula;
-                string rol = login.ObtenerRolUsuario(cedulaUsuario.Trim());
+          //csLogin login = new csLogin();
+          //  csUsuarios verificador = new csUsuarios();
+          //   string cifrado = verificador.Encriptar(contra);
+          //  if (login.VerificarLogin(usu, cifrado))
+          //  {
+          //      string cedulaUsuario = login.Cedula;
+          //      string rol = login.ObtenerRolUsuario(cedulaUsuario.Trim());
 
                 frmPantallaPrincipal frm = new frmPantallaPrincipal();
 
-                if (rol.Trim() == "Bibliotecario")
-                {
-                    frm.btnAdministracion.Visible = false;
-                    frm.btnAdministracion.Enabled = false;
-                }
+                //if (rol.Trim() == "Bibliotecario")
+                //{
+                //    frm.btnAdministracion.Visible = false;
+                //    frm.btnAdministracion.Enabled = false;
+                //}
                 frm.Show();
                 this.Hide();
-            }
-            else
-            {
-                MessageBox.Show("Credenciales incorrectas");
-            }
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Credenciales incorrectas");
+            //}
         }
         private void txtUsuario_KeyPress(object sender, KeyPressEventArgs e)
         {

@@ -88,6 +88,10 @@ namespace Proyecto_Biblioteca_Poo
             lbListaLectores.Visible = false;
             lbConfiguracion.Visible = false;
             lbUsuarios.Visible = false;
+            lbAutores.Visible = false;
+            lbCategoria.Visible = false;
+            lbEditorial.Visible = false;
+            lbReportes.Visible = false;
             MostrarLogoNombre();
             LlamarFormulario(frmListaLibros);
         }
@@ -114,17 +118,26 @@ namespace Proyecto_Biblioteca_Poo
             if (clickAdministracion) { btnAdministracion.PerformClick(); }
             if (!clickLibros)
             {
-                btnLectores.Location = new Point(0, 330);
-                btnAdministracion.Location = new Point(0, 380);
+                btnLectores.Location = new Point(0, 411);
+                btnAdministracion.Location = new Point(0, 461);
 
                 lbListaLibros.Visible = true;
                 lbListaLibros.Location = new Point(0, 245); //+2
 
+                lbAutores.Visible = true;
+                lbAutores.Location = new Point(0, 272); //+27
+
+                lbEditorial.Visible = true;
+                lbEditorial.Location = new Point(0, 299); //+27
+
+                lbCategoria.Visible = true;
+                lbCategoria.Location = new Point(0, 326); //+27
+
                 lbPrestamosLibros.Visible = true;
-                lbPrestamosLibros.Location = new Point(0, 272); //+27
+                lbPrestamosLibros.Location = new Point(0, 353); //+27
 
                 lbDevolucionesLibros.Visible = true;
-                lbDevolucionesLibros.Location = new Point(0, 299); //+27
+                lbDevolucionesLibros.Location = new Point(0, 380); //+27
 
                 clickLibros = true;
             }
@@ -135,6 +148,9 @@ namespace Proyecto_Biblioteca_Poo
                 lbPrestamosLibros.Visible = false;
                 lbDevolucionesLibros.Visible = false;
                 lbListaLibros.Visible = false;
+                lbAutores.Visible = false;
+                lbCategoria.Visible = false;
+                lbEditorial.Visible = false;
                 clickLibros = false;
             }
         }
@@ -166,6 +182,8 @@ namespace Proyecto_Biblioteca_Poo
                 lbConfiguracion.Location = new Point(0, 338);
                 lbUsuarios.Visible = true;
                 lbUsuarios.Location = new Point(0, 365);
+                lbReportes.Visible = true;
+                lbReportes.Location = new Point(0, 392);
                 clickAdministracion = true;
             }
             else
@@ -173,6 +191,7 @@ namespace Proyecto_Biblioteca_Poo
                 lbConfiguracion.Visible = false;
                 lbUsuarios.Visible = false;
                 clickAdministracion = false;
+                lbReportes.Visible = false;
             }
         }
         private void lbListaLibros_Click(object sender, EventArgs e)
@@ -198,12 +217,10 @@ namespace Proyecto_Biblioteca_Poo
             plPantalla.Controls.Add(formulario);
             formulario.Show();
         }
-
         private void lbUsuarios_Click(object sender, EventArgs e)
         {
             LlamarFormulario(frmlistaUsurs);
         }
-
         private void btnCerrarSesion_Click(object sender, EventArgs e)
         {
             new frmValidacionEntrada().Show();

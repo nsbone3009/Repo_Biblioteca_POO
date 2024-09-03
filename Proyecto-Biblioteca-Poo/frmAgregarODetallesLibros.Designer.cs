@@ -49,6 +49,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.lbIsbn = new System.Windows.Forms.Label();
             this.txtIsbn = new System.Windows.Forms.TextBox();
+            this.ptbxImagenLibro = new System.Windows.Forms.PictureBox();
+            this.btnCambiarImagen = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbxImagenLibro)).BeginInit();
             this.SuspendLayout();
             // 
             // txtTitulo
@@ -97,7 +100,7 @@
             this.txtResume.Location = new System.Drawing.Point(48, 366);
             this.txtResume.Multiline = true;
             this.txtResume.Name = "txtResume";
-            this.txtResume.Size = new System.Drawing.Size(434, 129);
+            this.txtResume.Size = new System.Drawing.Size(375, 129);
             this.txtResume.TabIndex = 14;
             // 
             // label1
@@ -177,7 +180,7 @@
             this.btnGuardarCampos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardarCampos.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardarCampos.ForeColor = System.Drawing.Color.White;
-            this.btnGuardarCampos.Location = new System.Drawing.Point(604, 409);
+            this.btnGuardarCampos.Location = new System.Drawing.Point(604, 331);
             this.btnGuardarCampos.Margin = new System.Windows.Forms.Padding(0, 3, 0, 3);
             this.btnGuardarCampos.Name = "btnGuardarCampos";
             this.btnGuardarCampos.Size = new System.Drawing.Size(125, 40);
@@ -197,7 +200,7 @@
             this.btnEditarCampos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditarCampos.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditarCampos.ForeColor = System.Drawing.Color.White;
-            this.btnEditarCampos.Location = new System.Drawing.Point(604, 363);
+            this.btnEditarCampos.Location = new System.Drawing.Point(604, 285);
             this.btnEditarCampos.Margin = new System.Windows.Forms.Padding(0, 3, 0, 3);
             this.btnEditarCampos.Name = "btnEditarCampos";
             this.btnEditarCampos.Size = new System.Drawing.Size(125, 40);
@@ -217,7 +220,7 @@
             this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrar.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCerrar.ForeColor = System.Drawing.Color.White;
-            this.btnCerrar.Location = new System.Drawing.Point(604, 455);
+            this.btnCerrar.Location = new System.Drawing.Point(604, 377);
             this.btnCerrar.Margin = new System.Windows.Forms.Padding(0, 3, 0, 3);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(125, 40);
@@ -276,12 +279,44 @@
             this.txtIsbn.Size = new System.Drawing.Size(214, 35);
             this.txtIsbn.TabIndex = 53;
             // 
+            // ptbxImagenLibro
+            // 
+            this.ptbxImagenLibro.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.ptbxImagenLibro.Location = new System.Drawing.Point(443, 366);
+            this.ptbxImagenLibro.Name = "ptbxImagenLibro";
+            this.ptbxImagenLibro.Size = new System.Drawing.Size(137, 129);
+            this.ptbxImagenLibro.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ptbxImagenLibro.TabIndex = 55;
+            this.ptbxImagenLibro.TabStop = false;
+            // 
+            // btnCambiarImagen
+            // 
+            this.btnCambiarImagen.BackColor = System.Drawing.Color.Transparent;
+            this.btnCambiarImagen.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCambiarImagen.BackgroundImage")));
+            this.btnCambiarImagen.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCambiarImagen.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnCambiarImagen.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnCambiarImagen.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnCambiarImagen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCambiarImagen.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCambiarImagen.ForeColor = System.Drawing.Color.White;
+            this.btnCambiarImagen.Location = new System.Drawing.Point(604, 455);
+            this.btnCambiarImagen.Margin = new System.Windows.Forms.Padding(0, 3, 0, 3);
+            this.btnCambiarImagen.Name = "btnCambiarImagen";
+            this.btnCambiarImagen.Size = new System.Drawing.Size(125, 40);
+            this.btnCambiarImagen.TabIndex = 56;
+            this.btnCambiarImagen.Text = "Cambiar";
+            this.btnCambiarImagen.UseVisualStyleBackColor = false;
+            this.btnCambiarImagen.Click += new System.EventHandler(this.btnCambiarImagen_Click);
+            // 
             // frmAgregarODetallesLibros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(780, 560);
+            this.Controls.Add(this.btnCambiarImagen);
+            this.Controls.Add(this.ptbxImagenLibro);
             this.Controls.Add(this.lbIsbn);
             this.Controls.Add(this.txtIsbn);
             this.Controls.Add(this.lbTituloVentana);
@@ -305,6 +340,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmAgregarODetallesLibros";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            ((System.ComponentModel.ISupportInitialize)(this.ptbxImagenLibro)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -332,5 +368,7 @@
         public System.Windows.Forms.Label label3;
         public System.Windows.Forms.Label lbIsbn;
         public System.Windows.Forms.TextBox txtIsbn;
+        private System.Windows.Forms.PictureBox ptbxImagenLibro;
+        public System.Windows.Forms.Button btnCambiarImagen;
     }
 }
