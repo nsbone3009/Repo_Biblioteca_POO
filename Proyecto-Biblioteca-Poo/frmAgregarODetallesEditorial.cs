@@ -32,26 +32,26 @@ namespace Proyecto_Biblioteca_Poo
                 if (txtEditorial.Text != "" && cbEstado.SelectedIndex != -1)
                 {
                     obj.Insert("insert into Editorial (NombreEditorial, Estado) values ('" + txtEditorial.Text + "', '" + cbEstado.SelectedIndex + "')");
-                    MessageBox.Show("Editorial agregada correctamente");
+                    MessageBox.Show("La editorial ha sido agregada correctamente.", "Editorial Agregada", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     frm.dgvEditorial.Rows.Clear();
                     frm.MostrarDatos();
                     this.Close();
                 }
                 else
-                    MessageBox.Show("Faltan campos por llenar");
+                    MessageBox.Show("Por favor, completa todos los campos obligatorios antes de continuar.", "Campos Incompletos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
                 if (txtEditorial.Text != "" && cbEstado.SelectedIndex != -1)
                 {
                     obj.Update("update Editorial set Estado = '" + cbEstado.SelectedIndex + "' where NombreEditorial = '" + txtEditorial.Text.TrimEnd() + "'");
-                    MessageBox.Show("Editorial editado correctamente");
+                    MessageBox.Show("La editorial ha sido editada correctamente.", "Editorial Editada", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     frm.dgvEditorial.Rows.Clear();
                     frm.MostrarDatos();
                     this.Close();
                 }
                 else
-                    MessageBox.Show("Faltan campos por llenar");
+                    MessageBox.Show("Por favor, completa todos los campos necesarios antes de proceder.", "Campos Incompletos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
     }

@@ -145,7 +145,7 @@
             // 
             // Column2
             // 
-            this.Column2.HeaderText = "GENERO";
+            this.Column2.HeaderText = "EDITORIAL";
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
             this.Column2.Width = 334;

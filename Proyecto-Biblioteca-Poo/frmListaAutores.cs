@@ -12,6 +12,7 @@ namespace Proyecto_Biblioteca_Poo
 {
     public partial class frmListaAutores : Form
     {
+        static frmAgregarODetallesAutores frm = new frmAgregarODetallesAutores();
         public string Id;
         public frmListaAutores()
         {
@@ -20,41 +21,42 @@ namespace Proyecto_Biblioteca_Poo
 
         private void btnAgregarLibro_Click(object sender, EventArgs e)
         {
-            frmAgregarODetallesAutores frm = new frmAgregarODetallesAutores();
-            frm.btnEditarCampos.Visible = false;
-            this.AddOwnedForm(frm);
-            frm.lbTituloVentana.Text = "AGREGAR AUTOR";
-            frm.ShowDialog();
+            if (dgvAutores.RowCount > 0)//Validar que tengo alguna fila seleccionada
+            {
+                this.AddOwnedForm(frm); frm.txtAutor.Text = "";
+                frm.cbEstado.SelectedIndex = -1;
+                frm.txtAutor.Enabled = true;
+                frm.bandera = true;
+                frm.lbTituloVentana.Text = "AGREGAR AUTOR";
+                frm.ShowDialog();
+            }
         }
-      
-
-        private void dgvPrestamos_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        public void MostrarDatos()
         {
-            frmAgregarODetallesAutores frm = new frmAgregarODetallesAutores();
-           
-            this.AddOwnedForm(frm);
-            Id = dgvAutores.Rows[e.RowIndex].Cells[0].Value.ToString();
-            frm.txtAutor.Text = dgvAutores.Rows[e.RowIndex].Cells[1].Value.ToString();
-            frm.cbEstado.Text = dgvAutores.Rows[e.RowIndex].Cells[2].Value.ToString();
-            frm.btnGuardarCampos.Enabled = false;
-            frm.txtAutor.Enabled = false;
-            frm.cbEstado.Enabled = false;
-            frm.datoId(Id);
-            frm.ShowDialog();
-            
-        }
-        public void Actualizar()
-        {
-            string consulta = "select * from Autores";
-            csConexionSQL VerDatos = new csConexionSQL();
-            DataTable dt = VerDatos.MostrarRegistros(consulta);
-            dgvAutores.DataSource = dt;
-
+            dgvAutores = new csAjustarDataGridView().Ajustar(dgvAutores, "select idAutor, NombreAutor, Estado from Autores");
         }
 
         private void frmListaAutores_Load(object sender, EventArgs e)
         {
-            Actualizar();
+            MostrarDatos();
+        }
+
+        private void dgvAutores_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgvAutores.RowCount > 0)//Validar que tengo alguna fila seleccionada
+            {
+                this.AddOwnedForm(frm);
+                frm.lbTituloVentana.Text = "MODIFICAR GENERO";
+                frm.txtAutor.Enabled = false;
+                frm.bandera = false;
+                frm.txtAutor.Text = dgvAutores[1, dgvAutores.CurrentRow.Index].Value.ToString().Trim();
+                if (int.Parse(dgvAutores[2, dgvAutores.CurrentRow.Index].Value.ToString().Trim()) == 1)
+                    frm.cbEstado.SelectedIndex = 1;
+                else
+                    frm.cbEstado.SelectedIndex = 0;
+
+                frm.ShowDialog();
+            }
         }
     }
 }

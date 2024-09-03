@@ -34,14 +34,14 @@
             this.button1 = new System.Windows.Forms.Button();
             this.btnAgregarLector = new System.Windows.Forms.Button();
             this.dgvLectores = new System.Windows.Forms.DataGridView();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
+            this.lbLibros = new System.Windows.Forms.Label();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtBuscar = new System.Windows.Forms.TextBox();
-            this.lbLibros = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLectores)).BeginInit();
             this.SuspendLayout();
             // 
@@ -123,42 +123,6 @@
             this.dgvLectores.TabIndex = 12;
             this.dgvLectores.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLectores_CellContentDoubleClick);
             // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Nombres";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Apellidos";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Fecha de Nacimiento";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Correo Electronico";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Direccion de Domicilio";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Sancionado";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            // 
             // txtBuscar
             // 
             this.txtBuscar.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -179,6 +143,42 @@
             this.lbLibros.Size = new System.Drawing.Size(124, 24);
             this.lbLibros.TabIndex = 10;
             this.lbLibros.Text = "LECTORES";
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "NOMBRES";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "APELLIDOS";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "FECHA NACIMIENTO";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "CORREO";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "DIRECCION";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "SANCIONADO";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
             // 
             // frmListaLectores
             // 
@@ -208,12 +208,12 @@
         public System.Windows.Forms.DataGridView dgvLectores;
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Label lbLibros;
+        public System.Windows.Forms.Button btnAgregarLector;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        public System.Windows.Forms.Button btnAgregarLector;
     }
 }

@@ -28,13 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmListaAutores));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lbAutor = new System.Windows.Forms.Label();
-            this.dgvAutores = new System.Windows.Forms.DataGridView();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.btnAgregarLibro = new System.Windows.Forms.Button();
+            this.dgvAutores = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAutores)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,32 +53,6 @@
             this.lbAutor.Size = new System.Drawing.Size(83, 24);
             this.lbAutor.TabIndex = 3;
             this.lbAutor.Text = "AUTOR";
-            // 
-            // dgvAutores
-            // 
-            this.dgvAutores.AllowUserToAddRows = false;
-            this.dgvAutores.AllowUserToDeleteRows = false;
-            this.dgvAutores.AllowUserToResizeColumns = false;
-            this.dgvAutores.AllowUserToResizeRows = false;
-            this.dgvAutores.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvAutores.BackgroundColor = System.Drawing.SystemColors.Window;
-            this.dgvAutores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvAutores.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvAutores.Location = new System.Drawing.Point(23, 189);
-            this.dgvAutores.Name = "dgvAutores";
-            this.dgvAutores.ReadOnly = true;
-            this.dgvAutores.RowHeadersVisible = false;
-            this.dgvAutores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvAutores.Size = new System.Drawing.Size(737, 335);
-            this.dgvAutores.TabIndex = 17;
-            this.dgvAutores.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPrestamos_CellContentDoubleClick);
             // 
             // btnBuscar
             // 
@@ -119,14 +97,75 @@
             this.btnAgregarLibro.UseVisualStyleBackColor = true;
             this.btnAgregarLibro.Click += new System.EventHandler(this.btnAgregarLibro_Click);
             // 
+            // dgvAutores
+            // 
+            this.dgvAutores.AllowUserToAddRows = false;
+            this.dgvAutores.AllowUserToDeleteRows = false;
+            this.dgvAutores.AllowUserToResizeColumns = false;
+            this.dgvAutores.AllowUserToResizeRows = false;
+            this.dgvAutores.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(8);
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvAutores.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvAutores.ColumnHeadersHeight = 50;
+            this.dgvAutores.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(8);
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvAutores.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvAutores.Location = new System.Drawing.Point(23, 188);
+            this.dgvAutores.Name = "dgvAutores";
+            this.dgvAutores.ReadOnly = true;
+            this.dgvAutores.RowHeadersVisible = false;
+            this.dgvAutores.RowHeadersWidth = 50;
+            this.dgvAutores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvAutores.Size = new System.Drawing.Size(737, 335);
+            this.dgvAutores.TabIndex = 19;
+            this.dgvAutores.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAutores_CellContentDoubleClick);
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "ID AUTOR";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 200;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "AUTOR";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 334;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "ESTADO";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Width = 200;
+            // 
             // frmListaAutores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Proyecto_Biblioteca_Poo.Properties.Resources.AUTOR;
             this.ClientSize = new System.Drawing.Size(785, 640);
-            this.Controls.Add(this.btnAgregarLibro);
             this.Controls.Add(this.dgvAutores);
+            this.Controls.Add(this.btnAgregarLibro);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.lbAutor);
@@ -144,9 +183,12 @@
         #endregion
 
         private System.Windows.Forms.Label lbAutor;
-        public System.Windows.Forms.DataGridView dgvAutores;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.TextBox txtBuscar;
         public System.Windows.Forms.Button btnAgregarLibro;
+        public System.Windows.Forms.DataGridView dgvAutores;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
     }
 }

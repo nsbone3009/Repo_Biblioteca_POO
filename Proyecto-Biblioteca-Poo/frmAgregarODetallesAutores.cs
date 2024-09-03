@@ -12,8 +12,8 @@ namespace Proyecto_Biblioteca_Poo
 {
     public partial class frmAgregarODetallesAutores : Form
     {
-        public int id;
-        public bool bandera=false;  
+        public bool bandera=false;
+        static csConexionSQL obj = new csConexionSQL();
         public frmAgregarODetallesAutores()
         {
             InitializeComponent();
@@ -24,61 +24,35 @@ namespace Proyecto_Biblioteca_Poo
         {
             this.Close();
         }
-        public int datoId(string ID)
-        {
-            id= Convert.ToInt32(ID);
-
-            return id;
-        }
-
         private void btnGuardarCampos_Click(object sender, EventArgs e)
         {
-            btnEditarCampos.Visible = false;
-            if (bandera==false)
+            frmListaAutores frmGenero = Owner as frmListaAutores;
+            if (bandera)
             {
-                if (cbEstado.SelectedItem.ToString() == "Activo")
+                if (txtAutor.Text != "" && cbEstado.SelectedIndex != -1)
                 {
-                    string consulta = "insert into Autores(NombreAutor,Estado)values('" + txtAutor.Text + "','" + cbEstado.SelectedIndex + "')";
-                    csConexionSQL conexionSQL = new csConexionSQL();
-                    conexionSQL.Insert(consulta);
-                    MessageBox.Show("Datos guardados Correctamente");
-                    this.Hide();
-
+                    obj.Insert("insert into Autores (NombreAutor, Estado) values ('" + txtAutor.Text + "', '" + cbEstado.SelectedIndex + "')");
+                    MessageBox.Show("El autor ha sido agregado exitosamente a la base de datos.", "Operación Exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    frmGenero.dgvAutores.Rows.Clear();
+                    frmGenero.MostrarDatos();
+                    this.Close();
                 }
                 else
-                {
-                    string consulta = "insert into Autores(NombreAutor,Estado)values('" + txtAutor.Text + "','" + cbEstado.SelectedIndex + "')";
-                    csConexionSQL conexionSQL = new csConexionSQL();
-                    conexionSQL.Insert(consulta);
-                    MessageBox.Show("Datos guardados Correctamente");
-                    this.Hide();
-                }
+                    MessageBox.Show("Faltan campos por llenar");
             }
             else
             {
-                if (cbEstado.SelectedItem.ToString() == "Activo")
+                if (txtAutor.Text != "" && cbEstado.SelectedIndex != -1)
                 {
-                    string consulta = "update Autores set NombreAutor='" + txtAutor.Text + "', Estado='" + cbEstado.SelectedIndex + "' where idAutor=" + id + " ";
-
-                    csConexionSQL conexionSQL = new csConexionSQL();
-                    conexionSQL.Update(consulta);
-                    MessageBox.Show("Datos actualizados Correctamente");
-                    this.Hide();
-
+                    obj.Update("update Autores set Estado = '" + cbEstado.SelectedIndex + "' where NombreAutor = '" + txtAutor.Text.TrimEnd() + "'");
+                    MessageBox.Show("El autor ha sido editado correctamente.", "Autor Editado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    frmGenero.dgvAutores.Rows.Clear();
+                    frmGenero.MostrarDatos();
+                    this.Close();
                 }
                 else
-                {
-                    string consulta = "update Autores set NombreAutor='" + txtAutor.Text + "', Estado='" + cbEstado.SelectedIndex + "' where idAutor=" + id + " ";
-
-                    csConexionSQL conexionSQL = new csConexionSQL();
-                    conexionSQL.Update(consulta);
-                    MessageBox.Show("Datos actualizados Correctamente");
-                    this.Hide();
-                }
+                    MessageBox.Show("Por favor, completa todos los campos requeridos antes de continuar.", "Campos Incompletos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            frmListaAutores frm =Owner as frmListaAutores;
-            //frm.dgvAutores.Rows.Clear();
-            frm.Actualizar();
 
         }
         private void btnEditarCampos_Click(object sender, EventArgs e)
