@@ -48,7 +48,7 @@ namespace Proyecto_Biblioteca_Poo
         private void Comparar()
         {
             DateTime fechaActual = DateTime.Now.Date;
-            using (SqlConnection conexion = new SqlConnection(@"Password=123;Persist Security Info=True;User ID=sa;Initial Catalog=Biblioteca;Data Source=DESKTOP-RJ6RQ3J\SQLEXPRESS"))
+            using (SqlConnection conexion = new SqlConnection(@"Password=123;Persist Security Info=True;User ID=Jeremy01;Initial Catalog=Biblioteca;Data Source=DESKTOP-2UJUKM2\JEREMY"))
             {
 
                 conexion.Open();

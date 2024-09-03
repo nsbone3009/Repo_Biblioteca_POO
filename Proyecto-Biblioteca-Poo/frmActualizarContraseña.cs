@@ -28,15 +28,25 @@ namespace Proyecto_Biblioteca_Poo
         }
         private void btnEnviar_Click(object sender, EventArgs e)
         {
-            csLogin ingreso = new csLogin();
-            if (txtNuevaClave.Text == txtConfirmarCLave.Text)
+            if (txtNuevaClave.Text!=string.Empty & txtConfirmarCLave.Text!=string.Empty)
             {
-                ingreso.ActualizarContraseña(txtCorreo.Text, txtNuevaClave.Text);
-                this.Hide();
+
+                csLogin ingreso = new csLogin();
+                csUsuarios encriptar= new csUsuarios();
+                if (txtNuevaClave.Text == txtConfirmarCLave.Text)
+                {
+                   string ClaveEncriptada= encriptar.Encriptar(txtConfirmarCLave.Text);
+                    ingreso.ActualizarContraseña(txtCorreo.Text, ClaveEncriptada);
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("La Claves no son iguales");
+                }
             }
             else
             {
-                MessageBox.Show("La Claves no son iguales");
+                MessageBox.Show("Ingrese los datos solicitados");
             }
         }
 

@@ -139,3 +139,9 @@ C:\Repo Biblioteca\Repo_Biblioteca_POO\Proyecto-Biblioteca-Poo\obj\Debug\Proyect
 C:\Repo Biblioteca\Repo_Biblioteca_POO\Proyecto-Biblioteca-Poo\obj\Debug\Proyecto-Biblioteca-Poo.csproj.CoreCompileInputs.cache
 C:\Repo Biblioteca\Repo_Biblioteca_POO\Proyecto-Biblioteca-Poo\obj\Debug\Proyecto-Biblioteca-Poo.exe
 C:\Repo Biblioteca\Repo_Biblioteca_POO\Proyecto-Biblioteca-Poo\obj\Debug\Proyecto-Biblioteca-Poo.pdb
+C:\Users\Jeremy Jaramillo\Desktop\REPOSITORIO\Repo_Biblioteca_POO\Proyecto-Biblioteca-Poo\obj\Debug\Proyecto_Biblioteca_Poo.frmAgregarODetallesAutores.resources
+C:\Users\Jeremy Jaramillo\Desktop\REPOSITORIO\Repo_Biblioteca_POO\Proyecto-Biblioteca-Poo\obj\Debug\Proyecto_Biblioteca_Poo.frmAgregarODetallesEditorial.resources
+C:\Users\Jeremy Jaramillo\Desktop\REPOSITORIO\Repo_Biblioteca_POO\Proyecto-Biblioteca-Poo\obj\Debug\Proyecto_Biblioteca_Poo.frmAgregarODetallesGeneros.resources
+C:\Users\Jeremy Jaramillo\Desktop\REPOSITORIO\Repo_Biblioteca_POO\Proyecto-Biblioteca-Poo\obj\Debug\Proyecto_Biblioteca_Poo.frmListaAutores.resources
+C:\Users\Jeremy Jaramillo\Desktop\REPOSITORIO\Repo_Biblioteca_POO\Proyecto-Biblioteca-Poo\obj\Debug\Proyecto_Biblioteca_Poo.frmListaGenero.resources
+C:\Users\Jeremy Jaramillo\Desktop\REPOSITORIO\Repo_Biblioteca_POO\Proyecto-Biblioteca-Poo\obj\Debug\Proyecto_Biblioteca_Poo.frmListaEditoriales.resources

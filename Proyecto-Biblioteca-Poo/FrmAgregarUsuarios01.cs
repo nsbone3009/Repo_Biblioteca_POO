@@ -153,5 +153,13 @@ namespace Proyecto_Biblioteca_Poo
                 MessageBox.Show("Ingrese todos los datos solicitados.");
             }
         }
+
+        private void txtUsuario_KeyPress(object sender, KeyPressEventArgs e)
+        {
+              if (e.KeyChar == (char)Keys.Space)
+            {
+                MessageBox.Show("No se permiten espacios.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
     }
 }
