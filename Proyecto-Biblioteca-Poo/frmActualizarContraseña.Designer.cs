@@ -135,7 +135,7 @@
             this.btnOcultarContraseña.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnOcultarContraseña.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnOcultarContraseña.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOcultarContraseña.Location = new System.Drawing.Point(445, 396);
+            this.btnOcultarContraseña.Location = new System.Drawing.Point(406, 396);
             this.btnOcultarContraseña.Name = "btnOcultarContraseña";
             this.btnOcultarContraseña.Size = new System.Drawing.Size(35, 35);
             this.btnOcultarContraseña.TabIndex = 18;
@@ -169,7 +169,7 @@
             this.bntocultaNueva.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.bntocultaNueva.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.bntocultaNueva.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bntocultaNueva.Location = new System.Drawing.Point(445, 299);
+            this.bntocultaNueva.Location = new System.Drawing.Point(406, 299);
             this.bntocultaNueva.Name = "bntocultaNueva";
             this.bntocultaNueva.Size = new System.Drawing.Size(35, 35);
             this.bntocultaNueva.TabIndex = 20;

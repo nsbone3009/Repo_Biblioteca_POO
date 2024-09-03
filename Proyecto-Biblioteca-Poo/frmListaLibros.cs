@@ -22,9 +22,9 @@ namespace Proyecto_Biblioteca_Poo
 
         private void btnAgregarLibro_Click(object sender, EventArgs e)
         {
-            frmAgregarODetallesEditorial frm = new frmAgregarODetallesEditorial();
+            frmAgregarODetallesLibros frm = new frmAgregarODetallesLibros();
             this.AddOwnedForm(frm);
-            frm.lbTituloVentana.Text = "AGREGAR EDITORIAL";
+            frm.lbTituloVentana.Text = "AGREGAR LIBRO";
             frm.ShowDialog();
         }
         private void frmListaLibros_Load(object sender, EventArgs e)

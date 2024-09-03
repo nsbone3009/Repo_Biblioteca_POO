@@ -84,23 +84,23 @@ namespace Proyecto_Biblioteca_Poo
                 MessageBox.Show("No se permiten Letras.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+        private void ValidarSoloLetrasYEspacios(KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+                MessageBox.Show("Solo se permiten letras y espacios.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
 
         private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar))
-            {
-                e.Handled = true;
-                MessageBox.Show("No se permiten Numeros.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
+            ValidarSoloLetrasYEspacios(e);
         }
 
         private void txtApellidos_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar))
-            {
-                e.Handled = true;
-                MessageBox.Show("No se permiten Numeros.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
+            ValidarSoloLetrasYEspacios(e);
         }
 
         private void btnMostrarContraseña_Click(object sender, EventArgs e)

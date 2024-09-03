@@ -29,9 +29,8 @@ namespace Proyecto_Biblioteca_Poo
         {
             frmListaPrestamosLibros frmLibros = new frmListaPrestamosLibros();
             frmLibros.btnAgregarPrestamo.Visible = false;
-            frmLibros.btnModificarPrestamo.Visible = false;
             frmLibros.bandera = true;
-            frmLibros.btnCancelar.Visible = true;
+            //frmLibros.btnCancelar.Visible = true;
             frmLibros.ShowDialog();
             this.Close();
         }

@@ -48,7 +48,7 @@ namespace Proyecto_Biblioteca_Poo
         private void Comparar()
         {
             DateTime fechaActual = DateTime.Now.Date;
-            using (SqlConnection conexion = new SqlConnection(@"Password=123;Persist Security Info=True;User ID=Jeremy01;Initial Catalog=Biblioteca;Data Source=DESKTOP-2UJUKM2\JEREMY"))
+            using (SqlConnection conexion = new SqlConnection(@"Password=admin;Persist Security Info=True;User ID=admin;Initial Catalog=Biblioteca;Data Source=NIURLETH"))
             {
 
                 conexion.Open();
@@ -204,6 +204,7 @@ namespace Proyecto_Biblioteca_Poo
         private void lbPrestamosLibros_Click(object sender, EventArgs e)
         {
             LlamarFormulario(frmListaPrestamosLibros);
+            frmListaPrestamosLibros.btnCerrar.Visible = false;
         }
         private void lbDevolucionesLibros_Click(object sender, EventArgs e)
         {

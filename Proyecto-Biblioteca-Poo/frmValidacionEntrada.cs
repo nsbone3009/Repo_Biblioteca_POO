@@ -56,9 +56,7 @@ namespace Proyecto_Biblioteca_Poo
         }
         private void btnIniciarSesion_Click(object sender, EventArgs e)
         {
-
                 Ingreso(txtUsuario.Text, txtContraseña.Text);
-
         }
         private void btnCerrar_Click(object sender, EventArgs e)
         {
@@ -74,48 +72,48 @@ namespace Proyecto_Biblioteca_Poo
         }
         private void Ingreso(string usu, string contra)
         {
-          //csLogin login = new csLogin();
-          //  csUsuarios verificador = new csUsuarios();
-          //   string cifrado = verificador.Encriptar(contra);
-          //  if (login.VerificarLogin(usu, cifrado))
-          //  {
-          //      string cedulaUsuario = login.Cedula;
-          //      string rol = login.ObtenerRolUsuario(cedulaUsuario.Trim());
+            csLogin login = new csLogin();
+            csUsuarios verificador = new csUsuarios();
+            string cifrado = verificador.Encriptar(contra);
+            if (login.VerificarLogin(usu, cifrado))
+            {
+                string cedulaUsuario = login.Cedula;
+                string rol = login.ObtenerRolUsuario(cedulaUsuario.Trim());
 
                 frmPantallaPrincipal frm = new frmPantallaPrincipal();
 
-                //if (rol.Trim() == "Bibliotecario")
-                //{
-                //    frm.btnAdministracion.Visible = false;
-                //    frm.btnAdministracion.Enabled = false;
-                //}
+                if (rol.Trim() == "Bibliotecario")
+                {
+                    frm.btnAdministracion.Visible = false;
+                    frm.btnAdministracion.Enabled = false;
+                }
                 frm.Show();
                 this.Hide();
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Credenciales incorrectas");
-            //}
-        }
-        private void txtUsuario_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar == (char)Keys.Enter) txtContraseña.Focus();
-
-            if (e.KeyChar == (char)Keys.Space)
+            }
+            else
             {
-                e.Handled = true;
+                MessageBox.Show("Las credenciales ingresadas no son válidas. Por favor, revisa tu nombre de usuario y contraseña e intenta de nuevo.", "Error de Inicio de Sesión", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private void ValidarEnterYEspacio(KeyPressEventArgs e, TextBox siguienteControl)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                siguienteControl.Focus();
+            }
+            else if (e.KeyChar == (char)Keys.Space)
+            {
                 MessageBox.Show("No se permiten espacios.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
 
+        private void txtUsuario_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ValidarEnterYEspacio(e, txtContraseña);
         }
         private void txtContraseña_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar == (char)Keys.Enter) Ingreso(txtUsuario.Text, txtContraseña.Text);
-            if (e.KeyChar == (char)Keys.Space)
-            {
-                e.Handled = true;
-                MessageBox.Show("No se permiten espacios.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
+            ValidarEnterYEspacio(e, txtContraseña);
         }
     }
 }
