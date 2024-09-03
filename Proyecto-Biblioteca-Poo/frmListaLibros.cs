@@ -57,6 +57,8 @@ namespace Proyecto_Biblioteca_Poo
                 frm.btnGuardarCampos.Enabled = false;
                 frm.txtIsbn.Visible = false;
                 frm.lbIsbn.Visible = false;
+                frm.btnCambiarImagen.Enabled = false;
+                frm.PortadaLibro();
                 frm.ShowDialog();
             }
         }

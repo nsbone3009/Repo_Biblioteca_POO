@@ -65,11 +65,11 @@ namespace Proyecto_Biblioteca_Poo
         {
             OpenFileDialog Imagen = new OpenFileDialog();
             Imagen.Filter = "archivos de imagen (*png;)|*png;";
-            if (Imagen.ShowDialog() == DialogResult.OK) 
+            if (Imagen.ShowDialog() == DialogResult.OK)
             {
                 ptbxImagen.BackgroundImage = null;
                 ptbxImagen.Image = Image.FromFile(Imagen.FileName);
-                new csGuardarImagenDatabase().GuardarImagen(ptbxImagen);
+                new csGuardarImagenDatabase().GuardarImagen(ptbxImagen, "Update logo set imagen_lg = @imagen where id_imagen = 1");
             }
             frmPantallaPrincipal frm = Owner as frmPantallaPrincipal;
             frm.MostrarLogoNombre();
