@@ -15,7 +15,6 @@ namespace Proyecto_Biblioteca_Poo
         public FrmListaUsuarios()
         {
             InitializeComponent();
-            MostrarLibros();
         }
         public void MostrarLibros()
         {
@@ -26,10 +25,10 @@ namespace Proyecto_Biblioteca_Poo
         private void btnAgregarLibro_Click(object sender, EventArgs e)
         {
             FrmAgregarUsuarios01 agregar = new FrmAgregarUsuarios01();
+            this.AddOwnedForm(agregar);
             agregar.btnActualizar.Visible = false;
             agregar.btnEditarCampos.Enabled= false;
             agregar.ShowDialog();
-            MostrarLibros();
         }
 
         private void FrmListaUsuarios_Load(object sender, EventArgs e)
@@ -40,6 +39,7 @@ namespace Proyecto_Biblioteca_Poo
         private void dgvLibros_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             FrmAgregarUsuarios01 datos = new FrmAgregarUsuarios01();
+            this.AddOwnedForm(datos);
             datos.txtCedula.Text = dgvUsuarios.Rows[e.RowIndex].Cells[0].Value.ToString().Trim();
             datos.txtNombre.Text = dgvUsuarios.Rows[e.RowIndex].Cells[1].Value.ToString().Trim();
             datos.txtApellidos.Text = dgvUsuarios.Rows[e.RowIndex].Cells[2].Value.ToString().Trim();

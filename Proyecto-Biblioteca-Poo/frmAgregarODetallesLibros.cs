@@ -47,8 +47,8 @@ namespace Proyecto_Biblioteca_Poo
         {
             txtTitulo.Enabled = true;
             txtAutor.Enabled = true;
-            txtEditorial.Enabled = true;
-            txtCategoria.Enabled = true;
+            cbEditorial.Enabled = true;
+            cbCategoria.Enabled = true;
             txtPublicacion.Enabled = true;
             txtCantidad.Enabled = true;
             txtResume.Enabled = true;
@@ -58,28 +58,51 @@ namespace Proyecto_Biblioteca_Poo
 
         private void btnGuardarCampos_Click(object sender, EventArgs e)
         {
-
             frmListaLibros frm = Owner as frmListaLibros;
             if (frm.validacion)
             {
-                string consulta = "Update Libros set titulo_lb = '" + txtTitulo.Text + "', autor_es_lb = '" + txtAutor.Text + "'," +
-                " editorial_lb = '" + txtEditorial.Text + "',genero_lb = '" + txtCategoria.Text + "', año_publicacion_lb = '" + txtPublicacion.Text + "'," +
+                if (txtTitulo.Text != "" & txtAutor.Text != "" & cbEditorial.SelectedIndex > -1 & cbCategoria.SelectedIndex > -1 & txtPublicacion.Text != "" & txtCantidad.Text != "" & txtResume.Text != "")
+                {
+                    string consulta = "Update Libros set titulo_lb = '" + txtTitulo.Text + "', autor_es_lb = '" + txtAutor.Text + "'," +
+                " editorial_lb = '" + cbEditorial.SelectedItem.ToString() + "',genero_lb = '" + cbCategoria.SelectedItem.ToString() + "', año_publicacion_lb = '" + txtPublicacion.Text + "'," +
                 " cantidad_lb = '" + txtCantidad.Text + "', sinopsis_lb = '" + txtResume.Text + "' where isbn_lb = '" + ISBN + "'";
-                new csConexionSQL().Update(consulta);
-                new csGuardarImagenDatabase().GuardarImagen(ptbxImagenLibro, "Update Libros set imagen_lb = @imagen where isbn_lb = '" + ISBN + "' ");
-                frm.validacion = false;
+                    new csConexionSQL().Update(consulta);
+                    if (ptbxImagenLibro.Image != null)
+                    {
+                        new csGuardarImagenDatabase().GuardarImagen(ptbxImagenLibro, "Update Libros set imagen_lb = @imagen where isbn_lb = '" + ISBN + "' ");
+                    }
+                    frm.validacion = false;
+                    frm.dgvLibros.Rows.Clear();
+                    frm.MostrarLibros();
+                    frm.validacion = false;
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Ingrese todos los datos solicitados.");
+                }
             }
             else
             {
-                string consulta = "Insert into Libros(isbn_lb, titulo_lb, autor_es_lb, editorial_lb, genero_lb, año_publicacion_lb, cantidad_lb, sinopsis_lb)" +
-                    "Values('"+txtIsbn.Text+"','"+txtTitulo.Text+"', '"+txtAutor.Text+"', '"+txtEditorial.Text+"', '"+txtCategoria.Text+"', '"+txtPublicacion.Text+"', '"+txtCantidad.Text+"', '"+txtResume.Text+"')";
-                new csConexionSQL().Insert(consulta);
-                new csGuardarImagenDatabase().GuardarImagen(ptbxImagenLibro, "Update Libros set imagen_lb = @imagen where isbn_lb = '"+txtIsbn.Text+"' ");
+                if (txtIsbn.Text != "" & txtTitulo.Text != "" & txtAutor.Text != "" & cbEditorial.SelectedIndex > -1 & cbCategoria.SelectedIndex > -1 & txtPublicacion.Text != "" & txtCantidad.Text != "" & txtResume.Text != "")
+                {
+                    string consulta = "Insert into Libros(isbn_lb, titulo_lb, autor_es_lb, editorial_lb, genero_lb, año_publicacion_lb, cantidad_lb, sinopsis_lb)" +
+                            "Values('" + txtIsbn.Text + "','" + txtTitulo.Text + "', '" + txtAutor.Text + "', '" + cbEditorial.SelectedItem.ToString() + "', '" + cbCategoria.SelectedItem.ToString() + "', '" + txtPublicacion.Text + "', '" + txtCantidad.Text + "', '" + txtResume.Text + "')";
+                    new csConexionSQL().Insert(consulta);
+                    if (ptbxImagenLibro.Image != null)
+                    {
+                        new csGuardarImagenDatabase().GuardarImagen(ptbxImagenLibro, "Update Libros set imagen_lb = @imagen where isbn_lb = '" + txtIsbn.Text + "' ");
+                    }
+                    frm.dgvLibros.Rows.Clear();
+                    frm.MostrarLibros();
+                    frm.validacion = false;
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Ingrese todos los datos solicitados.");
+                }
             }
-            frm.dgvLibros.Rows.Clear();
-            frm.MostrarLibros();
-            frm.validacion = false;
-            this.Close();
         }
 
         private void btnCambiarImagen_Click(object sender, EventArgs e)
@@ -90,6 +113,33 @@ namespace Proyecto_Biblioteca_Poo
             {
                 ptbxImagenLibro.BackgroundImage = null;
                 ptbxImagenLibro.Image = Image.FromFile(Imagen.FileName);
+            }
+        }
+
+        private void txtPublicacion_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+                MessageBox.Show("No se permiten Letras.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void txtCantidad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+                MessageBox.Show("No se permiten Letras.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void txtAutor_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+                MessageBox.Show("No se permiten Numeros.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
     }

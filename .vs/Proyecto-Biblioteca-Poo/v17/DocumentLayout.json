@@ -3,16 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\Jeremy Jaramillo\\Desktop\\REPOSITORIO\\Repo_Biblioteca_POO\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{163767A6-01AB-445D-85D3-F11D798F6F92}|Proyecto-Biblioteca-Poo\\Proyecto-Biblioteca-Poo.csproj|c:\\users\\jeremy jaramillo\\desktop\\repositorio\\repo_biblioteca_poo\\proyecto-biblioteca-poo\\csconexionsql.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{163767A6-01AB-445D-85D3-F11D798F6F92}|Proyecto-Biblioteca-Poo\\Proyecto-Biblioteca-Poo.csproj|solutionrelative:proyecto-biblioteca-poo\\csconexionsql.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{163767A6-01AB-445D-85D3-F11D798F6F92}|Proyecto-Biblioteca-Poo\\Proyecto-Biblioteca-Poo.csproj|c:\\users\\jeremy jaramillo\\desktop\\repositorio\\repo_biblioteca_poo\\proyecto-biblioteca-poo\\csusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{163767A6-01AB-445D-85D3-F11D798F6F92}|Proyecto-Biblioteca-Poo\\Proyecto-Biblioteca-Poo.csproj|solutionrelative:proyecto-biblioteca-poo\\csusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{163767A6-01AB-445D-85D3-F11D798F6F92}|Proyecto-Biblioteca-Poo\\Proyecto-Biblioteca-Poo.csproj|c:\\users\\jeremy jaramillo\\desktop\\repositorio\\repo_biblioteca_poo\\proyecto-biblioteca-poo\\frmagregarodetalleslibros.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{163767A6-01AB-445D-85D3-F11D798F6F92}|Proyecto-Biblioteca-Poo\\Proyecto-Biblioteca-Poo.csproj|solutionrelative:proyecto-biblioteca-poo\\frmagregarodetalleslibros.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{163767A6-01AB-445D-85D3-F11D798F6F92}|Proyecto-Biblioteca-Poo\\Proyecto-Biblioteca-Poo.csproj|c:\\users\\jeremy jaramillo\\desktop\\repositorio\\repo_biblioteca_poo\\proyecto-biblioteca-poo\\frmlistausuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{163767A6-01AB-445D-85D3-F11D798F6F92}|Proyecto-Biblioteca-Poo\\Proyecto-Biblioteca-Poo.csproj|solutionrelative:proyecto-biblioteca-poo\\frmlistausuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{163767A6-01AB-445D-85D3-F11D798F6F92}|Proyecto-Biblioteca-Poo\\Proyecto-Biblioteca-Poo.csproj|c:\\users\\jeremy jaramillo\\desktop\\repositorio\\repo_biblioteca_poo\\proyecto-biblioteca-poo\\frmagregarodetalleslibros.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{163767A6-01AB-445D-85D3-F11D798F6F92}|Proyecto-Biblioteca-Poo\\Proyecto-Biblioteca-Poo.csproj|solutionrelative:proyecto-biblioteca-poo\\frmagregarodetalleslibros.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{163767A6-01AB-445D-85D3-F11D798F6F92}|Proyecto-Biblioteca-Poo\\Proyecto-Biblioteca-Poo.csproj|c:\\users\\jeremy jaramillo\\desktop\\repositorio\\repo_biblioteca_poo\\proyecto-biblioteca-poo\\frmagregarusuarios01.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{163767A6-01AB-445D-85D3-F11D798F6F92}|Proyecto-Biblioteca-Poo\\Proyecto-Biblioteca-Poo.csproj|solutionrelative:proyecto-biblioteca-poo\\frmagregarusuarios01.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{163767A6-01AB-445D-85D3-F11D798F6F92}|Proyecto-Biblioteca-Poo\\Proyecto-Biblioteca-Poo.csproj|c:\\users\\jeremy jaramillo\\desktop\\repositorio\\repo_biblioteca_poo\\proyecto-biblioteca-poo\\frmagregarusuarios01.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{163767A6-01AB-445D-85D3-F11D798F6F92}|Proyecto-Biblioteca-Poo\\Proyecto-Biblioteca-Poo.csproj|solutionrelative:proyecto-biblioteca-poo\\frmagregarusuarios01.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{163767A6-01AB-445D-85D3-F11D798F6F92}|Proyecto-Biblioteca-Poo\\Proyecto-Biblioteca-Poo.csproj|c:\\users\\jeremy jaramillo\\desktop\\repositorio\\repo_biblioteca_poo\\proyecto-biblioteca-poo\\frmlistausuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{163767A6-01AB-445D-85D3-F11D798F6F92}|Proyecto-Biblioteca-Poo\\Proyecto-Biblioteca-Poo.csproj|solutionrelative:proyecto-biblioteca-poo\\frmlistausuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,48 +30,77 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "csUsuarios.cs",
+              "DocumentMoniker": "C:\\Users\\Jeremy Jaramillo\\Desktop\\REPOSITORIO\\Repo_Biblioteca_POO\\Proyecto-Biblioteca-Poo\\csUsuarios.cs",
+              "RelativeDocumentMoniker": "Proyecto-Biblioteca-Poo\\csUsuarios.cs",
+              "ToolTip": "C:\\Users\\Jeremy Jaramillo\\Desktop\\REPOSITORIO\\Repo_Biblioteca_POO\\Proyecto-Biblioteca-Poo\\csUsuarios.cs",
+              "RelativeToolTip": "Proyecto-Biblioteca-Poo\\csUsuarios.cs",
+              "ViewState": "AQIAAC4AAAAAAAAAAAAIwD0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-03T04:01:49.321Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "csConexionSQL.cs",
-              "DocumentMoniker": "C:\\Users\\Jeremy Jaramillo\\Desktop\\REPOSITORIO\\Repo_Biblioteca_POO\\Proyecto-Biblioteca-Poo\\csConexionSQL.cs",
-              "RelativeDocumentMoniker": "Proyecto-Biblioteca-Poo\\csConexionSQL.cs",
-              "ToolTip": "C:\\Users\\Jeremy Jaramillo\\Desktop\\REPOSITORIO\\Repo_Biblioteca_POO\\Proyecto-Biblioteca-Poo\\csConexionSQL.cs",
-              "RelativeToolTip": "Proyecto-Biblioteca-Poo\\csConexionSQL.cs",
-              "ViewState": "AQIAAAIAAAAAAAAAAAAWwA4AAACgAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-03T02:13:01.421Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "frmAgregarODetallesLibros.cs",
-              "DocumentMoniker": "C:\\Users\\Jeremy Jaramillo\\Desktop\\REPOSITORIO\\Repo_Biblioteca_POO\\Proyecto-Biblioteca-Poo\\frmAgregarODetallesLibros.cs",
-              "RelativeDocumentMoniker": "Proyecto-Biblioteca-Poo\\frmAgregarODetallesLibros.cs",
-              "ToolTip": "C:\\Users\\Jeremy Jaramillo\\Desktop\\REPOSITORIO\\Repo_Biblioteca_POO\\Proyecto-Biblioteca-Poo\\frmAgregarODetallesLibros.cs",
-              "RelativeToolTip": "Proyecto-Biblioteca-Poo\\frmAgregarODetallesLibros.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAE8AAAAgAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-03T00:54:20.222Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "frmAgregarODetallesLibros.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Jeremy Jaramillo\\Desktop\\REPOSITORIO\\Repo_Biblioteca_POO\\Proyecto-Biblioteca-Poo\\frmAgregarODetallesLibros.cs",
-              "RelativeDocumentMoniker": "Proyecto-Biblioteca-Poo\\frmAgregarODetallesLibros.cs",
-              "ToolTip": "C:\\Users\\Jeremy Jaramillo\\Desktop\\REPOSITORIO\\Repo_Biblioteca_POO\\Proyecto-Biblioteca-Poo\\frmAgregarODetallesLibros.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Proyecto-Biblioteca-Poo\\frmAgregarODetallesLibros.cs [Dise\u00F1o]",
+              "Title": "FrmAgregarUsuarios01.cs",
+              "DocumentMoniker": "C:\\Users\\Jeremy Jaramillo\\Desktop\\REPOSITORIO\\Repo_Biblioteca_POO\\Proyecto-Biblioteca-Poo\\FrmAgregarUsuarios01.cs",
+              "RelativeDocumentMoniker": "Proyecto-Biblioteca-Poo\\FrmAgregarUsuarios01.cs",
+              "ToolTip": "C:\\Users\\Jeremy Jaramillo\\Desktop\\REPOSITORIO\\Repo_Biblioteca_POO\\Proyecto-Biblioteca-Poo\\FrmAgregarUsuarios01.cs",
+              "RelativeToolTip": "Proyecto-Biblioteca-Poo\\FrmAgregarUsuarios01.cs",
+              "ViewState": "AQIAADUAAAAAAAAAAAAowEQAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-03T00:54:16.85Z",
+              "WhenOpened": "2024-09-03T03:49:23.032Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FrmAgregarUsuarios01.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Jeremy Jaramillo\\Desktop\\REPOSITORIO\\Repo_Biblioteca_POO\\Proyecto-Biblioteca-Poo\\FrmAgregarUsuarios01.cs",
+              "RelativeDocumentMoniker": "Proyecto-Biblioteca-Poo\\FrmAgregarUsuarios01.cs",
+              "ToolTip": "C:\\Users\\Jeremy Jaramillo\\Desktop\\REPOSITORIO\\Repo_Biblioteca_POO\\Proyecto-Biblioteca-Poo\\FrmAgregarUsuarios01.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Proyecto-Biblioteca-Poo\\FrmAgregarUsuarios01.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-03T03:49:17.67Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FrmListaUsuarios.cs",
+              "DocumentMoniker": "C:\\Users\\Jeremy Jaramillo\\Desktop\\REPOSITORIO\\Repo_Biblioteca_POO\\Proyecto-Biblioteca-Poo\\FrmListaUsuarios.cs",
+              "RelativeDocumentMoniker": "Proyecto-Biblioteca-Poo\\FrmListaUsuarios.cs",
+              "ToolTip": "C:\\Users\\Jeremy Jaramillo\\Desktop\\REPOSITORIO\\Repo_Biblioteca_POO\\Proyecto-Biblioteca-Poo\\FrmListaUsuarios.cs",
+              "RelativeToolTip": "Proyecto-Biblioteca-Poo\\FrmListaUsuarios.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAnwB4AAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-03T03:48:38.083Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FrmListaUsuarios.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Jeremy Jaramillo\\Desktop\\REPOSITORIO\\Repo_Biblioteca_POO\\Proyecto-Biblioteca-Poo\\FrmListaUsuarios.cs",
+              "RelativeDocumentMoniker": "Proyecto-Biblioteca-Poo\\FrmListaUsuarios.cs",
+              "ToolTip": "C:\\Users\\Jeremy Jaramillo\\Desktop\\REPOSITORIO\\Repo_Biblioteca_POO\\Proyecto-Biblioteca-Poo\\FrmListaUsuarios.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Proyecto-Biblioteca-Poo\\FrmListaUsuarios.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-03T03:48:35.531Z",
               "EditorCaption": " [Dise\u00F1o]"
             }
           ]
