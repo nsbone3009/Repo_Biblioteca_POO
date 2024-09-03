@@ -12,49 +12,80 @@ namespace Proyecto_Biblioteca_Poo
 {
     public partial class frmAgregarODetallesAutores : Form
     {
-        public bool bandera=false;
-        static csConexionSQL obj = new csConexionSQL();
+        public int id;
+        public bool bandera = false;
+
         public frmAgregarODetallesAutores()
         {
             InitializeComponent();
         }
-    
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+
+        public int datoId(string ID)
+        {
+            id = Convert.ToInt32(ID);
+
+            return id;
+        }
+
         private void btnGuardarCampos_Click(object sender, EventArgs e)
         {
-            frmListaAutores frmGenero = Owner as frmListaAutores;
-            if (bandera)
+            if (txtAutor.Text!=string.Empty& cbEstado.Text!=string.Empty)
             {
-                if (txtAutor.Text != "" && cbEstado.SelectedIndex != -1)
+                btnEditarCampos.Visible = false;
+                if (bandera == false)
                 {
-                    obj.Insert("insert into Autores (NombreAutor, Estado) values ('" + txtAutor.Text + "', '" + cbEstado.SelectedIndex + "')");
-                    MessageBox.Show("El autor ha sido agregado exitosamente a la base de datos.", "Operación Exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    frmGenero.dgvAutores.Rows.Clear();
-                    frmGenero.MostrarDatos();
-                    this.Close();
+                    if (cbEstado.SelectedItem.ToString() == "Activo")
+                    {
+                        string consulta = "insert into Autores(NombreAutor,Estado)values('" + txtAutor.Text + "','" + cbEstado.SelectedIndex + "')";
+                        csConexionSQL conexionSQL = new csConexionSQL();
+                        conexionSQL.Insert(consulta);
+                        MessageBox.Show("Datos guardados Correctamente");
+                        this.Hide();
+                    }
+                    else
+                    {
+                        string consulta = "insert into Autores(NombreAutor,Estado)values('" + txtAutor.Text + "','" + cbEstado.SelectedIndex + "')";
+                        csConexionSQL conexionSQL = new csConexionSQL();
+                        conexionSQL.Insert(consulta);
+                        MessageBox.Show("Datos guardados Correctamente");
+                        this.Hide();
+                    }
                 }
                 else
-                    MessageBox.Show("Faltan campos por llenar");
+                {
+                    if (cbEstado.SelectedItem.ToString() == "Activo")
+                    {
+                        string consulta = "update Autores set NombreAutor='" + txtAutor.Text + "', Estado='" + cbEstado.SelectedIndex + "' where idAutor=" + id + " ";
+                        csConexionSQL conexionSQL = new csConexionSQL();
+                        conexionSQL.Update(consulta);
+                        MessageBox.Show("Datos actualizados Correctamente");
+                        this.Hide();
+                    }
+                    else
+                    {
+                        string consulta = "update Autores set NombreAutor='" + txtAutor.Text + "', Estado='" + cbEstado.SelectedIndex + "' where idAutor=" + id + " ";
+                        csConexionSQL conexionSQL = new csConexionSQL();
+                        conexionSQL.Update(consulta);
+                        MessageBox.Show("Datos actualizados Correctamente");
+                        this.Hide();
+                    }
+                }
+                frmListaAutores frm = Owner as frmListaAutores;
+                frm.dgvAutores.Rows.Clear();
+                frm.MostrarDatos();
             }
             else
-            {
-                if (txtAutor.Text != "" && cbEstado.SelectedIndex != -1)
-                {
-                    obj.Update("update Autores set Estado = '" + cbEstado.SelectedIndex + "' where NombreAutor = '" + txtAutor.Text.TrimEnd() + "'");
-                    MessageBox.Show("El autor ha sido editado correctamente.", "Autor Editado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    frmGenero.dgvAutores.Rows.Clear();
-                    frmGenero.MostrarDatos();
-                    this.Close();
-                }
-                else
-                    MessageBox.Show("Por favor, completa todos los campos requeridos antes de continuar.", "Campos Incompletos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
+                MessageBox.Show("Ingrese todos los campos solicitados.");
+
+
 
         }
+
         private void btnEditarCampos_Click(object sender, EventArgs e)
         {
             cbEstado.Enabled = true;

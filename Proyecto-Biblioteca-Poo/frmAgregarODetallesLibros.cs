@@ -46,7 +46,7 @@ namespace Proyecto_Biblioteca_Poo
         private void btnEditarCampos_Click(object sender, EventArgs e)
         {
             txtTitulo.Enabled = true;
-            txtAutor.Enabled = true;
+            cbAutor.Enabled = true;
             cbEditorial.Enabled = true;
             cbCategoria.Enabled = true;
             txtPublicacion.Enabled = true;
@@ -61,9 +61,9 @@ namespace Proyecto_Biblioteca_Poo
             frmListaLibros frm = Owner as frmListaLibros;
             if (frm.validacion)
             {
-                if (txtTitulo.Text != "" & txtAutor.Text != "" & cbEditorial.SelectedIndex > -1 & cbCategoria.SelectedIndex > -1 & txtPublicacion.Text != "" & txtCantidad.Text != "" & txtResume.Text != "")
+                if (txtTitulo.Text != "" & cbAutor.SelectedIndex>-1 & cbEditorial.SelectedIndex > -1 & cbCategoria.SelectedIndex > -1 & txtPublicacion.Text != "" & txtCantidad.Text != "" & txtResume.Text != "")
                 {
-                    string consulta = "Update Libros set titulo_lb = '" + txtTitulo.Text + "', autor_es_lb = '" + txtAutor.Text + "'," +
+                    string consulta = "Update Libros set titulo_lb = '" + txtTitulo.Text + "', autor_es_lb = '" + cbAutor.SelectedItem.ToString() + "'," +
                 " editorial_lb = '" + cbEditorial.SelectedItem.ToString() + "',genero_lb = '" + cbCategoria.SelectedItem.ToString() + "', año_publicacion_lb = '" + txtPublicacion.Text + "'," +
                 " cantidad_lb = '" + txtCantidad.Text + "', sinopsis_lb = '" + txtResume.Text + "' where isbn_lb = '" + ISBN + "'";
                     new csConexionSQL().Update(consulta);
@@ -84,19 +84,26 @@ namespace Proyecto_Biblioteca_Poo
             }
             else
             {
-                if (txtIsbn.Text != "" & txtTitulo.Text != "" & txtAutor.Text != "" & cbEditorial.SelectedIndex > -1 & cbCategoria.SelectedIndex > -1 & txtPublicacion.Text != "" & txtCantidad.Text != "" & txtResume.Text != "")
+                if (txtIsbn.Text != "" & txtTitulo.Text != "" & cbAutor.SelectedIndex >-1  & cbEditorial.SelectedIndex > -1 & cbCategoria.SelectedIndex > -1 & txtPublicacion.Text != "" & txtCantidad.Text != "" & txtResume.Text != "")
                 {
-                    string consulta = "Insert into Libros(isbn_lb, titulo_lb, autor_es_lb, editorial_lb, genero_lb, año_publicacion_lb, cantidad_lb, sinopsis_lb)" +
-                            "Values('" + txtIsbn.Text + "','" + txtTitulo.Text + "', '" + txtAutor.Text + "', '" + cbEditorial.SelectedItem.ToString() + "', '" + cbCategoria.SelectedItem.ToString() + "', '" + txtPublicacion.Text + "', '" + txtCantidad.Text + "', '" + txtResume.Text + "')";
-                    new csConexionSQL().Insert(consulta);
-                    if (ptbxImagenLibro.Image != null)
+                    int cantidad = Convert.ToInt32(txtCantidad.Text);
+                    int añoP= Convert.ToInt32(txtPublicacion.Text);
+                    if (cantidad >=1& añoP<2025)
                     {
-                        new csGuardarImagenDatabase().GuardarImagen(ptbxImagenLibro, "Update Libros set imagen_lb = @imagen where isbn_lb = '" + txtIsbn.Text + "' ");
+                        string consulta = "Insert into Libros(isbn_lb, titulo_lb, autor_es_lb, editorial_lb, genero_lb, año_publicacion_lb, cantidad_lb, sinopsis_lb)" +
+                            "Values('" + txtIsbn.Text + "','" + txtTitulo.Text + "', '" + cbAutor.SelectedItem.ToString() + "', '" + cbEditorial.SelectedItem.ToString() + "', '" + cbCategoria.SelectedItem.ToString() + "', '" + txtPublicacion.Text + "', '" + txtCantidad.Text + "', '" + txtResume.Text + "')";
+                        new csConexionSQL().Insert(consulta);
+                        if (ptbxImagenLibro.Image != null)
+                        {
+                            new csGuardarImagenDatabase().GuardarImagen(ptbxImagenLibro, "Update Libros set imagen_lb = @imagen where isbn_lb = '" + txtIsbn.Text + "' ");
+                        }
+                        frm.dgvLibros.Rows.Clear();
+                        frm.MostrarLibros();
+                        frm.validacion = false;
+                        this.Close();
                     }
-                    frm.dgvLibros.Rows.Clear();
-                    frm.MostrarLibros();
-                    frm.validacion = false;
-                    this.Close();
+                    else
+                        MessageBox.Show("Cantidad o Año publicado invalida.");
                 }
                 else
                 {
