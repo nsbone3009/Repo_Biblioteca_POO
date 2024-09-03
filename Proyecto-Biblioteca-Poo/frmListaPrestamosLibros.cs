@@ -83,7 +83,8 @@ namespace Proyecto_Biblioteca_Poo
                     datitos.txtISBN.Text = lector["isbn_lb"].ToString().Trim();
                     datitos.txtFechaPrestamo.Text = lector["fecha_prestamo"].ToString().Trim();
                     datitos.txtFechaDevolucion.Text = lector["fecha_devolucion_programada"].ToString().Trim();
-                    datitos.txtFechaActual.Text = DateTime.Now.ToString("yyyy-MM-dd");datitos.Show();
+                    datitos.txtFechaActual.Text = DateTime.Now.ToString("yyyy-MM-dd");
+                    datitos.ShowDialog();
                 }
             }
             //this.Close();

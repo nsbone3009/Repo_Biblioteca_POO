@@ -24,7 +24,7 @@ namespace Proyecto_Biblioteca_Poo
         {
             frmAgregarODetallesLibros frm = new frmAgregarODetallesLibros();
             this.AddOwnedForm(frm);
-            frm.lbTituloVentana.Text = "Agregar Nuevo Libro";
+            frm.lbTituloVentana.Text = "AGREGAR LIBRO";
             frm.btnEditarCampos.Visible = false;
             frm.btnGuardarCampos.Enabled = true;
             frm.ShowDialog();

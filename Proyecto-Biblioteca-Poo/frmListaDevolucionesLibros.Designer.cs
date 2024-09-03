@@ -32,7 +32,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lbDevoluciones = new System.Windows.Forms.Label();
             this.btnBuscar = new System.Windows.Forms.Button();
-            this.btnAgregarLibro = new System.Windows.Forms.Button();
+            this.btnAgregarDevolucion = new System.Windows.Forms.Button();
             this.dgvDevoluciones = new System.Windows.Forms.DataGridView();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDevoluciones)).BeginInit();
@@ -67,23 +67,23 @@
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = false;
             // 
-            // btnAgregarLibro
+            // btnAgregarDevolucion
             // 
-            this.btnAgregarLibro.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAgregarLibro.BackgroundImage")));
-            this.btnAgregarLibro.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAgregarLibro.FlatAppearance.BorderSize = 0;
-            this.btnAgregarLibro.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnAgregarLibro.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnAgregarLibro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregarLibro.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarLibro.ForeColor = System.Drawing.Color.White;
-            this.btnAgregarLibro.Location = new System.Drawing.Point(24, 536);
-            this.btnAgregarLibro.Name = "btnAgregarLibro";
-            this.btnAgregarLibro.Size = new System.Drawing.Size(180, 50);
-            this.btnAgregarLibro.TabIndex = 17;
-            this.btnAgregarLibro.Text = "AGREGAR";
-            this.btnAgregarLibro.UseVisualStyleBackColor = true;
-            this.btnAgregarLibro.Click += new System.EventHandler(this.btnAgregarLibro_Click);
+            this.btnAgregarDevolucion.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAgregarDevolucion.BackgroundImage")));
+            this.btnAgregarDevolucion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAgregarDevolucion.FlatAppearance.BorderSize = 0;
+            this.btnAgregarDevolucion.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnAgregarDevolucion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnAgregarDevolucion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregarDevolucion.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarDevolucion.ForeColor = System.Drawing.Color.White;
+            this.btnAgregarDevolucion.Location = new System.Drawing.Point(24, 536);
+            this.btnAgregarDevolucion.Name = "btnAgregarDevolucion";
+            this.btnAgregarDevolucion.Size = new System.Drawing.Size(180, 50);
+            this.btnAgregarDevolucion.TabIndex = 17;
+            this.btnAgregarDevolucion.Text = "AGREGAR";
+            this.btnAgregarDevolucion.UseVisualStyleBackColor = true;
+            this.btnAgregarDevolucion.Click += new System.EventHandler(this.btnAgregarLibro_Click);
             // 
             // dgvDevoluciones
             // 
@@ -125,7 +125,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(785, 640);
             this.Controls.Add(this.btnBuscar);
-            this.Controls.Add(this.btnAgregarLibro);
+            this.Controls.Add(this.btnAgregarDevolucion);
             this.Controls.Add(this.dgvDevoluciones);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.lbDevoluciones);
@@ -144,7 +144,7 @@
 
         private System.Windows.Forms.Label lbDevoluciones;
         private System.Windows.Forms.Button btnBuscar;
-        private System.Windows.Forms.Button btnAgregarLibro;
+        private System.Windows.Forms.Button btnAgregarDevolucion;
         public System.Windows.Forms.DataGridView dgvDevoluciones;
         private System.Windows.Forms.TextBox txtBuscar;
     }

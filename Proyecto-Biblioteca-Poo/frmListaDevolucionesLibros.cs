@@ -19,7 +19,9 @@ namespace Proyecto_Biblioteca_Poo
 
         private void btnAgregarLibro_Click(object sender, EventArgs e)
         {
-            new frmAgregarODetallesDevolucionesLibros().ShowDialog();
+            frmAgregarODetallesDevolucionesLibros obj = new frmAgregarODetallesDevolucionesLibros();
+            this.AddOwnedForm(obj);
+            obj.ShowDialog();
         }
 
         private void frmListaDevolucionesLibros_Load(object sender, EventArgs e)
