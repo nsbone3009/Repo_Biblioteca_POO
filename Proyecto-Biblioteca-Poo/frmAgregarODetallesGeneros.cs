@@ -31,13 +31,13 @@ namespace Proyecto_Biblioteca_Poo
                 if (txtGenero.Text != "" && cbEstado.SelectedIndex != -1)
                 {
                     obj.Insert("insert into Genero (NombreGenero, Estado) values ('" + txtGenero.Text + "', '" + cbEstado.SelectedIndex + "')");
-                    MessageBox.Show("Genero agregado correctamente");
+                    MessageBox.Show("El género ha sido agregado correctamente.", "Género Agregado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     frmGenero.dgvGenero.Rows.Clear();
                     frmGenero.MostrarDatos();
                     this.Close();
                 }
                 else
-                    MessageBox.Show("Faltan campos por llenar");
+                    MessageBox.Show("Por favor, asegúrate de completar todos los campos requeridos antes de continuar.", "Campos Incompletos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
@@ -50,7 +50,7 @@ namespace Proyecto_Biblioteca_Poo
                     this.Close();
                 }
                 else
-                    MessageBox.Show("Faltan campos por llenar");
+                    MessageBox.Show("Algunos campos obligatorios están vacíos. Por favor, completa todos los campos antes de continuar.", "Campos Incompletos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
         }

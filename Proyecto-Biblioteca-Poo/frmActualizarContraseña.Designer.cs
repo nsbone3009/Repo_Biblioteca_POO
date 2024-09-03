@@ -41,13 +41,14 @@
             this.bntocultaNueva = new System.Windows.Forms.Button();
             this.bntnuevacontra = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
+            this.lbTituloVentana = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtCorreo
             // 
             this.txtCorreo.Enabled = false;
             this.txtCorreo.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCorreo.Location = new System.Drawing.Point(137, 208);
+            this.txtCorreo.Location = new System.Drawing.Point(143, 151);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(506, 35);
             this.txtCorreo.TabIndex = 10;
@@ -59,7 +60,7 @@
             this.lbCorreo.BackColor = System.Drawing.Color.Transparent;
             this.lbCorreo.Enabled = false;
             this.lbCorreo.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCorreo.Location = new System.Drawing.Point(133, 183);
+            this.lbCorreo.Location = new System.Drawing.Point(362, 126);
             this.lbCorreo.Name = "lbCorreo";
             this.lbCorreo.Size = new System.Drawing.Size(69, 22);
             this.lbCorreo.TabIndex = 9;
@@ -68,7 +69,7 @@
             // txtNuevaClave
             // 
             this.txtNuevaClave.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNuevaClave.Location = new System.Drawing.Point(137, 299);
+            this.txtNuevaClave.Location = new System.Drawing.Point(270, 242);
             this.txtNuevaClave.Name = "txtNuevaClave";
             this.txtNuevaClave.Size = new System.Drawing.Size(253, 35);
             this.txtNuevaClave.TabIndex = 13;
@@ -80,7 +81,7 @@
             this.lbCodigo.AutoSize = true;
             this.lbCodigo.BackColor = System.Drawing.Color.Transparent;
             this.lbCodigo.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCodigo.Location = new System.Drawing.Point(133, 274);
+            this.lbCodigo.Location = new System.Drawing.Point(314, 217);
             this.lbCodigo.Name = "lbCodigo";
             this.lbCodigo.Size = new System.Drawing.Size(165, 22);
             this.lbCodigo.TabIndex = 12;
@@ -89,7 +90,7 @@
             // txtConfirmarCLave
             // 
             this.txtConfirmarCLave.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtConfirmarCLave.Location = new System.Drawing.Point(137, 396);
+            this.txtConfirmarCLave.Location = new System.Drawing.Point(270, 339);
             this.txtConfirmarCLave.Name = "txtConfirmarCLave";
             this.txtConfirmarCLave.Size = new System.Drawing.Size(253, 35);
             this.txtConfirmarCLave.TabIndex = 15;
@@ -101,7 +102,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(133, 371);
+            this.label1.Location = new System.Drawing.Point(299, 314);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(195, 22);
             this.label1.TabIndex = 14;
@@ -117,9 +118,9 @@
             this.btnEnviar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEnviar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEnviar.ForeColor = System.Drawing.Color.White;
-            this.btnEnviar.Location = new System.Drawing.Point(486, 328);
+            this.btnEnviar.Location = new System.Drawing.Point(318, 412);
             this.btnEnviar.Name = "btnEnviar";
-            this.btnEnviar.Size = new System.Drawing.Size(157, 75);
+            this.btnEnviar.Size = new System.Drawing.Size(157, 44);
             this.btnEnviar.TabIndex = 16;
             this.btnEnviar.Text = "ACTUALIZAR";
             this.btnEnviar.UseVisualStyleBackColor = true;
@@ -135,7 +136,7 @@
             this.btnOcultarContraseña.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnOcultarContraseña.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnOcultarContraseña.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOcultarContraseña.Location = new System.Drawing.Point(406, 396);
+            this.btnOcultarContraseña.Location = new System.Drawing.Point(539, 339);
             this.btnOcultarContraseña.Name = "btnOcultarContraseña";
             this.btnOcultarContraseña.Size = new System.Drawing.Size(35, 35);
             this.btnOcultarContraseña.TabIndex = 18;
@@ -152,7 +153,7 @@
             this.btnMostrarContraseña.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnMostrarContraseña.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnMostrarContraseña.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMostrarContraseña.Location = new System.Drawing.Point(406, 396);
+            this.btnMostrarContraseña.Location = new System.Drawing.Point(539, 339);
             this.btnMostrarContraseña.Name = "btnMostrarContraseña";
             this.btnMostrarContraseña.Size = new System.Drawing.Size(35, 35);
             this.btnMostrarContraseña.TabIndex = 17;
@@ -169,7 +170,7 @@
             this.bntocultaNueva.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.bntocultaNueva.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.bntocultaNueva.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bntocultaNueva.Location = new System.Drawing.Point(406, 299);
+            this.bntocultaNueva.Location = new System.Drawing.Point(539, 242);
             this.bntocultaNueva.Name = "bntocultaNueva";
             this.bntocultaNueva.Size = new System.Drawing.Size(35, 35);
             this.bntocultaNueva.TabIndex = 20;
@@ -186,7 +187,7 @@
             this.bntnuevacontra.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.bntnuevacontra.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.bntnuevacontra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bntnuevacontra.Location = new System.Drawing.Point(406, 299);
+            this.bntnuevacontra.Location = new System.Drawing.Point(539, 242);
             this.bntnuevacontra.Name = "bntnuevacontra";
             this.bntnuevacontra.Size = new System.Drawing.Size(35, 35);
             this.bntnuevacontra.TabIndex = 19;
@@ -212,12 +213,25 @@
             this.btnCerrar.UseVisualStyleBackColor = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
+            // lbTituloVentana
+            // 
+            this.lbTituloVentana.AutoSize = true;
+            this.lbTituloVentana.BackColor = System.Drawing.Color.Transparent;
+            this.lbTituloVentana.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTituloVentana.ForeColor = System.Drawing.Color.White;
+            this.lbTituloVentana.Location = new System.Drawing.Point(109, 32);
+            this.lbTituloVentana.Name = "lbTituloVentana";
+            this.lbTituloVentana.Size = new System.Drawing.Size(258, 24);
+            this.lbTituloVentana.TabIndex = 74;
+            this.lbTituloVentana.Text = "CAMBIAR CONTRASEÑA";
+            // 
             // frmActualizarContraseña
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(780, 560);
+            this.Controls.Add(this.lbTituloVentana);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.bntocultaNueva);
             this.Controls.Add(this.bntnuevacontra);
@@ -254,5 +268,6 @@
         private System.Windows.Forms.Button bntnuevacontra;
         private System.Windows.Forms.Button btnCerrar;
         public System.Windows.Forms.TextBox txtCorreo;
+        public System.Windows.Forms.Label lbTituloVentana;
     }
 }

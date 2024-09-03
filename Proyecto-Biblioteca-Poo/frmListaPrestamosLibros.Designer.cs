@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmListaPrestamosLibros));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnBuscar = new System.Windows.Forms.Button();
-            this.dgvPrestamos = new System.Windows.Forms.DataGridView();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.btnAgregarPrestamo = new System.Windows.Forms.Button();
             this.blPrestamos = new System.Windows.Forms.Label();
             this.btnCerrar = new System.Windows.Forms.Button();
+            this.dgvPrestamos = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrestamos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,33 +55,6 @@
             this.btnBuscar.TabIndex = 12;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = false;
-            // 
-            // dgvPrestamos
-            // 
-            this.dgvPrestamos.AllowUserToAddRows = false;
-            this.dgvPrestamos.AllowUserToDeleteRows = false;
-            this.dgvPrestamos.AllowUserToResizeColumns = false;
-            this.dgvPrestamos.AllowUserToResizeRows = false;
-            this.dgvPrestamos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvPrestamos.BackgroundColor = System.Drawing.SystemColors.Window;
-            this.dgvPrestamos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvPrestamos.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvPrestamos.Location = new System.Drawing.Point(23, 196);
-            this.dgvPrestamos.Name = "dgvPrestamos";
-            this.dgvPrestamos.ReadOnly = true;
-            this.dgvPrestamos.RowHeadersVisible = false;
-            this.dgvPrestamos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPrestamos.Size = new System.Drawing.Size(737, 335);
-            this.dgvPrestamos.TabIndex = 11;
-            this.dgvPrestamos.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPrestamos_CellContentDoubleClick);
-            this.dgvPrestamos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPrestamos_CellDoubleClick);
             // 
             // txtBuscar
             // 
@@ -143,6 +116,34 @@
             this.btnCerrar.UseVisualStyleBackColor = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
+            // dgvPrestamos
+            // 
+            this.dgvPrestamos.AllowUserToAddRows = false;
+            this.dgvPrestamos.AllowUserToDeleteRows = false;
+            this.dgvPrestamos.AllowUserToResizeColumns = false;
+            this.dgvPrestamos.AllowUserToResizeRows = false;
+            this.dgvPrestamos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvPrestamos.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.dgvPrestamos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvPrestamos.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvPrestamos.Location = new System.Drawing.Point(23, 196);
+            this.dgvPrestamos.Name = "dgvPrestamos";
+            this.dgvPrestamos.ReadOnly = true;
+            this.dgvPrestamos.RowHeadersVisible = false;
+            this.dgvPrestamos.RowHeadersWidth = 50;
+            this.dgvPrestamos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvPrestamos.Size = new System.Drawing.Size(737, 335);
+            this.dgvPrestamos.TabIndex = 11;
+            this.dgvPrestamos.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPrestamos_CellContentDoubleClick);
+            this.dgvPrestamos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPrestamos_CellDoubleClick);
+            // 
             // frmListaPrestamosLibros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -169,10 +170,10 @@
         #endregion
 
         private System.Windows.Forms.Button btnBuscar;
-        public System.Windows.Forms.DataGridView dgvPrestamos;
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Label blPrestamos;
         public System.Windows.Forms.Button btnAgregarPrestamo;
         public System.Windows.Forms.Button btnCerrar;
+        public System.Windows.Forms.DataGridView dgvPrestamos;
     }
 }
