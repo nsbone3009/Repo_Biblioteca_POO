@@ -30,13 +30,16 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmListaGenero));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lbGenero = new System.Windows.Forms.Label();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.btnAgregarGenero = new System.Windows.Forms.Button();
-            this.btnModificarGenero = new System.Windows.Forms.Button();
-            this.dgvPrestamos = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPrestamos)).BeginInit();
+            this.dgvGenero = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvGenero)).BeginInit();
             this.SuspendLayout();
             // 
             // lbGenero
@@ -94,47 +97,66 @@
             this.btnAgregarGenero.UseVisualStyleBackColor = true;
             this.btnAgregarGenero.Click += new System.EventHandler(this.btnAgregarGenero_Click);
             // 
-            // btnModificarGenero
+            // dgvGenero
             // 
-            this.btnModificarGenero.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnModificarGenero.BackgroundImage")));
-            this.btnModificarGenero.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnModificarGenero.FlatAppearance.BorderSize = 0;
-            this.btnModificarGenero.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnModificarGenero.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnModificarGenero.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModificarGenero.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificarGenero.ForeColor = System.Drawing.Color.White;
-            this.btnModificarGenero.Location = new System.Drawing.Point(235, 561);
-            this.btnModificarGenero.Name = "btnModificarGenero";
-            this.btnModificarGenero.Size = new System.Drawing.Size(180, 50);
-            this.btnModificarGenero.TabIndex = 13;
-            this.btnModificarGenero.Text = "MODIFICAR";
-            this.btnModificarGenero.UseVisualStyleBackColor = true;
-            // 
-            // dgvPrestamos
-            // 
-            this.dgvPrestamos.AllowUserToAddRows = false;
-            this.dgvPrestamos.AllowUserToDeleteRows = false;
-            this.dgvPrestamos.AllowUserToResizeColumns = false;
-            this.dgvPrestamos.AllowUserToResizeRows = false;
-            this.dgvPrestamos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvPrestamos.BackgroundColor = System.Drawing.SystemColors.Window;
-            this.dgvPrestamos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            this.dgvGenero.AllowUserToAddRows = false;
+            this.dgvGenero.AllowUserToDeleteRows = false;
+            this.dgvGenero.AllowUserToResizeColumns = false;
+            this.dgvGenero.AllowUserToResizeRows = false;
+            this.dgvGenero.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(8);
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvPrestamos.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvPrestamos.Location = new System.Drawing.Point(24, 190);
-            this.dgvPrestamos.Name = "dgvPrestamos";
-            this.dgvPrestamos.ReadOnly = true;
-            this.dgvPrestamos.RowHeadersVisible = false;
-            this.dgvPrestamos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPrestamos.Size = new System.Drawing.Size(737, 335);
-            this.dgvPrestamos.TabIndex = 14;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvGenero.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvGenero.ColumnHeadersHeight = 50;
+            this.dgvGenero.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(8);
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvGenero.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvGenero.Location = new System.Drawing.Point(24, 190);
+            this.dgvGenero.Name = "dgvGenero";
+            this.dgvGenero.ReadOnly = true;
+            this.dgvGenero.RowHeadersVisible = false;
+            this.dgvGenero.RowHeadersWidth = 50;
+            this.dgvGenero.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvGenero.Size = new System.Drawing.Size(737, 335);
+            this.dgvGenero.TabIndex = 15;
+            this.dgvGenero.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvGenero_CellContentClick);
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "ID GENERO";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 200;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "GENERO";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 334;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "ESTADO";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Width = 200;
             // 
             // frmListaGenero
             // 
@@ -142,8 +164,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Proyecto_Biblioteca_Poo.Properties.Resources.GÉNERO__4_;
             this.ClientSize = new System.Drawing.Size(785, 640);
-            this.Controls.Add(this.dgvPrestamos);
-            this.Controls.Add(this.btnModificarGenero);
+            this.Controls.Add(this.dgvGenero);
             this.Controls.Add(this.btnAgregarGenero);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.txtBuscar);
@@ -152,7 +173,8 @@
             this.Name = "frmListaGenero";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmListaCategorias";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPrestamos)).EndInit();
+            this.Load += new System.EventHandler(this.frmListaGenero_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvGenero)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -164,7 +186,9 @@
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.TextBox txtBuscar;
         public System.Windows.Forms.Button btnAgregarGenero;
-        public System.Windows.Forms.Button btnModificarGenero;
-        public System.Windows.Forms.DataGridView dgvPrestamos;
+        public System.Windows.Forms.DataGridView dgvGenero;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
     }
 }

@@ -12,7 +12,7 @@ namespace Proyecto_Biblioteca_Poo
     internal class csConexionSQL
     {
         // Cadena de conexión que especifica el servidor, base de datos, y las credenciales de SQL Server.
-        private string cadenaConexion = @"Password=admin;Persist Security Info=True;User ID=admin;Initial Catalog=Biblioteca;Data Source=NIURLETH";
+        private string cadenaConexion = @"Password=123;Persist Security Info=True;User ID=sa;Initial Catalog=Biblioteca;Data Source=DESKTOP-RJ6RQ3J\SQLEXPRESS";
         private SqlConnection conexion;  // Objeto SqlConnection para manejar la conexión con SQL Server.
         // Propiedad que permite acceder al objeto SqlConnection desde fuera de la clase.
         public SqlConnection Conexion { get { return conexion; } }
@@ -76,6 +76,17 @@ namespace Proyecto_Biblioteca_Poo
             if(leer.Read()) { resultado = leer[columna].ToString(); }
             conexion.Close();
             return resultado;
+        }
+
+        //METODO PARA LLENAR LA LISTA DE UN COMBOBOX
+        public ComboBox LLenarLista(ComboBox lista, string consulta, string columna)
+        {
+            conexion.Open();
+            SqlCommand comando = new SqlCommand(consulta, conexion);
+            SqlDataReader leer = comando.ExecuteReader();
+            while (leer.Read()) { lista.Items.Add(leer[columna].ToString().Trim()); }
+            conexion.Close();
+            return lista;
         }
     }
 }

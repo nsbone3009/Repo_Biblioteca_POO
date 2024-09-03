@@ -30,13 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAgregarODetallesGeneros));
             this.lbTituloVentana = new System.Windows.Forms.Label();
-            this.btnEditarCampos = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.btnGuardarCampos = new System.Windows.Forms.Button();
             this.cbEstado = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lbNombreAutor = new System.Windows.Forms.Label();
-            this.txtAutor = new System.Windows.Forms.TextBox();
+            this.txtGenero = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // lbTituloVentana
@@ -50,25 +49,6 @@
             this.lbTituloVentana.Size = new System.Drawing.Size(94, 24);
             this.lbTituloVentana.TabIndex = 74;
             this.lbTituloVentana.Text = "XXXXXX";
-            // 
-            // btnEditarCampos
-            // 
-            this.btnEditarCampos.BackColor = System.Drawing.Color.Transparent;
-            this.btnEditarCampos.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnEditarCampos.BackgroundImage")));
-            this.btnEditarCampos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEditarCampos.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnEditarCampos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnEditarCampos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnEditarCampos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditarCampos.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditarCampos.ForeColor = System.Drawing.Color.White;
-            this.btnEditarCampos.Location = new System.Drawing.Point(49, 262);
-            this.btnEditarCampos.Margin = new System.Windows.Forms.Padding(0, 3, 0, 3);
-            this.btnEditarCampos.Name = "btnEditarCampos";
-            this.btnEditarCampos.Size = new System.Drawing.Size(125, 40);
-            this.btnEditarCampos.TabIndex = 87;
-            this.btnEditarCampos.Text = "Editar";
-            this.btnEditarCampos.UseVisualStyleBackColor = false;
             // 
             // btnCerrar
             // 
@@ -101,21 +81,23 @@
             this.btnGuardarCampos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardarCampos.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardarCampos.ForeColor = System.Drawing.Color.White;
-            this.btnGuardarCampos.Location = new System.Drawing.Point(217, 262);
+            this.btnGuardarCampos.Location = new System.Drawing.Point(49, 262);
             this.btnGuardarCampos.Margin = new System.Windows.Forms.Padding(0, 3, 0, 3);
             this.btnGuardarCampos.Name = "btnGuardarCampos";
             this.btnGuardarCampos.Size = new System.Drawing.Size(125, 40);
             this.btnGuardarCampos.TabIndex = 85;
             this.btnGuardarCampos.Text = "Guardar";
             this.btnGuardarCampos.UseVisualStyleBackColor = false;
+            this.btnGuardarCampos.Click += new System.EventHandler(this.btnGuardarCampos_Click);
             // 
             // cbEstado
             // 
+            this.cbEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbEstado.FormattingEnabled = true;
             this.cbEstado.Items.AddRange(new object[] {
-            "Activo",
-            "Inactivo"});
+            "Inactivo",
+            "Activo"});
             this.cbEstado.Location = new System.Drawing.Point(49, 189);
             this.cbEstado.Name = "cbEstado";
             this.cbEstado.Size = new System.Drawing.Size(455, 37);
@@ -143,13 +125,13 @@
             this.lbNombreAutor.TabIndex = 82;
             this.lbNombreAutor.Text = "Nombre Genero";
             // 
-            // txtAutor
+            // txtGenero
             // 
-            this.txtAutor.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAutor.Location = new System.Drawing.Point(49, 91);
-            this.txtAutor.Name = "txtAutor";
-            this.txtAutor.Size = new System.Drawing.Size(455, 35);
-            this.txtAutor.TabIndex = 81;
+            this.txtGenero.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtGenero.Location = new System.Drawing.Point(49, 91);
+            this.txtGenero.Name = "txtGenero";
+            this.txtGenero.Size = new System.Drawing.Size(455, 35);
+            this.txtGenero.TabIndex = 81;
             // 
             // frmAgregarODetallesGeneros
             // 
@@ -157,13 +139,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Proyecto_Biblioteca_Poo.Properties.Resources.DETALLES_GENERO;
             this.ClientSize = new System.Drawing.Size(550, 360);
-            this.Controls.Add(this.btnEditarCampos);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.btnGuardarCampos);
             this.Controls.Add(this.cbEstado);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lbNombreAutor);
-            this.Controls.Add(this.txtAutor);
+            this.Controls.Add(this.txtGenero);
             this.Controls.Add(this.lbTituloVentana);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmAgregarODetallesGeneros";
@@ -177,12 +158,11 @@
         #endregion
 
         public System.Windows.Forms.Label lbTituloVentana;
-        public System.Windows.Forms.Button btnEditarCampos;
         public System.Windows.Forms.Button btnCerrar;
         public System.Windows.Forms.Button btnGuardarCampos;
-        private System.Windows.Forms.ComboBox cbEstado;
         public System.Windows.Forms.Label label1;
         public System.Windows.Forms.Label lbNombreAutor;
-        public System.Windows.Forms.TextBox txtAutor;
+        public System.Windows.Forms.TextBox txtGenero;
+        public System.Windows.Forms.ComboBox cbEstado;
     }
 }
