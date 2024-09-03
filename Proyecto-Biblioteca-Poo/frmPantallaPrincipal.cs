@@ -20,6 +20,9 @@ namespace Proyecto_Biblioteca_Poo
         static frmListaDevolucionesLibros frmListaDevolucionesLibros = new frmListaDevolucionesLibros();
         static frmConfiguracionSistema frmConfiguracion = new frmConfiguracionSistema();
         static FrmListaUsuarios frmlistaUsurs = new FrmListaUsuarios();
+        static frmListaCategorias frmlistaGen = new frmListaCategorias();
+        static frmListaAutores frmlistaAutor = new frmListaAutores();
+        static frmListaEditoriales frmlistaEditorial = new frmListaEditoriales();
         static bool clickLibros = false, clickLectores = false, clickAdministracion = false;
         private Timer timer;
         static DateTime fechaAviso;
@@ -65,7 +68,6 @@ namespace Proyecto_Biblioteca_Poo
                     {
                         csConexionSQL obj = new csConexionSQL();
                         obj.Update("Update Prestamos set aviso_ = 1 where cedula_ltr = '" + ced.ToString().Trim() + "' and fecha_devolucio_programada = '" + a.Trim() + "'");
-                        MessageBox.Show(ced.ToString().Trim() + "-" + a.Trim());
                         EnviarCorreo(correo.Trim(), nombre.Trim(), isbn.Trim());
                     }
                 }
@@ -76,7 +78,7 @@ namespace Proyecto_Biblioteca_Poo
             frmPantallaPrincipal obj = new frmPantallaPrincipal();
             csEmail email = new csEmail();
             email.Asunto = "Recordatorio de Entrega de Libro - Queda 1 dia";
-            email.Cuerpo = "Estimado/a " + nombre + ": Esperamos que se encuentre bien. \nLe recordamos que el libro de código [" + isbn + "] que tiene en préstamo se encuentra próximo a su fecha de vencimiento. \nLe resta 1 día para devolver el ejemplar* a nuestra biblioteca. \nPara evitar recargos y permitir que otros usuarios disfruten del mismo, le solicitamos que realice la devolución dentro del plazo establecido. \nSi necesita extender el préstamo o tiene alguna consulta, por favor, no dude en contactarnos. Estamos aquí para ayudarle. \nAgradecemos su atención y comprensión.Atentamente la Biblioteca " + obj.lbNombreEmpresa.Text;
+            email.Cuerpo = "Estimado/a " + nombre + ": \nEsperamos que se encuentre bien. \nLe recordamos que el libro de código [" + isbn + "] que tiene en préstamo se encuentra próximo a su fecha de vencimiento. \nLe resta 1 día para devolver el ejemplar* a nuestra biblioteca. \nPara evitar recargos y permitir que otros usuarios disfruten del mismo, le solicitamos que realice la devolución dentro del plazo establecido. \nSi necesita extender el préstamo o tiene alguna consulta, por favor, no dude en contactarnos. Estamos aquí para ayudarle. \nAgradecemos su atención y comprensión.Atentamente la Biblioteca " + obj.lbNombreEmpresa.Text;
             email.Receptor = correo.Trim();
             email.Con_Copia = "sanchezvera243@gmail.com";
             email.Enviar();
@@ -222,6 +224,22 @@ namespace Proyecto_Biblioteca_Poo
         {
             LlamarFormulario(frmlistaUsurs);
         }
+
+        private void lbCategoria_Click(object sender, EventArgs e)
+        {
+            LlamarFormulario(frmlistaGen);
+        }
+
+        private void lbAutores_Click(object sender, EventArgs e)
+        {
+            LlamarFormulario(frmlistaAutor);
+        }
+
+        private void lbEditorial_Click(object sender, EventArgs e)
+        {
+            LlamarFormulario(frmlistaEditorial);
+        }
+
         private void btnCerrarSesion_Click(object sender, EventArgs e)
         {
             new frmValidacionEntrada().Show();

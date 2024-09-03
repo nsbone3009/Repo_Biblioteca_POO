@@ -63,6 +63,16 @@ namespace Proyecto_Biblioteca_Poo.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap AUTOR {
+            get {
+                object obj = ResourceManager.GetObject("AUTOR", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap BaseDetallesOAgregarLector {
             get {
                 object obj = ResourceManager.GetObject("BaseDetallesOAgregarLector", resourceCulture);
@@ -76,6 +86,26 @@ namespace Proyecto_Biblioteca_Poo.Properties {
         internal static System.Drawing.Bitmap BaseListaLectores {
             get {
                 object obj = ResourceManager.GetObject("BaseListaLectores", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap EDITORIAL {
+            get {
+                object obj = ResourceManager.GetObject("EDITORIAL", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap GÉNERO__4_ {
+            get {
+                object obj = ResourceManager.GetObject("GÉNERO (4)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

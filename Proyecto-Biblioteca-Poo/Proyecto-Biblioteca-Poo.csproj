@@ -56,6 +56,24 @@
     <Compile Include="FrmAgregarUsuarios01.Designer.cs">
       <DependentUpon>FrmAgregarUsuarios01.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmListaAutores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListaAutores.Designer.cs">
+      <DependentUpon>frmListaAutores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmListaCategorias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListaCategorias.Designer.cs">
+      <DependentUpon>frmListaCategorias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmListaEditoriales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListaEditoriales.Designer.cs">
+      <DependentUpon>frmListaEditoriales.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmListaUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -164,6 +182,15 @@
     <EmbeddedResource Include="frmConfiguracionSistema.resx">
       <DependentUpon>frmConfiguracionSistema.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmListaAutores.resx">
+      <DependentUpon>frmListaAutores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListaCategorias.resx">
+      <DependentUpon>frmListaCategorias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListaEditoriales.resx">
+      <DependentUpon>frmListaEditoriales.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmListaUsuarios.resx">
       <DependentUpon>FrmListaUsuarios.cs</DependentUpon>
     </EmbeddedResource>
@@ -234,6 +261,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\BaseDetallesOAgregarLector.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GÉNERO %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AUTOR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EDITORIAL.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

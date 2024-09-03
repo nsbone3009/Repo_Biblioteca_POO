@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPantallaPrincipal));
+            this.plPantalla = new System.Windows.Forms.Panel();
             this.plBarraLateral = new System.Windows.Forms.Panel();
             this.lbReportes = new System.Windows.Forms.Label();
             this.lbCategoria = new System.Windows.Forms.Label();
@@ -46,10 +47,16 @@
             this.lbListaLibros = new System.Windows.Forms.Label();
             this.lbDevolucionesLibros = new System.Windows.Forms.Label();
             this.lbPrestamosLibros = new System.Windows.Forms.Label();
-            this.plPantalla = new System.Windows.Forms.Panel();
             this.plBarraLateral.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptboxLogo)).BeginInit();
             this.SuspendLayout();
+            // 
+            // plPantalla
+            // 
+            this.plPantalla.Location = new System.Drawing.Point(239, 0);
+            this.plPantalla.Name = "plPantalla";
+            this.plPantalla.Size = new System.Drawing.Size(785, 640);
+            this.plPantalla.TabIndex = 1;
             // 
             // plBarraLateral
             // 
@@ -97,9 +104,10 @@
             this.lbCategoria.ForeColor = System.Drawing.Color.White;
             this.lbCategoria.Location = new System.Drawing.Point(15, 468);
             this.lbCategoria.Name = "lbCategoria";
-            this.lbCategoria.Size = new System.Drawing.Size(122, 22);
+            this.lbCategoria.Size = new System.Drawing.Size(167, 22);
             this.lbCategoria.TabIndex = 17;
-            this.lbCategoria.Text = "    Categorias";
+            this.lbCategoria.Text = "    Género Literario";
+            this.lbCategoria.Click += new System.EventHandler(this.lbCategoria_Click);
             // 
             // lbEditorial
             // 
@@ -113,6 +121,7 @@
             this.lbEditorial.Size = new System.Drawing.Size(119, 22);
             this.lbEditorial.TabIndex = 16;
             this.lbEditorial.Text = "    Editoriales";
+            this.lbEditorial.Click += new System.EventHandler(this.lbEditorial_Click);
             // 
             // lbAutores
             // 
@@ -126,6 +135,7 @@
             this.lbAutores.Size = new System.Drawing.Size(95, 22);
             this.lbAutores.TabIndex = 15;
             this.lbAutores.Text = "    Autores";
+            this.lbAutores.Click += new System.EventHandler(this.lbAutores_Click);
             // 
             // lbUsuarios
             // 
@@ -310,13 +320,6 @@
             this.lbPrestamosLibros.TabIndex = 1;
             this.lbPrestamosLibros.Text = "- Prestamos";
             this.lbPrestamosLibros.Click += new System.EventHandler(this.lbPrestamosLibros_Click);
-            // 
-            // plPantalla
-            // 
-            this.plPantalla.Location = new System.Drawing.Point(239, 0);
-            this.plPantalla.Name = "plPantalla";
-            this.plPantalla.Size = new System.Drawing.Size(785, 640);
-            this.plPantalla.TabIndex = 1;
             // 
             // frmPantallaPrincipal
             // 
