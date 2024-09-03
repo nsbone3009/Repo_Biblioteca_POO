@@ -31,10 +31,10 @@ namespace Proyecto_Biblioteca_Poo
             frmLibros.btnAgregarPrestamo.Visible = false;
             frmLibros.btnModificarPrestamo.Visible = false;
             frmLibros.bandera = true;
+            frmLibros.btnCancelar.Visible = true;
             frmLibros.ShowDialog();
             this.Close();
         }
-
         private void btnDevolverLibros_Click(object sender, EventArgs e)
         {
             if (txtISBN.Text != "")
@@ -72,6 +72,10 @@ namespace Proyecto_Biblioteca_Poo
             txtFechaDevolucion.Text = string.Empty;
             txtCedula.Text = string.Empty;
             txtFechaActual.Text = string.Empty;
+        }
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

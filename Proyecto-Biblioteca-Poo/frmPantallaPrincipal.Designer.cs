@@ -30,6 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPantallaPrincipal));
             this.plBarraLateral = new System.Windows.Forms.Panel();
+            this.lbReportes = new System.Windows.Forms.Label();
+            this.lbCategoria = new System.Windows.Forms.Label();
+            this.lbEditorial = new System.Windows.Forms.Label();
+            this.lbAutores = new System.Windows.Forms.Label();
             this.lbUsuarios = new System.Windows.Forms.Label();
             this.btnLectores = new System.Windows.Forms.Button();
             this.btnLibros = new System.Windows.Forms.Button();
@@ -43,10 +47,6 @@
             this.lbDevolucionesLibros = new System.Windows.Forms.Label();
             this.lbPrestamosLibros = new System.Windows.Forms.Label();
             this.plPantalla = new System.Windows.Forms.Panel();
-            this.lbAutores = new System.Windows.Forms.Label();
-            this.lbEditorial = new System.Windows.Forms.Label();
-            this.lbCategoria = new System.Windows.Forms.Label();
-            this.lbReportes = new System.Windows.Forms.Label();
             this.plBarraLateral.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptboxLogo)).BeginInit();
             this.SuspendLayout();
@@ -74,6 +74,58 @@
             this.plBarraLateral.Name = "plBarraLateral";
             this.plBarraLateral.Size = new System.Drawing.Size(239, 640);
             this.plBarraLateral.TabIndex = 0;
+            // 
+            // lbReportes
+            // 
+            this.lbReportes.AutoSize = true;
+            this.lbReportes.BackColor = System.Drawing.Color.Transparent;
+            this.lbReportes.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbReportes.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbReportes.ForeColor = System.Drawing.Color.White;
+            this.lbReportes.Location = new System.Drawing.Point(15, 555);
+            this.lbReportes.Name = "lbReportes";
+            this.lbReportes.Size = new System.Drawing.Size(100, 22);
+            this.lbReportes.TabIndex = 18;
+            this.lbReportes.Text = "- Reportes";
+            // 
+            // lbCategoria
+            // 
+            this.lbCategoria.AutoSize = true;
+            this.lbCategoria.BackColor = System.Drawing.Color.Transparent;
+            this.lbCategoria.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbCategoria.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCategoria.ForeColor = System.Drawing.Color.White;
+            this.lbCategoria.Location = new System.Drawing.Point(15, 468);
+            this.lbCategoria.Name = "lbCategoria";
+            this.lbCategoria.Size = new System.Drawing.Size(122, 22);
+            this.lbCategoria.TabIndex = 17;
+            this.lbCategoria.Text = "    Categorias";
+            // 
+            // lbEditorial
+            // 
+            this.lbEditorial.AutoSize = true;
+            this.lbEditorial.BackColor = System.Drawing.Color.Transparent;
+            this.lbEditorial.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbEditorial.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbEditorial.ForeColor = System.Drawing.Color.White;
+            this.lbEditorial.Location = new System.Drawing.Point(14, 446);
+            this.lbEditorial.Name = "lbEditorial";
+            this.lbEditorial.Size = new System.Drawing.Size(119, 22);
+            this.lbEditorial.TabIndex = 16;
+            this.lbEditorial.Text = "    Editoriales";
+            // 
+            // lbAutores
+            // 
+            this.lbAutores.AutoSize = true;
+            this.lbAutores.BackColor = System.Drawing.Color.Transparent;
+            this.lbAutores.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbAutores.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbAutores.ForeColor = System.Drawing.Color.White;
+            this.lbAutores.Location = new System.Drawing.Point(14, 424);
+            this.lbAutores.Name = "lbAutores";
+            this.lbAutores.Size = new System.Drawing.Size(95, 22);
+            this.lbAutores.TabIndex = 15;
+            this.lbAutores.Text = "    Autores";
             // 
             // lbUsuarios
             // 
@@ -169,12 +221,12 @@
             this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrarSesion.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCerrarSesion.ForeColor = System.Drawing.Color.White;
-            this.btnCerrarSesion.Location = new System.Drawing.Point(86, 597);
+            this.btnCerrarSesion.Location = new System.Drawing.Point(51, 588);
             this.btnCerrarSesion.Margin = new System.Windows.Forms.Padding(0, 3, 0, 3);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
-            this.btnCerrarSesion.Size = new System.Drawing.Size(66, 31);
+            this.btnCerrarSesion.Size = new System.Drawing.Size(113, 40);
             this.btnCerrarSesion.TabIndex = 12;
-            this.btnCerrarSesion.Text = "Exit";
+            this.btnCerrarSesion.Text = "Salir";
             this.btnCerrarSesion.UseVisualStyleBackColor = false;
             this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
             // 
@@ -265,58 +317,6 @@
             this.plPantalla.Name = "plPantalla";
             this.plPantalla.Size = new System.Drawing.Size(785, 640);
             this.plPantalla.TabIndex = 1;
-            // 
-            // lbAutores
-            // 
-            this.lbAutores.AutoSize = true;
-            this.lbAutores.BackColor = System.Drawing.Color.Transparent;
-            this.lbAutores.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lbAutores.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbAutores.ForeColor = System.Drawing.Color.White;
-            this.lbAutores.Location = new System.Drawing.Point(14, 424);
-            this.lbAutores.Name = "lbAutores";
-            this.lbAutores.Size = new System.Drawing.Size(86, 22);
-            this.lbAutores.TabIndex = 15;
-            this.lbAutores.Text = "- Autores";
-            // 
-            // lbEditorial
-            // 
-            this.lbEditorial.AutoSize = true;
-            this.lbEditorial.BackColor = System.Drawing.Color.Transparent;
-            this.lbEditorial.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lbEditorial.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbEditorial.ForeColor = System.Drawing.Color.White;
-            this.lbEditorial.Location = new System.Drawing.Point(14, 446);
-            this.lbEditorial.Name = "lbEditorial";
-            this.lbEditorial.Size = new System.Drawing.Size(110, 22);
-            this.lbEditorial.TabIndex = 16;
-            this.lbEditorial.Text = "- Editoriales";
-            // 
-            // lbCategoria
-            // 
-            this.lbCategoria.AutoSize = true;
-            this.lbCategoria.BackColor = System.Drawing.Color.Transparent;
-            this.lbCategoria.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lbCategoria.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCategoria.ForeColor = System.Drawing.Color.White;
-            this.lbCategoria.Location = new System.Drawing.Point(15, 468);
-            this.lbCategoria.Name = "lbCategoria";
-            this.lbCategoria.Size = new System.Drawing.Size(113, 22);
-            this.lbCategoria.TabIndex = 17;
-            this.lbCategoria.Text = "- Categorias";
-            // 
-            // lbReportes
-            // 
-            this.lbReportes.AutoSize = true;
-            this.lbReportes.BackColor = System.Drawing.Color.Transparent;
-            this.lbReportes.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lbReportes.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbReportes.ForeColor = System.Drawing.Color.White;
-            this.lbReportes.Location = new System.Drawing.Point(15, 555);
-            this.lbReportes.Name = "lbReportes";
-            this.lbReportes.Size = new System.Drawing.Size(100, 22);
-            this.lbReportes.TabIndex = 18;
-            this.lbReportes.Text = "- Reportes";
             // 
             // frmPantallaPrincipal
             // 

@@ -7,12 +7,20 @@
       "RelativeMoniker": "D:0:0:{163767A6-01AB-445D-85D3-F11D798F6F92}|Proyecto-Biblioteca-Poo\\Proyecto-Biblioteca-Poo.csproj|solutionrelative:proyecto-biblioteca-poo\\frmagregarodetallesdevolucioneslibros.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{163767A6-01AB-445D-85D3-F11D798F6F92}|Proyecto-Biblioteca-Poo\\Proyecto-Biblioteca-Poo.csproj|c:\\users\\scarl\\onedrive\\escritorio\\prueba 400\\repo_biblioteca_poo\\proyecto-biblioteca-poo\\frmlistaprestamoslibros.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{163767A6-01AB-445D-85D3-F11D798F6F92}|Proyecto-Biblioteca-Poo\\Proyecto-Biblioteca-Poo.csproj|solutionrelative:proyecto-biblioteca-poo\\frmlistaprestamoslibros.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{163767A6-01AB-445D-85D3-F11D798F6F92}|Proyecto-Biblioteca-Poo\\Proyecto-Biblioteca-Poo.csproj|c:\\users\\scarl\\onedrive\\escritorio\\prueba 400\\repo_biblioteca_poo\\proyecto-biblioteca-poo\\frmlistaprestamoslibros.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{163767A6-01AB-445D-85D3-F11D798F6F92}|Proyecto-Biblioteca-Poo\\Proyecto-Biblioteca-Poo.csproj|solutionrelative:proyecto-biblioteca-poo\\frmlistaprestamoslibros.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{163767A6-01AB-445D-85D3-F11D798F6F92}|Proyecto-Biblioteca-Poo\\Proyecto-Biblioteca-Poo.csproj|c:\\users\\scarl\\onedrive\\escritorio\\prueba 400\\repo_biblioteca_poo\\proyecto-biblioteca-poo\\frmagregarodetallesdevolucioneslibros.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{163767A6-01AB-445D-85D3-F11D798F6F92}|Proyecto-Biblioteca-Poo\\Proyecto-Biblioteca-Poo.csproj|solutionrelative:proyecto-biblioteca-poo\\frmagregarodetallesdevolucioneslibros.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{163767A6-01AB-445D-85D3-F11D798F6F92}|Proyecto-Biblioteca-Poo\\Proyecto-Biblioteca-Poo.csproj|c:\\users\\scarl\\onedrive\\escritorio\\prueba 400\\repo_biblioteca_poo\\proyecto-biblioteca-poo\\frmlistadevolucioneslibros.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{163767A6-01AB-445D-85D3-F11D798F6F92}|Proyecto-Biblioteca-Poo\\Proyecto-Biblioteca-Poo.csproj|solutionrelative:proyecto-biblioteca-poo\\frmlistadevolucioneslibros.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{163767A6-01AB-445D-85D3-F11D798F6F92}|Proyecto-Biblioteca-Poo\\Proyecto-Biblioteca-Poo.csproj|c:\\users\\scarl\\onedrive\\escritorio\\prueba 400\\repo_biblioteca_poo\\proyecto-biblioteca-poo\\frmlistadevolucioneslibros.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{163767A6-01AB-445D-85D3-F11D798F6F92}|Proyecto-Biblioteca-Poo\\Proyecto-Biblioteca-Poo.csproj|solutionrelative:proyecto-biblioteca-poo\\frmlistadevolucioneslibros.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,31 +30,18 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "frmListaPrestamosLibros.cs",
+              "Title": "frmListaPrestamosLibros.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\scarl\\OneDrive\\Escritorio\\Prueba 400\\Repo_Biblioteca_POO\\Proyecto-Biblioteca-Poo\\frmListaPrestamosLibros.cs",
               "RelativeDocumentMoniker": "Proyecto-Biblioteca-Poo\\frmListaPrestamosLibros.cs",
-              "ToolTip": "C:\\Users\\scarl\\OneDrive\\Escritorio\\Prueba 400\\Repo_Biblioteca_POO\\Proyecto-Biblioteca-Poo\\frmListaPrestamosLibros.cs",
-              "RelativeToolTip": "Proyecto-Biblioteca-Poo\\frmListaPrestamosLibros.cs",
-              "ViewState": "AQIAAEQAAACAMzMzM3MrwFgAAAAOAAAA",
+              "ToolTip": "C:\\Users\\scarl\\OneDrive\\Escritorio\\Prueba 400\\Repo_Biblioteca_POO\\Proyecto-Biblioteca-Poo\\frmListaPrestamosLibros.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Proyecto-Biblioteca-Poo\\frmListaPrestamosLibros.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-03T00:56:37.397Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "frmAgregarODetallesDevolucionesLibros.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\scarl\\OneDrive\\Escritorio\\Prueba 400\\Repo_Biblioteca_POO\\Proyecto-Biblioteca-Poo\\frmAgregarODetallesDevolucionesLibros.cs",
-              "RelativeDocumentMoniker": "Proyecto-Biblioteca-Poo\\frmAgregarODetallesDevolucionesLibros.cs",
-              "ToolTip": "C:\\Users\\scarl\\OneDrive\\Escritorio\\Prueba 400\\Repo_Biblioteca_POO\\Proyecto-Biblioteca-Poo\\frmAgregarODetallesDevolucionesLibros.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Proyecto-Biblioteca-Poo\\frmAgregarODetallesDevolucionesLibros.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-03T00:09:40.439Z",
+              "WhenOpened": "2024-09-03T02:19:04.211Z",
               "EditorCaption": " [Dise\u00F1o]"
             },
             {
@@ -55,11 +50,48 @@
               "Title": "frmAgregarODetallesDevolucionesLibros.cs",
               "DocumentMoniker": "C:\\Users\\scarl\\OneDrive\\Escritorio\\Prueba 400\\Repo_Biblioteca_POO\\Proyecto-Biblioteca-Poo\\frmAgregarODetallesDevolucionesLibros.cs",
               "RelativeDocumentMoniker": "Proyecto-Biblioteca-Poo\\frmAgregarODetallesDevolucionesLibros.cs",
-              "ToolTip": "C:\\Users\\scarl\\OneDrive\\Escritorio\\Prueba 400\\Repo_Biblioteca_POO\\Proyecto-Biblioteca-Poo\\frmAgregarODetallesDevolucionesLibros.cs",
-              "RelativeToolTip": "Proyecto-Biblioteca-Poo\\frmAgregarODetallesDevolucionesLibros.cs",
-              "ViewState": "AQIAACgAAACAamZmZiYmwD4AAAAhAAAA",
+              "ToolTip": "C:\\Users\\scarl\\OneDrive\\Escritorio\\Prueba 400\\Repo_Biblioteca_POO\\Proyecto-Biblioteca-Poo\\frmAgregarODetallesDevolucionesLibros.cs*",
+              "RelativeToolTip": "Proyecto-Biblioteca-Poo\\frmAgregarODetallesDevolucionesLibros.cs*",
+              "ViewState": "AQIAAA0AAAAAAAAAAAASwCAAAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-03T00:09:59.484Z",
+              "WhenOpened": "2024-09-03T02:17:02.358Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "frmAgregarODetallesDevolucionesLibros.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\scarl\\OneDrive\\Escritorio\\Prueba 400\\Repo_Biblioteca_POO\\Proyecto-Biblioteca-Poo\\frmAgregarODetallesDevolucionesLibros.cs",
+              "RelativeDocumentMoniker": "Proyecto-Biblioteca-Poo\\frmAgregarODetallesDevolucionesLibros.cs",
+              "ToolTip": "C:\\Users\\scarl\\OneDrive\\Escritorio\\Prueba 400\\Repo_Biblioteca_POO\\Proyecto-Biblioteca-Poo\\frmAgregarODetallesDevolucionesLibros.cs [Dise\u00F1o]*",
+              "RelativeToolTip": "Proyecto-Biblioteca-Poo\\frmAgregarODetallesDevolucionesLibros.cs [Dise\u00F1o]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-03T02:18:39.693Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "frmListaDevolucionesLibros.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\scarl\\OneDrive\\Escritorio\\Prueba 400\\Repo_Biblioteca_POO\\Proyecto-Biblioteca-Poo\\frmListaDevolucionesLibros.cs",
+              "RelativeDocumentMoniker": "Proyecto-Biblioteca-Poo\\frmListaDevolucionesLibros.cs",
+              "ToolTip": "C:\\Users\\scarl\\OneDrive\\Escritorio\\Prueba 400\\Repo_Biblioteca_POO\\Proyecto-Biblioteca-Poo\\frmListaDevolucionesLibros.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Proyecto-Biblioteca-Poo\\frmListaDevolucionesLibros.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-03T02:18:30.702Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "frmListaDevolucionesLibros.cs",
+              "DocumentMoniker": "C:\\Users\\scarl\\OneDrive\\Escritorio\\Prueba 400\\Repo_Biblioteca_POO\\Proyecto-Biblioteca-Poo\\frmListaDevolucionesLibros.cs",
+              "RelativeDocumentMoniker": "Proyecto-Biblioteca-Poo\\frmListaDevolucionesLibros.cs",
+              "ToolTip": "C:\\Users\\scarl\\OneDrive\\Escritorio\\Prueba 400\\Repo_Biblioteca_POO\\Proyecto-Biblioteca-Poo\\frmListaDevolucionesLibros.cs",
+              "RelativeToolTip": "Proyecto-Biblioteca-Poo\\frmListaDevolucionesLibros.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAASwBUAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-03T02:00:26.719Z",
               "EditorCaption": ""
             }
           ]

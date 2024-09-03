@@ -42,13 +42,13 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.txtResume = new System.Windows.Forms.TextBox();
-            this.btnCerrar = new System.Windows.Forms.Button();
             this.btnDevolverLibros = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.txtCedula = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtFechaActual = new System.Windows.Forms.TextBox();
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lbLibros
@@ -59,9 +59,9 @@
             this.lbLibros.ForeColor = System.Drawing.Color.White;
             this.lbLibros.Location = new System.Drawing.Point(97, 28);
             this.lbLibros.Name = "lbLibros";
-            this.lbLibros.Size = new System.Drawing.Size(66, 24);
+            this.lbLibros.Size = new System.Drawing.Size(250, 24);
             this.lbLibros.TabIndex = 10;
-            this.lbLibros.Text = "XXXX";
+            this.lbLibros.Text = "DEVOLUCION DE LIBRO";
             // 
             // label5
             // 
@@ -180,28 +180,8 @@
             this.txtResume.Location = new System.Drawing.Point(45, 384);
             this.txtResume.Multiline = true;
             this.txtResume.Name = "txtResume";
-            this.txtResume.Size = new System.Drawing.Size(507, 92);
+            this.txtResume.Size = new System.Drawing.Size(507, 138);
             this.txtResume.TabIndex = 65;
-            // 
-            // btnCerrar
-            // 
-            this.btnCerrar.BackColor = System.Drawing.Color.Transparent;
-            this.btnCerrar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCerrar.BackgroundImage")));
-            this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCerrar.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnCerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrar.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCerrar.ForeColor = System.Drawing.Color.White;
-            this.btnCerrar.Location = new System.Drawing.Point(714, 20);
-            this.btnCerrar.Margin = new System.Windows.Forms.Padding(0, 3, 0, 3);
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(43, 40);
-            this.btnCerrar.TabIndex = 69;
-            this.btnCerrar.Text = "X";
-            this.btnCerrar.UseVisualStyleBackColor = false;
-            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // btnDevolverLibros
             // 
@@ -212,12 +192,12 @@
             this.btnDevolverLibros.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnDevolverLibros.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnDevolverLibros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDevolverLibros.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDevolverLibros.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDevolverLibros.ForeColor = System.Drawing.Color.White;
-            this.btnDevolverLibros.Location = new System.Drawing.Point(590, 450);
+            this.btnDevolverLibros.Location = new System.Drawing.Point(590, 434);
             this.btnDevolverLibros.Margin = new System.Windows.Forms.Padding(0, 3, 0, 3);
             this.btnDevolverLibros.Name = "btnDevolverLibros";
-            this.btnDevolverLibros.Size = new System.Drawing.Size(124, 62);
+            this.btnDevolverLibros.Size = new System.Drawing.Size(124, 48);
             this.btnDevolverLibros.TabIndex = 68;
             this.btnDevolverLibros.Text = "Devolver Libro";
             this.btnDevolverLibros.UseVisualStyleBackColor = false;
@@ -231,11 +211,11 @@
             this.btnBuscar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnBuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscar.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
-            this.btnBuscar.Location = new System.Drawing.Point(590, 370);
+            this.btnBuscar.Location = new System.Drawing.Point(590, 384);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(124, 62);
+            this.btnBuscar.Size = new System.Drawing.Size(124, 44);
             this.btnBuscar.TabIndex = 70;
             this.btnBuscar.Text = "Buscar Prestamo";
             this.btnBuscar.UseVisualStyleBackColor = false;
@@ -281,18 +261,38 @@
             this.txtFechaActual.Size = new System.Drawing.Size(208, 35);
             this.txtFechaActual.TabIndex = 73;
             // 
+            // btnCancelar
+            // 
+            this.btnCancelar.BackColor = System.Drawing.Color.Transparent;
+            this.btnCancelar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCancelar.BackgroundImage")));
+            this.btnCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCancelar.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnCancelar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.ForeColor = System.Drawing.Color.White;
+            this.btnCancelar.Location = new System.Drawing.Point(589, 488);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(0, 3, 0, 3);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(125, 40);
+            this.btnCancelar.TabIndex = 75;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
             // frmAgregarODetallesDevolucionesLibros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(780, 560);
+            this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtFechaActual);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtCedula);
             this.Controls.Add(this.btnBuscar);
-            this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.btnDevolverLibros);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.txtResume);
@@ -331,12 +331,12 @@
         public System.Windows.Forms.Label label4;
         public System.Windows.Forms.Label label9;
         public System.Windows.Forms.TextBox txtResume;
-        public System.Windows.Forms.Button btnCerrar;
         public System.Windows.Forms.Button btnDevolverLibros;
         private System.Windows.Forms.Button btnBuscar;
         public System.Windows.Forms.Label label7;
         public System.Windows.Forms.TextBox txtCedula;
         public System.Windows.Forms.Label label3;
         public System.Windows.Forms.TextBox txtFechaActual;
+        public System.Windows.Forms.Button btnCancelar;
     }
 }
