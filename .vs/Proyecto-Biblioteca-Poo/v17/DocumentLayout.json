@@ -1,18 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\scarl\\OneDrive\\Escritorio\\Prueba 400\\Repo_Biblioteca_POO\\",
+  "WorkspaceRootPath": "C:\\Users\\Jeremy Jaramillo\\Desktop\\REPOSITORIO\\Repo_Biblioteca_POO\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{163767A6-01AB-445D-85D3-F11D798F6F92}|Proyecto-Biblioteca-Poo\\Proyecto-Biblioteca-Poo.csproj|c:\\users\\scarl\\onedrive\\escritorio\\prueba 400\\repo_biblioteca_poo\\proyecto-biblioteca-poo\\frmagregarodetallesdevolucioneslibros.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{163767A6-01AB-445D-85D3-F11D798F6F92}|Proyecto-Biblioteca-Poo\\Proyecto-Biblioteca-Poo.csproj|solutionrelative:proyecto-biblioteca-poo\\frmagregarodetallesdevolucioneslibros.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{163767A6-01AB-445D-85D3-F11D798F6F92}|Proyecto-Biblioteca-Poo\\Proyecto-Biblioteca-Poo.csproj|c:\\users\\jeremy jaramillo\\desktop\\repositorio\\repo_biblioteca_poo\\proyecto-biblioteca-poo\\csconexionsql.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{163767A6-01AB-445D-85D3-F11D798F6F92}|Proyecto-Biblioteca-Poo\\Proyecto-Biblioteca-Poo.csproj|solutionrelative:proyecto-biblioteca-poo\\csconexionsql.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{163767A6-01AB-445D-85D3-F11D798F6F92}|Proyecto-Biblioteca-Poo\\Proyecto-Biblioteca-Poo.csproj|c:\\users\\scarl\\onedrive\\escritorio\\prueba 400\\repo_biblioteca_poo\\proyecto-biblioteca-poo\\frmlistaprestamoslibros.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{163767A6-01AB-445D-85D3-F11D798F6F92}|Proyecto-Biblioteca-Poo\\Proyecto-Biblioteca-Poo.csproj|solutionrelative:proyecto-biblioteca-poo\\frmlistaprestamoslibros.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{163767A6-01AB-445D-85D3-F11D798F6F92}|Proyecto-Biblioteca-Poo\\Proyecto-Biblioteca-Poo.csproj|c:\\users\\jeremy jaramillo\\desktop\\repositorio\\repo_biblioteca_poo\\proyecto-biblioteca-poo\\frmagregarodetalleslibros.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{163767A6-01AB-445D-85D3-F11D798F6F92}|Proyecto-Biblioteca-Poo\\Proyecto-Biblioteca-Poo.csproj|solutionrelative:proyecto-biblioteca-poo\\frmagregarodetalleslibros.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{163767A6-01AB-445D-85D3-F11D798F6F92}|Proyecto-Biblioteca-Poo\\Proyecto-Biblioteca-Poo.csproj|c:\\users\\scarl\\onedrive\\escritorio\\prueba 400\\repo_biblioteca_poo\\proyecto-biblioteca-poo\\frmagregarodetallesdevolucioneslibros.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{163767A6-01AB-445D-85D3-F11D798F6F92}|Proyecto-Biblioteca-Poo\\Proyecto-Biblioteca-Poo.csproj|solutionrelative:proyecto-biblioteca-poo\\frmagregarodetallesdevolucioneslibros.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{163767A6-01AB-445D-85D3-F11D798F6F92}|Proyecto-Biblioteca-Poo\\Proyecto-Biblioteca-Poo.csproj|c:\\users\\jeremy jaramillo\\desktop\\repositorio\\repo_biblioteca_poo\\proyecto-biblioteca-poo\\frmagregarodetalleslibros.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{163767A6-01AB-445D-85D3-F11D798F6F92}|Proyecto-Biblioteca-Poo\\Proyecto-Biblioteca-Poo.csproj|solutionrelative:proyecto-biblioteca-poo\\frmagregarodetalleslibros.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,45 +22,49 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "csConexionSQL.cs",
+              "DocumentMoniker": "C:\\Users\\Jeremy Jaramillo\\Desktop\\REPOSITORIO\\Repo_Biblioteca_POO\\Proyecto-Biblioteca-Poo\\csConexionSQL.cs",
+              "RelativeDocumentMoniker": "Proyecto-Biblioteca-Poo\\csConexionSQL.cs",
+              "ToolTip": "C:\\Users\\Jeremy Jaramillo\\Desktop\\REPOSITORIO\\Repo_Biblioteca_POO\\Proyecto-Biblioteca-Poo\\csConexionSQL.cs",
+              "RelativeToolTip": "Proyecto-Biblioteca-Poo\\csConexionSQL.cs",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAWwA4AAACgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-03T02:13:01.421Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "frmListaPrestamosLibros.cs",
-              "DocumentMoniker": "C:\\Users\\scarl\\OneDrive\\Escritorio\\Prueba 400\\Repo_Biblioteca_POO\\Proyecto-Biblioteca-Poo\\frmListaPrestamosLibros.cs",
-              "RelativeDocumentMoniker": "Proyecto-Biblioteca-Poo\\frmListaPrestamosLibros.cs",
-              "ToolTip": "C:\\Users\\scarl\\OneDrive\\Escritorio\\Prueba 400\\Repo_Biblioteca_POO\\Proyecto-Biblioteca-Poo\\frmListaPrestamosLibros.cs",
-              "RelativeToolTip": "Proyecto-Biblioteca-Poo\\frmListaPrestamosLibros.cs",
-              "ViewState": "AQIAAEQAAACAMzMzM3MrwFgAAAAOAAAA",
+              "Title": "frmAgregarODetallesLibros.cs",
+              "DocumentMoniker": "C:\\Users\\Jeremy Jaramillo\\Desktop\\REPOSITORIO\\Repo_Biblioteca_POO\\Proyecto-Biblioteca-Poo\\frmAgregarODetallesLibros.cs",
+              "RelativeDocumentMoniker": "Proyecto-Biblioteca-Poo\\frmAgregarODetallesLibros.cs",
+              "ToolTip": "C:\\Users\\Jeremy Jaramillo\\Desktop\\REPOSITORIO\\Repo_Biblioteca_POO\\Proyecto-Biblioteca-Poo\\frmAgregarODetallesLibros.cs",
+              "RelativeToolTip": "Proyecto-Biblioteca-Poo\\frmAgregarODetallesLibros.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAE8AAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-03T00:56:37.397Z",
+              "WhenOpened": "2024-09-03T00:54:20.222Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "frmAgregarODetallesDevolucionesLibros.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\scarl\\OneDrive\\Escritorio\\Prueba 400\\Repo_Biblioteca_POO\\Proyecto-Biblioteca-Poo\\frmAgregarODetallesDevolucionesLibros.cs",
-              "RelativeDocumentMoniker": "Proyecto-Biblioteca-Poo\\frmAgregarODetallesDevolucionesLibros.cs",
-              "ToolTip": "C:\\Users\\scarl\\OneDrive\\Escritorio\\Prueba 400\\Repo_Biblioteca_POO\\Proyecto-Biblioteca-Poo\\frmAgregarODetallesDevolucionesLibros.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Proyecto-Biblioteca-Poo\\frmAgregarODetallesDevolucionesLibros.cs [Dise\u00F1o]",
+              "Title": "frmAgregarODetallesLibros.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Jeremy Jaramillo\\Desktop\\REPOSITORIO\\Repo_Biblioteca_POO\\Proyecto-Biblioteca-Poo\\frmAgregarODetallesLibros.cs",
+              "RelativeDocumentMoniker": "Proyecto-Biblioteca-Poo\\frmAgregarODetallesLibros.cs",
+              "ToolTip": "C:\\Users\\Jeremy Jaramillo\\Desktop\\REPOSITORIO\\Repo_Biblioteca_POO\\Proyecto-Biblioteca-Poo\\frmAgregarODetallesLibros.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Proyecto-Biblioteca-Poo\\frmAgregarODetallesLibros.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-03T00:09:40.439Z",
+              "WhenOpened": "2024-09-03T00:54:16.85Z",
               "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "frmAgregarODetallesDevolucionesLibros.cs",
-              "DocumentMoniker": "C:\\Users\\scarl\\OneDrive\\Escritorio\\Prueba 400\\Repo_Biblioteca_POO\\Proyecto-Biblioteca-Poo\\frmAgregarODetallesDevolucionesLibros.cs",
-              "RelativeDocumentMoniker": "Proyecto-Biblioteca-Poo\\frmAgregarODetallesDevolucionesLibros.cs",
-              "ToolTip": "C:\\Users\\scarl\\OneDrive\\Escritorio\\Prueba 400\\Repo_Biblioteca_POO\\Proyecto-Biblioteca-Poo\\frmAgregarODetallesDevolucionesLibros.cs",
-              "RelativeToolTip": "Proyecto-Biblioteca-Poo\\frmAgregarODetallesDevolucionesLibros.cs",
-              "ViewState": "AQIAACgAAACAamZmZiYmwD4AAAAhAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-03T00:09:59.484Z",
-              "EditorCaption": ""
             }
           ]
         }
