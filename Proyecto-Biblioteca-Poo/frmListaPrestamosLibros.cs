@@ -68,7 +68,29 @@ namespace Proyecto_Biblioteca_Poo
 
         private void dgvPrestamos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (bandera==true)
+
+            //this.Close();
+        }
+
+        private void txtBuscar_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (txtBuscar.Text.Length > 4)
+            {
+                dgvPrestamos.DataSource = database.MostrarRegistros("SELECT id_ptm as [ID Prestamo], cedula_ltr as [Cédula Lector], isbn_lb as [ISBN Libro], fecha_prestamo as [Fecha Préstamo], fecha_devolucio_programada as [Fecha devolucion] FROM Prestamos where estado_=1 and CONVERT(varchar,cedula_ltr) like '%" + txtBuscar.Text + "%'  or isbn_lb like '%" + txtBuscar.Text + "%'");
+            }
+
+            if (txtBuscar.Text.Length == 0)
+                CargarDatos();
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void dgvPrestamos_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (bandera == true)
             {
                 frmAgregarODetallesDevolucionesLibros datitos = new frmAgregarODetallesDevolucionesLibros();
                 string consulta = dgvPrestamos.Rows[e.RowIndex].Cells[2].Value.ToString();
@@ -87,18 +109,6 @@ namespace Proyecto_Biblioteca_Poo
                     datitos.ShowDialog();
                 }
             }
-            //this.Close();
-        }
-
-        private void txtBuscar_KeyUp(object sender, KeyEventArgs e)
-        {
-            if (txtBuscar.Text.Length > 4)
-            {
-                dgvPrestamos.DataSource = database.MostrarRegistros("SELECT id_ptm as [ID Prestamo], cedula_ltr as [Cédula Lector], isbn_lb as [ISBN Libro], fecha_prestamo as [Fecha Préstamo], fecha_devolucio_programada as [Fecha devolucion] FROM Prestamos where estado_=1 and CONVERT(varchar,cedula_ltr) like '%" + txtBuscar.Text + "%'  or isbn_lb like '%" + txtBuscar.Text + "%'");
-            }
-
-            if (txtBuscar.Text.Length == 0)
-                CargarDatos();
         }
     }
 }

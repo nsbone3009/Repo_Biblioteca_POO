@@ -45,8 +45,8 @@ namespace Proyecto_Biblioteca_Poo
                 obj.Update("update Prestamos set estado_ = 0 where isbn_lb =  '" + txtISBN.Text.Trim() + "'");
                 ObtenerDato("select cantidad_lb from Libros where isbn_lb =  '" + txtISBN.Text.Trim() + "'", txtISBN.Text.Trim());
                 MessageBox.Show("Libro devuelto correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                Limpiar_Y_Cargar();
+                //Limpiar_Y_Cargar();
+                this.Close();
             }
             else
                 MessageBox.Show("Primero seleccione un libro.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
