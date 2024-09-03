@@ -28,15 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmListaAutores));
             this.lbAutor = new System.Windows.Forms.Label();
-            this.dgvPrestamos = new System.Windows.Forms.DataGridView();
+            this.dgvAutores = new System.Windows.Forms.DataGridView();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.txtBuscar = new System.Windows.Forms.TextBox();
-            this.btnModificar = new System.Windows.Forms.Button();
             this.btnAgregarLibro = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPrestamos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAutores)).BeginInit();
             this.SuspendLayout();
             // 
             // lbAutor
@@ -51,30 +50,31 @@
             this.lbAutor.TabIndex = 3;
             this.lbAutor.Text = "AUTOR";
             // 
-            // dgvPrestamos
+            // dgvAutores
             // 
-            this.dgvPrestamos.AllowUserToAddRows = false;
-            this.dgvPrestamos.AllowUserToDeleteRows = false;
-            this.dgvPrestamos.AllowUserToResizeColumns = false;
-            this.dgvPrestamos.AllowUserToResizeRows = false;
-            this.dgvPrestamos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvPrestamos.BackgroundColor = System.Drawing.SystemColors.Window;
-            this.dgvPrestamos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvPrestamos.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvPrestamos.Location = new System.Drawing.Point(23, 189);
-            this.dgvPrestamos.Name = "dgvPrestamos";
-            this.dgvPrestamos.ReadOnly = true;
-            this.dgvPrestamos.RowHeadersVisible = false;
-            this.dgvPrestamos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPrestamos.Size = new System.Drawing.Size(737, 335);
-            this.dgvPrestamos.TabIndex = 17;
+            this.dgvAutores.AllowUserToAddRows = false;
+            this.dgvAutores.AllowUserToDeleteRows = false;
+            this.dgvAutores.AllowUserToResizeColumns = false;
+            this.dgvAutores.AllowUserToResizeRows = false;
+            this.dgvAutores.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvAutores.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.dgvAutores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvAutores.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvAutores.Location = new System.Drawing.Point(23, 189);
+            this.dgvAutores.Name = "dgvAutores";
+            this.dgvAutores.ReadOnly = true;
+            this.dgvAutores.RowHeadersVisible = false;
+            this.dgvAutores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvAutores.Size = new System.Drawing.Size(737, 335);
+            this.dgvAutores.TabIndex = 17;
+            this.dgvAutores.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPrestamos_CellContentDoubleClick);
             // 
             // btnBuscar
             // 
@@ -101,23 +101,6 @@
             this.txtBuscar.Size = new System.Drawing.Size(643, 35);
             this.txtBuscar.TabIndex = 15;
             // 
-            // btnModificar
-            // 
-            this.btnModificar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnModificar.BackgroundImage")));
-            this.btnModificar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnModificar.FlatAppearance.BorderSize = 0;
-            this.btnModificar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnModificar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModificar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificar.ForeColor = System.Drawing.Color.White;
-            this.btnModificar.Location = new System.Drawing.Point(235, 550);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(180, 50);
-            this.btnModificar.TabIndex = 19;
-            this.btnModificar.Text = "MODIFICAR";
-            this.btnModificar.UseVisualStyleBackColor = true;
-            // 
             // btnAgregarLibro
             // 
             this.btnAgregarLibro.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAgregarLibro.BackgroundImage")));
@@ -142,9 +125,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Proyecto_Biblioteca_Poo.Properties.Resources.AUTOR;
             this.ClientSize = new System.Drawing.Size(785, 640);
-            this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnAgregarLibro);
-            this.Controls.Add(this.dgvPrestamos);
+            this.Controls.Add(this.dgvAutores);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.lbAutor);
@@ -152,7 +134,8 @@
             this.Name = "frmListaAutores";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmListaAutores";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPrestamos)).EndInit();
+            this.Load += new System.EventHandler(this.frmListaAutores_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAutores)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -161,10 +144,9 @@
         #endregion
 
         private System.Windows.Forms.Label lbAutor;
-        public System.Windows.Forms.DataGridView dgvPrestamos;
+        public System.Windows.Forms.DataGridView dgvAutores;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.TextBox txtBuscar;
-        public System.Windows.Forms.Button btnModificar;
         public System.Windows.Forms.Button btnAgregarLibro;
     }
 }
