@@ -32,8 +32,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmListaEditoriales));
             this.lbEditorial = new System.Windows.Forms.Label();
             this.dgvPrestamos = new System.Windows.Forms.DataGridView();
-            this.btnModificar = new System.Windows.Forms.Button();
-            this.btnAgregarLibro = new System.Windows.Forms.Button();
+            this.btnModificarEditorial = new System.Windows.Forms.Button();
+            this.btnAgregarEditorial = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrestamos)).BeginInit();
@@ -76,39 +76,40 @@
             this.dgvPrestamos.Size = new System.Drawing.Size(737, 335);
             this.dgvPrestamos.TabIndex = 19;
             // 
-            // btnModificar
+            // btnModificarEditorial
             // 
-            this.btnModificar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnModificar.BackgroundImage")));
-            this.btnModificar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnModificar.FlatAppearance.BorderSize = 0;
-            this.btnModificar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnModificar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModificar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificar.ForeColor = System.Drawing.Color.White;
-            this.btnModificar.Location = new System.Drawing.Point(236, 563);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(180, 50);
-            this.btnModificar.TabIndex = 18;
-            this.btnModificar.Text = "MODIFICAR";
-            this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificarEditorial.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnModificarEditorial.BackgroundImage")));
+            this.btnModificarEditorial.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnModificarEditorial.FlatAppearance.BorderSize = 0;
+            this.btnModificarEditorial.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnModificarEditorial.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnModificarEditorial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModificarEditorial.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificarEditorial.ForeColor = System.Drawing.Color.White;
+            this.btnModificarEditorial.Location = new System.Drawing.Point(236, 563);
+            this.btnModificarEditorial.Name = "btnModificarEditorial";
+            this.btnModificarEditorial.Size = new System.Drawing.Size(180, 50);
+            this.btnModificarEditorial.TabIndex = 18;
+            this.btnModificarEditorial.Text = "MODIFICAR";
+            this.btnModificarEditorial.UseVisualStyleBackColor = true;
             // 
-            // btnAgregarLibro
+            // btnAgregarEditorial
             // 
-            this.btnAgregarLibro.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAgregarLibro.BackgroundImage")));
-            this.btnAgregarLibro.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAgregarLibro.FlatAppearance.BorderSize = 0;
-            this.btnAgregarLibro.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnAgregarLibro.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnAgregarLibro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregarLibro.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarLibro.ForeColor = System.Drawing.Color.White;
-            this.btnAgregarLibro.Location = new System.Drawing.Point(25, 563);
-            this.btnAgregarLibro.Name = "btnAgregarLibro";
-            this.btnAgregarLibro.Size = new System.Drawing.Size(180, 50);
-            this.btnAgregarLibro.TabIndex = 17;
-            this.btnAgregarLibro.Text = "AGREGAR";
-            this.btnAgregarLibro.UseVisualStyleBackColor = true;
+            this.btnAgregarEditorial.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAgregarEditorial.BackgroundImage")));
+            this.btnAgregarEditorial.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAgregarEditorial.FlatAppearance.BorderSize = 0;
+            this.btnAgregarEditorial.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnAgregarEditorial.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnAgregarEditorial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregarEditorial.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarEditorial.ForeColor = System.Drawing.Color.White;
+            this.btnAgregarEditorial.Location = new System.Drawing.Point(25, 563);
+            this.btnAgregarEditorial.Name = "btnAgregarEditorial";
+            this.btnAgregarEditorial.Size = new System.Drawing.Size(180, 50);
+            this.btnAgregarEditorial.TabIndex = 17;
+            this.btnAgregarEditorial.Text = "AGREGAR";
+            this.btnAgregarEditorial.UseVisualStyleBackColor = true;
+            this.btnAgregarEditorial.Click += new System.EventHandler(this.btnAgregarEditorial_Click);
             // 
             // btnBuscar
             // 
@@ -142,13 +143,14 @@
             this.BackgroundImage = global::Proyecto_Biblioteca_Poo.Properties.Resources.EDITORIAL;
             this.ClientSize = new System.Drawing.Size(785, 640);
             this.Controls.Add(this.dgvPrestamos);
-            this.Controls.Add(this.btnModificar);
-            this.Controls.Add(this.btnAgregarLibro);
+            this.Controls.Add(this.btnModificarEditorial);
+            this.Controls.Add(this.btnAgregarEditorial);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.lbEditorial);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmListaEditoriales";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmListaEditoriales";
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrestamos)).EndInit();
             this.ResumeLayout(false);
@@ -160,8 +162,8 @@
 
         private System.Windows.Forms.Label lbEditorial;
         public System.Windows.Forms.DataGridView dgvPrestamos;
-        public System.Windows.Forms.Button btnModificar;
-        public System.Windows.Forms.Button btnAgregarLibro;
+        public System.Windows.Forms.Button btnModificarEditorial;
+        public System.Windows.Forms.Button btnAgregarEditorial;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.TextBox txtBuscar;
     }

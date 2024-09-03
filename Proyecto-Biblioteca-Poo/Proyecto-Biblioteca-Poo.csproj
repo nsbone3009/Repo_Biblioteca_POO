@@ -50,6 +50,24 @@
     <Compile Include="csGuardarImagenDatabase.cs" />
     <Compile Include="csPrestamos.cs" />
     <Compile Include="csUsuarios.cs" />
+    <Compile Include="frmAgregarODetallesAutores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAgregarODetallesAutores.Designer.cs">
+      <DependentUpon>frmAgregarODetallesAutores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAgregarODetallesEditorial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAgregarODetallesEditorial.Designer.cs">
+      <DependentUpon>frmAgregarODetallesEditorial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAgregarODetallesGeneros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAgregarODetallesGeneros.Designer.cs">
+      <DependentUpon>frmAgregarODetallesGeneros.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmAgregarUsuarios01.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,11 +80,11 @@
     <Compile Include="frmListaAutores.Designer.cs">
       <DependentUpon>frmListaAutores.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmListaCategorias.cs">
+    <Compile Include="frmListaGenero.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmListaCategorias.Designer.cs">
-      <DependentUpon>frmListaCategorias.cs</DependentUpon>
+    <Compile Include="frmListaGenero.Designer.cs">
+      <DependentUpon>frmListaGenero.cs</DependentUpon>
     </Compile>
     <Compile Include="frmListaEditoriales.cs">
       <SubType>Form</SubType>
@@ -176,6 +194,15 @@
     <EmbeddedResource Include="frmActualizarContraseña.resx">
       <DependentUpon>frmActualizarContraseña.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmAgregarODetallesAutores.resx">
+      <DependentUpon>frmAgregarODetallesAutores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAgregarODetallesEditorial.resx">
+      <DependentUpon>frmAgregarODetallesEditorial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAgregarODetallesGeneros.resx">
+      <DependentUpon>frmAgregarODetallesGeneros.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmAgregarUsuarios01.resx">
       <DependentUpon>FrmAgregarUsuarios01.cs</DependentUpon>
     </EmbeddedResource>
@@ -185,8 +212,8 @@
     <EmbeddedResource Include="frmListaAutores.resx">
       <DependentUpon>frmListaAutores.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmListaCategorias.resx">
-      <DependentUpon>frmListaCategorias.cs</DependentUpon>
+    <EmbeddedResource Include="frmListaGenero.resx">
+      <DependentUpon>frmListaGenero.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmListaEditoriales.resx">
       <DependentUpon>frmListaEditoriales.cs</DependentUpon>
@@ -270,6 +297,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\EDITORIAL.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AGREGAR EDITORIAL.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AGREGAR EDITORIAL %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AGREGAR AUTOR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DETALLES GENERO.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

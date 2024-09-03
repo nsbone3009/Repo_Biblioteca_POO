@@ -118,19 +118,31 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="BaseListaLectores" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BaseListaLectores.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="GÉNERO (4)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\GÉNERO (4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="BaseDetallesOAgregarLector" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BaseDetallesOAgregarLector.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="AGREGAR AUTOR" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AGREGAR AUTOR.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BaseListaLectores" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BaseListaLectores.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AGREGAR EDITORIAL (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AGREGAR EDITORIAL (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EDITORIAL" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EDITORIAL.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AGREGAR EDITORIAL" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AGREGAR EDITORIAL.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="AUTOR" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\AUTOR.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="EDITORIAL" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\EDITORIAL.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="BaseDetallesOAgregarLector" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BaseDetallesOAgregarLector.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DETALLES GENERO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DETALLES GENERO.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

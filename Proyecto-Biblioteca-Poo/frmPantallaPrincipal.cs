@@ -20,7 +20,7 @@ namespace Proyecto_Biblioteca_Poo
         static frmListaDevolucionesLibros frmListaDevolucionesLibros = new frmListaDevolucionesLibros();
         static frmConfiguracionSistema frmConfiguracion = new frmConfiguracionSistema();
         static FrmListaUsuarios frmlistaUsurs = new FrmListaUsuarios();
-        static frmListaCategorias frmlistaGen = new frmListaCategorias();
+        static frmListaGenero frmlistaGen = new frmListaGenero();
         static frmListaAutores frmlistaAutor = new frmListaAutores();
         static frmListaEditoriales frmlistaEditorial = new frmListaEditoriales();
         static bool clickLibros = false, clickLectores = false, clickAdministracion = false;

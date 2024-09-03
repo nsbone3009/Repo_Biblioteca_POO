@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Proyecto_Biblioteca_Poo
 {
-    public partial class frmListaCategorias : Form
+    public partial class frmAgregarODetallesAutores : Form
     {
-        public frmListaCategorias()
+        public frmAgregarODetallesAutores()
         {
             InitializeComponent();
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

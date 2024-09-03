@@ -1,6 +1,6 @@
 ﻿namespace Proyecto_Biblioteca_Poo
 {
-    partial class frmListaCategorias
+    partial class frmListaGenero
     {
         /// <summary>
         /// Required designer variable.
@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmListaCategorias));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmListaGenero));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lbGenero = new System.Windows.Forms.Label();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.txtBuscar = new System.Windows.Forms.TextBox();
-            this.btnAgregarLibro = new System.Windows.Forms.Button();
-            this.btnModificar = new System.Windows.Forms.Button();
+            this.btnAgregarGenero = new System.Windows.Forms.Button();
+            this.btnModificarGenero = new System.Windows.Forms.Button();
             this.dgvPrestamos = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrestamos)).BeginInit();
             this.SuspendLayout();
@@ -76,39 +76,40 @@
             this.txtBuscar.Size = new System.Drawing.Size(643, 35);
             this.txtBuscar.TabIndex = 10;
             // 
-            // btnAgregarLibro
+            // btnAgregarGenero
             // 
-            this.btnAgregarLibro.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAgregarLibro.BackgroundImage")));
-            this.btnAgregarLibro.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAgregarLibro.FlatAppearance.BorderSize = 0;
-            this.btnAgregarLibro.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnAgregarLibro.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnAgregarLibro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregarLibro.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarLibro.ForeColor = System.Drawing.Color.White;
-            this.btnAgregarLibro.Location = new System.Drawing.Point(24, 561);
-            this.btnAgregarLibro.Name = "btnAgregarLibro";
-            this.btnAgregarLibro.Size = new System.Drawing.Size(180, 50);
-            this.btnAgregarLibro.TabIndex = 12;
-            this.btnAgregarLibro.Text = "AGREGAR";
-            this.btnAgregarLibro.UseVisualStyleBackColor = true;
+            this.btnAgregarGenero.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAgregarGenero.BackgroundImage")));
+            this.btnAgregarGenero.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAgregarGenero.FlatAppearance.BorderSize = 0;
+            this.btnAgregarGenero.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnAgregarGenero.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnAgregarGenero.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregarGenero.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarGenero.ForeColor = System.Drawing.Color.White;
+            this.btnAgregarGenero.Location = new System.Drawing.Point(24, 561);
+            this.btnAgregarGenero.Name = "btnAgregarGenero";
+            this.btnAgregarGenero.Size = new System.Drawing.Size(180, 50);
+            this.btnAgregarGenero.TabIndex = 12;
+            this.btnAgregarGenero.Text = "AGREGAR";
+            this.btnAgregarGenero.UseVisualStyleBackColor = true;
+            this.btnAgregarGenero.Click += new System.EventHandler(this.btnAgregarGenero_Click);
             // 
-            // btnModificar
+            // btnModificarGenero
             // 
-            this.btnModificar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnModificar.BackgroundImage")));
-            this.btnModificar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnModificar.FlatAppearance.BorderSize = 0;
-            this.btnModificar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnModificar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModificar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificar.ForeColor = System.Drawing.Color.White;
-            this.btnModificar.Location = new System.Drawing.Point(235, 561);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(180, 50);
-            this.btnModificar.TabIndex = 13;
-            this.btnModificar.Text = "MODIFICAR";
-            this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificarGenero.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnModificarGenero.BackgroundImage")));
+            this.btnModificarGenero.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnModificarGenero.FlatAppearance.BorderSize = 0;
+            this.btnModificarGenero.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnModificarGenero.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnModificarGenero.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModificarGenero.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificarGenero.ForeColor = System.Drawing.Color.White;
+            this.btnModificarGenero.Location = new System.Drawing.Point(235, 561);
+            this.btnModificarGenero.Name = "btnModificarGenero";
+            this.btnModificarGenero.Size = new System.Drawing.Size(180, 50);
+            this.btnModificarGenero.TabIndex = 13;
+            this.btnModificarGenero.Text = "MODIFICAR";
+            this.btnModificarGenero.UseVisualStyleBackColor = true;
             // 
             // dgvPrestamos
             // 
@@ -135,20 +136,20 @@
             this.dgvPrestamos.Size = new System.Drawing.Size(737, 335);
             this.dgvPrestamos.TabIndex = 14;
             // 
-            // frmListaCategorias
+            // frmListaGenero
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Proyecto_Biblioteca_Poo.Properties.Resources.GÉNERO__4_;
             this.ClientSize = new System.Drawing.Size(785, 640);
             this.Controls.Add(this.dgvPrestamos);
-            this.Controls.Add(this.btnModificar);
-            this.Controls.Add(this.btnAgregarLibro);
+            this.Controls.Add(this.btnModificarGenero);
+            this.Controls.Add(this.btnAgregarGenero);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.lbGenero);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmListaCategorias";
+            this.Name = "frmListaGenero";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmListaCategorias";
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrestamos)).EndInit();
@@ -162,8 +163,8 @@
         private System.Windows.Forms.Label lbGenero;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.TextBox txtBuscar;
-        public System.Windows.Forms.Button btnAgregarLibro;
-        public System.Windows.Forms.Button btnModificar;
+        public System.Windows.Forms.Button btnAgregarGenero;
+        public System.Windows.Forms.Button btnModificarGenero;
         public System.Windows.Forms.DataGridView dgvPrestamos;
     }
 }

@@ -63,6 +63,36 @@ namespace Proyecto_Biblioteca_Poo.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap AGREGAR_AUTOR {
+            get {
+                object obj = ResourceManager.GetObject("AGREGAR AUTOR", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap AGREGAR_EDITORIAL {
+            get {
+                object obj = ResourceManager.GetObject("AGREGAR EDITORIAL", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap AGREGAR_EDITORIAL__1_ {
+            get {
+                object obj = ResourceManager.GetObject("AGREGAR EDITORIAL (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap AUTOR {
             get {
                 object obj = ResourceManager.GetObject("AUTOR", resourceCulture);
@@ -86,6 +116,16 @@ namespace Proyecto_Biblioteca_Poo.Properties {
         internal static System.Drawing.Bitmap BaseListaLectores {
             get {
                 object obj = ResourceManager.GetObject("BaseListaLectores", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap DETALLES_GENERO {
+            get {
+                object obj = ResourceManager.GetObject("DETALLES GENERO", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

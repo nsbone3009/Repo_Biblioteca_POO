@@ -127,7 +127,7 @@
         3g8+Q+nYiPqTFQAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="btnAgregarLibro.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnAgregarGenero.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAWIAAAAqCAYAAACJIFHPAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         vAAADrwBlbxySQAAAKhJREFUeF7tyCEBwDAABLHqm9dp7Awc/pGAkJzzvBeAH2UCsJMJwE4mADuZAOxk
@@ -136,7 +136,7 @@
         3g8+Q+nYiPqTFQAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="btnModificar.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnModificarGenero.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAWIAAAAqCAYAAACJIFHPAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         vAAADrwBlbxySQAAAKhJREFUeF7tyCEBwDAABLHqm9dp7Awc/pGAkJzzvBeAH2UCsJMJwE4mADuZAOxk

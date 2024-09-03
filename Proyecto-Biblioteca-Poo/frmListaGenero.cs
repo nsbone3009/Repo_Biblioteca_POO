@@ -10,18 +10,18 @@ using System.Windows.Forms;
 
 namespace Proyecto_Biblioteca_Poo
 {
-    public partial class frmListaAutores : Form
+    public partial class frmListaGenero : Form
     {
-        public frmListaAutores()
+        public frmListaGenero()
         {
             InitializeComponent();
         }
 
-        private void btnAgregarLibro_Click(object sender, EventArgs e)
+        private void btnAgregarGenero_Click(object sender, EventArgs e)
         {
-            frmAgregarODetallesAutores frm = new frmAgregarODetallesAutores();
+            frmAgregarODetallesGeneros frm = new frmAgregarODetallesGeneros();
             this.AddOwnedForm(frm);
-            frm.lbTituloVentana.Text = "AGREGAR AUTOR";
+            frm.lbTituloVentana.Text = "AGREGAR GENERO";
             frm.ShowDialog();
         }
     }

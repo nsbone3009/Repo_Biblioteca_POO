@@ -16,5 +16,13 @@ namespace Proyecto_Biblioteca_Poo
         {
             InitializeComponent();
         }
+
+        private void btnAgregarEditorial_Click(object sender, EventArgs e)
+        {
+            frmAgregarODetallesEditorial frm = new frmAgregarODetallesEditorial();
+            this.AddOwnedForm(frm);
+            frm.lbTituloVentana.Text = "AGREGAR EDITORIAL";
+            frm.ShowDialog();
+        }
     }
 }

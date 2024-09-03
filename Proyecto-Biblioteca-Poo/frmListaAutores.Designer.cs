@@ -134,6 +134,7 @@
             this.btnAgregarLibro.TabIndex = 18;
             this.btnAgregarLibro.Text = "AGREGAR";
             this.btnAgregarLibro.UseVisualStyleBackColor = true;
+            this.btnAgregarLibro.Click += new System.EventHandler(this.btnAgregarLibro_Click);
             // 
             // frmListaAutores
             // 
