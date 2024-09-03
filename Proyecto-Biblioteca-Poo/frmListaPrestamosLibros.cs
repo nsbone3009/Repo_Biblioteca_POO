@@ -39,7 +39,7 @@ namespace Proyecto_Biblioteca_Poo
         {
             CargarDatos();
         }
-        private void CargarDatos()
+        public void CargarDatos()
         {
             string sentencia = prestamo.CargarDatos();
             dgvPrestamos.DataSource = database.MostrarRegistros(sentencia);
@@ -48,23 +48,8 @@ namespace Proyecto_Biblioteca_Poo
         private void txtBuscar_TextChanged(object sender, EventArgs e)
         {
         }
-        private void btnModificarPrestamo_Click(object sender, EventArgs e)
-        {
-            //if (dgvPrestamos.SelectedRows.Count > 0)
-            //{
-            //    DataGridViewRow selectedRow = dgvPrestamos.SelectedRows[0];
-            //    int idPrestamo = int.Parse(selectedRow.Cells[0].Value.ToString());
-            //    new frmAgregarODetallesPrestamosLibros(idPrestamo).ShowDialog();
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Por favor, seleccione una fila primero.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            //}
-            //CargarDatos();
-        }
-        private void btnEliminarPrestamo_Click(object sender, EventArgs e)
-        {
-        }
+
+
 
         private void dgvPrestamos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -97,6 +82,7 @@ namespace Proyecto_Biblioteca_Poo
                 string NuevaConsulta = "select L.titulo_lb,L.isbn_lb,Le.nombres_ltr,Le.cedula_ltr,D.fecha_prestamo,D.fecha_devolucion_programada from Devoluciones as D inner join[Libros] as L on D.isbn_lb=[L].isbn_lb inner join Lectores as Le  on d.cedula_ltr=[Le].cedula_ltr where D.isbn_lb='" + consulta.Trim() + "'";
                 csConexionSQL conector = new csConexionSQL();
                 SqlDataReader lector = conector.SelectLeer(NuevaConsulta);
+                this.AddOwnedForm(datitos);
                 if (lector.Read())
                 {
                     datitos.txtTitulo.Text = lector["titulo_lb"].ToString().Trim();
@@ -107,7 +93,7 @@ namespace Proyecto_Biblioteca_Poo
                     datitos.txtFechaDevolucion.Text = lector["fecha_devolucion_programada"].ToString().Trim();
                     datitos.txtFechaActual.Text = DateTime.Now.ToString("yyyy-MM-dd");
                     datitos.ShowDialog();
-                }
+                }this.Close();
             }
             else 
             {

@@ -92,6 +92,7 @@
             // 
             // cbEstado
             // 
+            this.cbEstado.BackColor = System.Drawing.Color.White;
             this.cbEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbEstado.FormattingEnabled = true;
@@ -129,6 +130,7 @@
             // 
             this.txtGenero.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtGenero.Location = new System.Drawing.Point(49, 91);
+            this.txtGenero.MaxLength = 50;
             this.txtGenero.Name = "txtGenero";
             this.txtGenero.Size = new System.Drawing.Size(455, 35);
             this.txtGenero.TabIndex = 81;

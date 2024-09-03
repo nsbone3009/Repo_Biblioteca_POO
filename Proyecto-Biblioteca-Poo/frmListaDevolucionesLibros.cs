@@ -26,10 +26,13 @@ namespace Proyecto_Biblioteca_Poo
 
         private void frmListaDevolucionesLibros_Load(object sender, EventArgs e)
         {
-            string consulta = "Select * from Devoluciones";
+            CargarDatos();
+        }
+        public void CargarDatos()
+        {
+            string consulta = "select id_dl as ID, cedula_ltr as [CEDULA LECTOR], isbn_lb as ISBN, fecha_prestamo AS [FECHA PRESTAMO], fecha_devolucion_programada as [FECHA DEVOLUCION PROGRAMADA], fecha_devolucion as [FECHA DEVOLUCION] FROM Devoluciones";
             csConexionSQL database = new csConexionSQL();
             dgvDevoluciones.DataSource = database.MostrarRegistros(consulta);
-            //new csAjustarDataGridView().Ajustar(dgvDevoluciones);
         }
     }
 }

@@ -54,5 +54,33 @@ namespace Proyecto_Biblioteca_Poo
                 frm.ShowDialog();
             }
         }
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        {
+            if (txtBuscar.Text.Length >= 5)
+                BusquedaPorCaracter(txtBuscar.Text);
+            else
+                Limpiar();
+        }
+        private void BusquedaPorCaracter(string busqueda)
+        {
+            try
+            {
+                dgvGenero.Rows.Clear();
+                dgvGenero = new csAjustarDataGridView().Ajustar(dgvGenero, "select idGenero, NombreGenero, Estado from Genero where NombreGenero like '" + "%" + busqueda + "%" +"' ");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
+        private void Limpiar()
+        {
+            dgvGenero.Rows.Clear();
+            MostrarDatos();
+        }
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            BusquedaPorCaracter(txtBuscar.Text);
+        }
     }
 }

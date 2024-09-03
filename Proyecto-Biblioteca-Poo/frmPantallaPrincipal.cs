@@ -23,6 +23,8 @@ namespace Proyecto_Biblioteca_Poo
         static frmListaGenero frmlistaGen = new frmListaGenero();
         static frmListaAutores frmlistaAutor = new frmListaAutores();
         static frmListaEditoriales frmlistaEditorial = new frmListaEditoriales();
+        static csConexionSQL database = new csConexionSQL();
+        static csPrestamos prestamo = new csPrestamos();
         static bool clickLibros = false, clickLectores = false, clickAdministracion = false;
         private Timer timer;
         static DateTime fechaAviso;
@@ -199,14 +201,20 @@ namespace Proyecto_Biblioteca_Poo
         }
         private void lbListaLibros_Click(object sender, EventArgs e)
         {
+            frmListaLibros.dgvLibros.Rows.Clear();
+            frmListaLibros.MostrarLibros();
             LlamarFormulario(frmListaLibros);
         }
         private void lbPrestamosLibros_Click(object sender, EventArgs e)
         {
+            frmListaPrestamosLibros.btnCerrar.Visible = false;
+            string sentencia = prestamo.CargarDatos();
+            frmListaPrestamosLibros.dgvPrestamos.DataSource = database.MostrarRegistros(sentencia);
             LlamarFormulario(frmListaPrestamosLibros);
         }
         private void lbDevolucionesLibros_Click(object sender, EventArgs e)
         {
+            frmListaDevolucionesLibros.dgvDevoluciones.DataSource = database.MostrarRegistros("select id_dl as ID, cedula_ltr as [CEDULA LECTOR], isbn_lb as ISBN, fecha_prestamo AS [FECHA PRESTAMO], fecha_devolucion_programada as [FECHA DEVOLUCION PROGRAMADA], fecha_devolucion as [FECHA DEVOLUCION] FROM Devoluciones");
             LlamarFormulario(frmListaDevolucionesLibros);
         }
         private void lbListaLectores_Click(object sender, EventArgs e)
