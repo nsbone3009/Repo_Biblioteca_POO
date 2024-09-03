@@ -48,24 +48,6 @@ namespace Proyecto_Biblioteca_Poo
         private void txtBuscar_TextChanged(object sender, EventArgs e)
         {
         }
-        private void btnModificarPrestamo_Click(object sender, EventArgs e)
-        {
-            //if (dgvPrestamos.SelectedRows.Count > 0)
-            //{
-            //    DataGridViewRow selectedRow = dgvPrestamos.SelectedRows[0];
-            //    int idPrestamo = int.Parse(selectedRow.Cells[0].Value.ToString());
-            //    new frmAgregarODetallesPrestamosLibros(idPrestamo).ShowDialog();
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Por favor, seleccione una fila primero.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            //}
-            //CargarDatos();
-        }
-        private void btnEliminarPrestamo_Click(object sender, EventArgs e)
-        {
-        }
-
         private void dgvPrestamos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
 
@@ -76,7 +58,7 @@ namespace Proyecto_Biblioteca_Poo
         {
             if (txtBuscar.Text.Length > 4)
             {
-                dgvPrestamos.DataSource = database.MostrarRegistros("SELECT id_ptm as [ID Prestamo], cedula_ltr as [Cédula Lector], isbn_lb as [ISBN Libro], fecha_prestamo as [Fecha Préstamo], fecha_devolucio_programada as [Fecha devolucion] FROM Prestamos where estado_=1 and CONVERT(varchar,cedula_ltr) like '%" + txtBuscar.Text + "%'  or isbn_lb like '%" + txtBuscar.Text + "%'");
+                dgvPrestamos.DataSource = database.MostrarRegistros("SELECT id_ptm as [ID PRESTAMO], cedula_ltr as [CEDULA LECTOR], isbn_lb as [ISBN LIBRO], fecha_prestamo as [FECHA PRESTAMO], fecha_devolucio_programada as [FECHA DEVOLUCION] FROM Prestamos where estado_=1 and CONVERT(varchar,cedula_ltr) like '%" + txtBuscar.Text + "%'  or isbn_lb like '%" + txtBuscar.Text + "%'");
             }
 
             if (txtBuscar.Text.Length == 0)

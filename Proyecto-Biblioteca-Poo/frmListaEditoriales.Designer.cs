@@ -28,15 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmListaEditoriales));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lbEditorial = new System.Windows.Forms.Label();
-            this.dgvPrestamos = new System.Windows.Forms.DataGridView();
-            this.btnModificarEditorial = new System.Windows.Forms.Button();
             this.btnAgregarEditorial = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.txtBuscar = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPrestamos)).BeginInit();
+            this.dgvEditorial = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEditorial)).BeginInit();
             this.SuspendLayout();
             // 
             // lbEditorial
@@ -50,48 +53,6 @@
             this.lbEditorial.Size = new System.Drawing.Size(121, 24);
             this.lbEditorial.TabIndex = 3;
             this.lbEditorial.Text = "EDITORIAL";
-            // 
-            // dgvPrestamos
-            // 
-            this.dgvPrestamos.AllowUserToAddRows = false;
-            this.dgvPrestamos.AllowUserToDeleteRows = false;
-            this.dgvPrestamos.AllowUserToResizeColumns = false;
-            this.dgvPrestamos.AllowUserToResizeRows = false;
-            this.dgvPrestamos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvPrestamos.BackgroundColor = System.Drawing.SystemColors.Window;
-            this.dgvPrestamos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvPrestamos.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvPrestamos.Location = new System.Drawing.Point(25, 192);
-            this.dgvPrestamos.Name = "dgvPrestamos";
-            this.dgvPrestamos.ReadOnly = true;
-            this.dgvPrestamos.RowHeadersVisible = false;
-            this.dgvPrestamos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPrestamos.Size = new System.Drawing.Size(737, 335);
-            this.dgvPrestamos.TabIndex = 19;
-            // 
-            // btnModificarEditorial
-            // 
-            this.btnModificarEditorial.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnModificarEditorial.BackgroundImage")));
-            this.btnModificarEditorial.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnModificarEditorial.FlatAppearance.BorderSize = 0;
-            this.btnModificarEditorial.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnModificarEditorial.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnModificarEditorial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModificarEditorial.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificarEditorial.ForeColor = System.Drawing.Color.White;
-            this.btnModificarEditorial.Location = new System.Drawing.Point(236, 563);
-            this.btnModificarEditorial.Name = "btnModificarEditorial";
-            this.btnModificarEditorial.Size = new System.Drawing.Size(180, 50);
-            this.btnModificarEditorial.TabIndex = 18;
-            this.btnModificarEditorial.Text = "MODIFICAR";
-            this.btnModificarEditorial.UseVisualStyleBackColor = true;
             // 
             // btnAgregarEditorial
             // 
@@ -136,14 +97,73 @@
             this.txtBuscar.Size = new System.Drawing.Size(643, 35);
             this.txtBuscar.TabIndex = 15;
             // 
+            // dgvEditorial
+            // 
+            this.dgvEditorial.AllowUserToAddRows = false;
+            this.dgvEditorial.AllowUserToDeleteRows = false;
+            this.dgvEditorial.AllowUserToResizeColumns = false;
+            this.dgvEditorial.AllowUserToResizeRows = false;
+            this.dgvEditorial.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(8);
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvEditorial.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvEditorial.ColumnHeadersHeight = 50;
+            this.dgvEditorial.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(8);
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvEditorial.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvEditorial.Location = new System.Drawing.Point(25, 199);
+            this.dgvEditorial.Name = "dgvEditorial";
+            this.dgvEditorial.ReadOnly = true;
+            this.dgvEditorial.RowHeadersVisible = false;
+            this.dgvEditorial.RowHeadersWidth = 50;
+            this.dgvEditorial.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvEditorial.Size = new System.Drawing.Size(737, 335);
+            this.dgvEditorial.TabIndex = 19;
+            this.dgvEditorial.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEditorial_CellContentDoubleClick);
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "ID EDITORIAL";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "GENERO";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 334;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "ESTADO";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Width = 200;
+            // 
             // frmListaEditoriales
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Proyecto_Biblioteca_Poo.Properties.Resources.EDITORIAL;
             this.ClientSize = new System.Drawing.Size(785, 640);
-            this.Controls.Add(this.dgvPrestamos);
-            this.Controls.Add(this.btnModificarEditorial);
+            this.Controls.Add(this.dgvEditorial);
             this.Controls.Add(this.btnAgregarEditorial);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.txtBuscar);
@@ -152,7 +172,8 @@
             this.Name = "frmListaEditoriales";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmListaEditoriales";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPrestamos)).EndInit();
+            this.Load += new System.EventHandler(this.frmListaEditoriales_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEditorial)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -161,10 +182,12 @@
         #endregion
 
         private System.Windows.Forms.Label lbEditorial;
-        public System.Windows.Forms.DataGridView dgvPrestamos;
-        public System.Windows.Forms.Button btnModificarEditorial;
         public System.Windows.Forms.Button btnAgregarEditorial;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.TextBox txtBuscar;
+        public System.Windows.Forms.DataGridView dgvEditorial;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
     }
 }

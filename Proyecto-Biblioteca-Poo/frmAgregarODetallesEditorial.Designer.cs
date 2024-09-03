@@ -86,8 +86,8 @@
             this.cbEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbEstado.FormattingEnabled = true;
             this.cbEstado.Items.AddRange(new object[] {
-            "Activo",
-            "Inactivo"});
+            "Inactivo",
+            "Activo"});
             this.cbEstado.Location = new System.Drawing.Point(45, 193);
             this.cbEstado.Name = "cbEstado";
             this.cbEstado.Size = new System.Drawing.Size(455, 37);
@@ -150,6 +150,7 @@
             this.btnGuardarCampos.TabIndex = 75;
             this.btnGuardarCampos.Text = "Guardar";
             this.btnGuardarCampos.UseVisualStyleBackColor = false;
+            this.btnGuardarCampos.Click += new System.EventHandler(this.btnGuardarCampos_Click);
             // 
             // frmAgregarODetallesEditorial
             // 
