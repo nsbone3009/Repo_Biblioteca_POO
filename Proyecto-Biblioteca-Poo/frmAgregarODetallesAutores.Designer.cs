@@ -44,8 +44,8 @@
             this.cbEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbEstado.FormattingEnabled = true;
             this.cbEstado.Items.AddRange(new object[] {
-            "Activo",
-            "Inactivo"});
+            "Inactivo",
+            "Activo"});
             this.cbEstado.Location = new System.Drawing.Point(46, 191);
             this.cbEstado.Name = "cbEstado";
             this.cbEstado.Size = new System.Drawing.Size(455, 37);
@@ -111,6 +111,7 @@
             this.btnEditarCampos.TabIndex = 80;
             this.btnEditarCampos.Text = "Editar";
             this.btnEditarCampos.UseVisualStyleBackColor = false;
+            this.btnEditarCampos.Click += new System.EventHandler(this.btnEditarCampos_Click);
             // 
             // btnCerrar
             // 
@@ -150,6 +151,7 @@
             this.btnGuardarCampos.TabIndex = 78;
             this.btnGuardarCampos.Text = "Guardar";
             this.btnGuardarCampos.UseVisualStyleBackColor = false;
+            this.btnGuardarCampos.Click += new System.EventHandler(this.btnGuardarCampos_Click);
             // 
             // frmAgregarODetallesAutores
             // 
@@ -175,8 +177,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.ComboBox cbEstado;
         public System.Windows.Forms.Label label1;
         public System.Windows.Forms.Label lbNombreAutor;
         public System.Windows.Forms.TextBox txtAutor;
@@ -184,5 +184,6 @@
         public System.Windows.Forms.Button btnEditarCampos;
         public System.Windows.Forms.Button btnCerrar;
         public System.Windows.Forms.Button btnGuardarCampos;
+        public System.Windows.Forms.ComboBox cbEstado;
     }
 }

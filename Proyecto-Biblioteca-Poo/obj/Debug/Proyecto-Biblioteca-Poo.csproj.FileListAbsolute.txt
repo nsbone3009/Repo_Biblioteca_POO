@@ -107,3 +107,9 @@ C:\Users\scarl\OneDrive\Escritorio\Prueba 400\Repo_Biblioteca_POO\Proyecto-Bibli
 C:\Users\scarl\OneDrive\Escritorio\Prueba 400\Repo_Biblioteca_POO\Proyecto-Biblioteca-Poo\obj\Debug\Proyecto_Biblioteca_Poo.frmAgregarODetallesEditorial.resources
 C:\Users\scarl\OneDrive\Escritorio\Prueba 400\Repo_Biblioteca_POO\Proyecto-Biblioteca-Poo\obj\Debug\Proyecto_Biblioteca_Poo.frmAgregarODetallesGeneros.resources
 C:\Users\scarl\OneDrive\Escritorio\Prueba 400\Repo_Biblioteca_POO\Proyecto-Biblioteca-Poo\obj\Debug\Proyecto_Biblioteca_Poo.frmListaGenero.resources
+C:\Users\Jeremy Jaramillo\Desktop\REPOSITORIO\Repo_Biblioteca_POO\Proyecto-Biblioteca-Poo\obj\Debug\Proyecto_Biblioteca_Poo.frmAgregarODetallesAutores.resources
+C:\Users\Jeremy Jaramillo\Desktop\REPOSITORIO\Repo_Biblioteca_POO\Proyecto-Biblioteca-Poo\obj\Debug\Proyecto_Biblioteca_Poo.frmAgregarODetallesEditorial.resources
+C:\Users\Jeremy Jaramillo\Desktop\REPOSITORIO\Repo_Biblioteca_POO\Proyecto-Biblioteca-Poo\obj\Debug\Proyecto_Biblioteca_Poo.frmAgregarODetallesGeneros.resources
+C:\Users\Jeremy Jaramillo\Desktop\REPOSITORIO\Repo_Biblioteca_POO\Proyecto-Biblioteca-Poo\obj\Debug\Proyecto_Biblioteca_Poo.frmListaAutores.resources
+C:\Users\Jeremy Jaramillo\Desktop\REPOSITORIO\Repo_Biblioteca_POO\Proyecto-Biblioteca-Poo\obj\Debug\Proyecto_Biblioteca_Poo.frmListaGenero.resources
+C:\Users\Jeremy Jaramillo\Desktop\REPOSITORIO\Repo_Biblioteca_POO\Proyecto-Biblioteca-Poo\obj\Debug\Proyecto_Biblioteca_Poo.frmListaEditoriales.resources
