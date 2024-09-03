@@ -58,7 +58,7 @@ namespace Proyecto_Biblioteca_Poo
             string consulta = "update Usuarios set nombres_usr='"+Nombre+"',apellidos_usr='"+Apellido+"',fecha_nacimiento_usr='"+Fecha+"',direccion_domicilio_usr='"+Domicilio+"',correo_usr='"+Correo+"',rol_usr='"+Rol+"',estado_usr='"+Estado+"' where cedula_usr='"+Cedula+"'";
             SqlCommand comando = new SqlCommand(consulta,Conexion); comando.ExecuteNonQuery();
             Conexion.Close();
-       
+
 
 
         }

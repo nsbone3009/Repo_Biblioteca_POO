@@ -64,6 +64,10 @@ namespace Proyecto_Biblioteca_Poo
                         MessageBox.Show("El correo electrónico ingresado ya está registrado en nuestro sistema o No es un correo valido. Por favor, ingrese una dirección de correo diferente.");
                         txtCorreo.Text = string.Empty;
                     }
+                    FrmListaUsuarios frm = Owner as FrmListaUsuarios;
+                    frm.dgvUsuarios.Rows.Clear();
+                    frm.MostrarLibros();
+
                 }
             }
             else
@@ -134,10 +138,13 @@ namespace Proyecto_Biblioteca_Poo
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
+            FrmListaUsuarios frm = Owner as FrmListaUsuarios;
             if (txtNombre.Text != string.Empty && txtApellidos.Text != string.Empty && txtCedula.Text != string.Empty && txtDomicilio.Text != string.Empty && cbEstado.SelectedItem != null && cbRol.SelectedItem != null)
             {
                 csUsuarios users = new csUsuarios(txtCedula.Text, txtNombre.Text, txtApellidos.Text, txtFechaNacimiento.Text, cbRol.SelectedItem.ToString(), cbEstado.SelectedItem.ToString(), txtDomicilio.Text, txtCorreo.Text, txtUsuario.Text, txtContraseña.Text);
                 users.EditarDatos();
+                frm.dgvUsuarios.Rows.Clear();
+                frm.MostrarLibros();
                 MessageBox.Show("Datos actualizados correctamente.");
                 this.Hide();
             }

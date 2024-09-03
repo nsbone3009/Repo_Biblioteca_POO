@@ -68,21 +68,23 @@ namespace Proyecto_Biblioteca_Poo
                         frm.ISBN = new csConexionSQL().Extraer("Select isbn_lb from Libros where titulo_lb = '" + dgvLibros.Rows[e.RowIndex].Cells[0].Value.ToString().Trim() + "'", "isbn_lb");
                         frm.txtTitulo.Text = dgvLibros.Rows[e.RowIndex].Cells[0].Value.ToString().Trim();
                         frm.txtAutor.Text = dgvLibros.Rows[e.RowIndex].Cells[1].Value.ToString().Trim();
-                        frm.txtEditorial.Text = dgvLibros.Rows[e.RowIndex].Cells[2].Value.ToString().Trim();
-                        frm.txtCategoria.Text = dgvLibros.Rows[e.RowIndex].Cells[3].Value.ToString().Trim();
+                        frm.cbEditorial.SelectedItem = dgvLibros.Rows[e.RowIndex].Cells[2].Value.ToString().Trim();
+                        frm.cbCategoria.SelectedItem = dgvLibros.Rows[e.RowIndex].Cells[3].Value.ToString().Trim();
                         frm.txtPublicacion.Text = dgvLibros.Rows[e.RowIndex].Cells[4].Value.ToString().Trim();
                         frm.txtCantidad.Text = dgvLibros.Rows[e.RowIndex].Cells[5].Value.ToString().Trim();
                         frm.txtResume.Text = dgvLibros.Rows[e.RowIndex].Cells[6].Value.ToString().Trim();
+
                         frm.txtTitulo.Enabled = false;
                         frm.txtAutor.Enabled = false;
-                        frm.txtEditorial.Enabled = false;
-                        frm.txtCategoria.Enabled = false;
+                        frm.cbEditorial.Enabled = false;
+                        frm.cbCategoria.Enabled = false;
                         frm.txtPublicacion.Enabled = false;
                         frm.txtCantidad.Enabled = false;
                         frm.txtResume.Enabled = false;
                         frm.btnGuardarCampos.Enabled = false;
                         frm.txtIsbn.Visible = false;
                         frm.lbIsbn.Visible = false;
+                        frm.PortadaLibro();
                         frm.ShowDialog();
                     }
                 }
