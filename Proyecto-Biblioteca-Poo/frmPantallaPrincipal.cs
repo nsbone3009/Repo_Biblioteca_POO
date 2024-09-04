@@ -54,9 +54,8 @@ namespace Proyecto_Biblioteca_Poo
         private void Comparar()
         {
             DateTime fechaActual = DateTime.Now.Date;
-            using (SqlConnection conexion = new SqlConnection(@"Password=admin;Persist Security Info=True;User ID=admin;Initial Catalog=Biblioteca;Data Source=NIURLETH"))
+            using (SqlConnection conexion = new SqlConnection(database.cadenaConexion))
             {
-
                 conexion.Open();
                 SqlCommand comando = new SqlCommand("select P.fecha_devolucio_programada,P.estado_, P.aviso_, L.correo_ltr, L.cedula_ltr, L.nombres_ltr, P.isbn_lb from Prestamos as P inner join Lectores as L on P.cedula_ltr = L.cedula_ltr where P.aviso_ = 0 and P.estado_=1", conexion);
                 SqlDataReader leer = comando.ExecuteReader();

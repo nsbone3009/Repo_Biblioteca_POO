@@ -63,7 +63,7 @@ namespace Proyecto_Biblioteca_Poo
             {
                 if (txtTitulo.Text != "" & cbAutor.SelectedIndex != -1 & cbEditorial.SelectedIndex > -1 & cbCategoria.SelectedIndex > -1 & txtPublicacion.Text != "" & txtCantidad.Text != "" & txtResume.Text != "")
                 {
-                    string consulta = "Update Libros set titulo_lb = '" + txtTitulo.Text + "', autor_es_lb = '" + cbAutor.SelectedText.ToString() + "'," +
+                    string consulta = "Update Libros set titulo_lb = '" + txtTitulo.Text + "', autor_es_lb = '" + cbAutor.SelectedItem.ToString() + "'," +
                 " editorial_lb = '" + cbEditorial.SelectedItem.ToString() + "',genero_lb = '" + cbCategoria.SelectedItem.ToString() + "', año_publicacion_lb = '" + txtPublicacion.Text + "'," +
                 " cantidad_lb = '" + txtCantidad.Text + "', sinopsis_lb = '" + txtResume.Text + "' where isbn_lb = '" + ISBN + "'";
                     new csConexionSQL().Update(consulta);
