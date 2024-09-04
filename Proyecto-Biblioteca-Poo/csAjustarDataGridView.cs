@@ -13,9 +13,9 @@ namespace Proyecto_Biblioteca_Poo
         public DataGridView Ajustar(DataGridView tabla, string consulta)
         {
             int f = 0;
-            //int x = 0;
+            int x = 0;
             DataTable contenedor = new csConexionSQL().MostrarRegistros(consulta);
-            //if (contenedor.Rows.Count > 5) { x = 18; }
+            if (contenedor.Rows.Count > 5) { x = 18; }
             foreach (DataRow row in contenedor.Rows)
             {
                 tabla.Rows.Add(row.ItemArray);

@@ -15,6 +15,7 @@ namespace Proyecto_Biblioteca_Poo
     public partial class frmAgregarODetallesLibros : Form
     {
         public string ISBN = "";
+        private csValidaciones validacion = new csValidaciones();
 
         public frmAgregarODetallesLibros()
         {
@@ -25,7 +26,6 @@ namespace Proyecto_Biblioteca_Poo
         {
             this.Close();
         }
-
         public void PortadaLibro()
         {
             csConexionSQL conexion = new csConexionSQL();
@@ -42,112 +42,61 @@ namespace Proyecto_Biblioteca_Poo
                 catch { }
             }
         }
-
         private void btnEditarCampos_Click(object sender, EventArgs e)
         {
-            txtTitulo.Enabled = true;
-            cbAutor.Enabled = true;
-            cbEditorial.Enabled = true;
-            cbCategoria.Enabled = true;
-            txtPublicacion.Enabled = true;
-            txtCantidad.Enabled = true;
-            txtResume.Enabled = true;
-            btnGuardarCampos.Enabled = true;
-            btnCambiarImagen.Enabled = true;
+            csLibro libro = new csLibro();
+            libro.HabilitarCampos(txtTitulo, cbAutor, cbEditorial, cbCategoria, txtPublicacion, txtCantidad, txtResume, btnGuardarCampos, btnCambiarImagen);
         }
 
         private void btnGuardarCampos_Click(object sender, EventArgs e)
         {
             frmListaLibros frm = Owner as frmListaLibros;
-            if (frm.validacion)
+            csLibro libro = new csLibro();
+            if (txtIsbn.Text != "" | txtTitulo.Text != "" & cbAutor.Text != ""   & cbEditorial.Text != "" & cbCategoria.Text != "" & txtPublicacion.Text != "" & txtCantidad.Text != "" & txtResume.Text != "")
             {
-                if (txtTitulo.Text != "" & cbAutor.SelectedIndex != -1 & cbEditorial.SelectedIndex > -1 & cbCategoria.SelectedIndex > -1 & txtPublicacion.Text != "" & txtCantidad.Text != "" & txtResume.Text != "")
+                if (frm.validacion)
                 {
-                    string consulta = "Update Libros set titulo_lb = '" + txtTitulo.Text + "', autor_es_lb = '" + cbAutor.SelectedItem.ToString() + "'," +
-                " editorial_lb = '" + cbEditorial.SelectedItem.ToString() + "',genero_lb = '" + cbCategoria.SelectedItem.ToString() + "', año_publicacion_lb = '" + txtPublicacion.Text + "'," +
-                " cantidad_lb = '" + txtCantidad.Text + "', sinopsis_lb = '" + txtResume.Text + "' where isbn_lb = '" + ISBN + "'";
-                    new csConexionSQL().Update(consulta);
-                    if (ptbxImagenLibro.Image != null)
-                    {
-                        new csGuardarImagenDatabase().GuardarImagen(ptbxImagenLibro, "Update Libros set imagen_lb = @imagen where isbn_lb = '" + ISBN + "' ");
-                    }
+                    libro.AgregarLibro(txtIsbn.Text,txtTitulo.Text, cbAutor.SelectedItem.ToString(), cbEditorial.SelectedItem.ToString(), cbCategoria.SelectedItem.ToString(), txtPublicacion.Text, int.Parse(txtCantidad.Text), txtResume.Text, ptbxImagenLibro);
+                    libro.MostrarLibros(frm.dgvLibros);
                     frm.validacion = false;
-                    frm.dgvLibros.Rows.Clear();
-                    frm.MostrarLibros();
-                    frm.validacion = false;
-                    this.Close();
                 }
                 else
                 {
-                    MessageBox.Show("Ingrese todos los datos solicitados.");
+                    libro.ModificarLibro(ISBN, txtTitulo.Text, cbAutor.SelectedItem.ToString(), cbEditorial.SelectedItem.ToString(), cbCategoria.SelectedItem.ToString(), txtPublicacion.Text, int.Parse(txtCantidad.Text), txtResume.Text, ptbxImagenLibro);
+                    libro.MostrarLibros(frm.dgvLibros);
                 }
+                Close();
             }
             else
             {
-                if (txtIsbn.Text != "" & txtTitulo.Text != "" & cbAutor.SelectedIndex != -1 & cbEditorial.SelectedIndex > -1 & cbCategoria.SelectedIndex > -1 & txtPublicacion.Text != "" & txtCantidad.Text != "" & txtResume.Text != "")
-                {
-                    string consulta = "Insert into Libros(isbn_lb, titulo_lb, autor_es_lb, editorial_lb, genero_lb, año_publicacion_lb, cantidad_lb, sinopsis_lb)" +
-                            "Values('" + txtIsbn.Text + "','" + txtTitulo.Text + "', '" + cbAutor.SelectedItem.ToString() + "', '" + cbEditorial.SelectedItem.ToString() + "', '" + cbCategoria.SelectedItem.ToString() + "', '" + txtPublicacion.Text + "', '" + txtCantidad.Text + "', '" + txtResume.Text + "')";
-                    new csConexionSQL().Insert(consulta);
-                    if (ptbxImagenLibro.Image != null)
-                    {
-                        new csGuardarImagenDatabase().GuardarImagen(ptbxImagenLibro, "Update Libros set imagen_lb = @imagen where isbn_lb = '" + txtIsbn.Text + "' ");
-                    }
-                    frm.dgvLibros.Rows.Clear();
-                    frm.MostrarLibros();
-                    frm.validacion = false;
-                    this.Close();
-                }
-                else
-                {
-                    MessageBox.Show("Ingrese todos los datos solicitados.");
-                }
+                MessageBox.Show("Ingrese todos los datos solicitados.");
             }
         }
 
         private void btnCambiarImagen_Click(object sender, EventArgs e)
         {
-            OpenFileDialog Imagen = new OpenFileDialog();
-            Imagen.Filter = "archivos de imagen (*png;)|*png;";
-            if (Imagen.ShowDialog() == DialogResult.OK)
-            {
-                ptbxImagenLibro.BackgroundImage = null;
-                ptbxImagenLibro.Image = Image.FromFile(Imagen.FileName);
-            }
+            csLibro libro = new csLibro();
+            libro.CambiarImagen(ptbxImagenLibro);
         }
-
+        
         private void txtPublicacion_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-            {
-                e.Handled = true;
-                MessageBox.Show("No se permiten Letras.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
+            validacion.ValidarSoloNumeros(e);
         }
 
         private void txtCantidad_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-            {
-                e.Handled = true;
-                MessageBox.Show("No se permiten Letras.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
+            validacion.ValidarSoloNumeros(e);
         }
-
-        private void txtAutor_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar))
-            {
-                e.Handled = true;
-                MessageBox.Show("No se permiten Numeros.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-        }
-
-        private void frmAgregarODetallesLibros_Load(object sender, EventArgs e)
+        public void MostrarLista()
         {
             cbAutor = new csConexionSQL().LLenarLista(cbAutor, "Select NombreAutor from Autores where Estado = '1'", "NombreAutor");
             cbCategoria = new csConexionSQL().LLenarLista(cbCategoria, "Select NombreGenero from Genero where Estado = '1'", "NombreGenero");
             cbEditorial = new csConexionSQL().LLenarLista(cbEditorial, "Select NombreEditorial from Editorial where Estado = '1'", "NombreEditorial");
+        }
+        private void frmAgregarODetallesLibros_Load(object sender, EventArgs e)
+        {
+            MostrarLista();
         }
     }
 }
