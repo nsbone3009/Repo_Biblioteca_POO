@@ -45,24 +45,24 @@ namespace Proyecto_Biblioteca_Poo
         private void btnEditarCampos_Click(object sender, EventArgs e)
         {
             csLibro libro = new csLibro();
-            libro.HabilitarCampos(txtTitulo, cbAutor, cbEditorial, cbCategoria, txtPublicacion, txtCantidad, txtResume, btnGuardarCampos, btnCambiarImagen);
+            libro.HabilitarCampos(txtTitulo, txtAutores, cbEditorial, cbCategoria, txtPublicacion, txtCantidad, txtResume, btnGuardarCampos, btnCambiarImagen);
         }
 
         private void btnGuardarCampos_Click(object sender, EventArgs e)
         {
             frmListaLibros frm = Owner as frmListaLibros;
             csLibro libro = new csLibro();
-            if (txtIsbn.Text != "" | txtTitulo.Text != "" & cbAutor.Text != ""   & cbEditorial.Text != "" & cbCategoria.Text != "" & txtPublicacion.Text != "" & txtCantidad.Text != "" & txtResume.Text != "")
+            if (txtIsbn.Text != "" | txtTitulo.Text != "" & txtAutores.Text != ""   & cbEditorial.Text != "" & cbCategoria.Text != "" & txtPublicacion.Text != "" & txtCantidad.Text != "" & txtResume.Text != "")
             {
                 if (frm.validacion)
                 {
-                    libro.AgregarLibro(txtIsbn.Text,txtTitulo.Text, cbAutor.SelectedItem.ToString(), cbEditorial.SelectedItem.ToString(), cbCategoria.SelectedItem.ToString(), txtPublicacion.Text, int.Parse(txtCantidad.Text), txtResume.Text, ptbxImagenLibro);
+                    libro.AgregarLibro(txtIsbn.Text,txtTitulo.Text, txtAutores.Text, cbEditorial.SelectedItem.ToString(), cbCategoria.SelectedItem.ToString(), txtPublicacion.Text, int.Parse(txtCantidad.Text), txtResume.Text, ptbxImagenLibro);
                     libro.MostrarLibros(frm.dgvLibros);
                     frm.validacion = false;
                 }
                 else
                 {
-                    libro.ModificarLibro(ISBN, txtTitulo.Text, cbAutor.SelectedItem.ToString(), cbEditorial.SelectedItem.ToString(), cbCategoria.SelectedItem.ToString(), txtPublicacion.Text, int.Parse(txtCantidad.Text), txtResume.Text, ptbxImagenLibro);
+                    libro.ModificarLibro(ISBN, txtTitulo.Text, txtAutores.Text, cbEditorial.SelectedItem.ToString(), cbCategoria.SelectedItem.ToString(), txtPublicacion.Text, int.Parse(txtCantidad.Text), txtResume.Text, ptbxImagenLibro);
                     libro.MostrarLibros(frm.dgvLibros);
                 }
                 Close();
@@ -90,7 +90,7 @@ namespace Proyecto_Biblioteca_Poo
         }
         public void MostrarLista()
         {
-            cbAutor = new csConexionSQL().LLenarLista(cbAutor, "Select NombreAutor from Autores where Estado = '1'", "NombreAutor");
+            //cbAutor = new csConexionSQL().LLenarLista(cbAutor, "Select NombreAutor from Autores where Estado = '1'", "NombreAutor");
             cbCategoria = new csConexionSQL().LLenarLista(cbCategoria, "Select NombreGenero from Genero where Estado = '1'", "NombreGenero");
             cbEditorial = new csConexionSQL().LLenarLista(cbEditorial, "Select NombreEditorial from Editorial where Estado = '1'", "NombreEditorial");
         }

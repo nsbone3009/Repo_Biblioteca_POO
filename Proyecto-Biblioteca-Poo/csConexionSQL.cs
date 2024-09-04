@@ -12,7 +12,7 @@ namespace Proyecto_Biblioteca_Poo
     internal class csConexionSQL
     {
         // Cadena de conexión que especifica el servidor, base de datos, y las credenciales de SQL Server.
-        public string cadenaConexion = @"Password=admin;Persist Security Info=True;User ID=admin;Initial Catalog=Biblioteca;Data Source=NIURLETH";
+        public string cadenaConexion = @"Password=1111;Persist Security Info=True;User ID=Administrador;Initial Catalog=Biblioteca;Data Source=DESKTOP-T767FTN\KHRIZ";
 
         private SqlConnection conexion;  // Objeto SqlConnection para manejar la conexión con SQL Server.
         // Propiedad que permite acceder al objeto SqlConnection desde fuera de la clase.
@@ -75,6 +75,19 @@ namespace Proyecto_Biblioteca_Poo
             SqlCommand comando = new SqlCommand(consulta, conexion);
             SqlDataReader leer = comando.ExecuteReader();
             if(leer.Read()) { resultado = leer[columna].ToString(); }
+            conexion.Close();
+            return resultado;
+        }
+        public string ExtraerAutores(string consulta, string columna)
+        {
+            string resultado = "";
+            conexion.Open();
+            SqlCommand comando = new SqlCommand(consulta, conexion);
+            SqlDataReader leer = comando.ExecuteReader();
+            while (leer.Read())
+            {
+                resultado += leer[columna].ToString() + ";";
+            }
             conexion.Close();
             return resultado;
         }

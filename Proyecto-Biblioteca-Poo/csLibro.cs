@@ -7,31 +7,53 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data;
 
 namespace Proyecto_Biblioteca_Poo
 {
     internal class csLibro
     {
         public string ISBN { get; set; }
-        //public string Titulo { get; set; }
-        //public string Autor { get; set; }
-        //public string Editorial { get; set; }
-        //public string Genero { get; set; }
-        //public string publicacion { get; set; }
-        //public string sinopsis { get; set; }
         private csConexionSQL conexion;
-
         public csLibro()
         {
             conexion = new csConexionSQL();
         }
-
-        // Mostrar Lista de Libros
         public void MostrarLibros(DataGridView dgvLibros)
         {
-            string consulta = "Select titulo_lb, autor_es_lb, editorial_lb, genero_lb, año_publicacion_lb, cantidad_lb, sinopsis_lb from Libros";
-            dgvLibros.Rows.Clear();
-            dgvLibros = new csAjustarDataGridView().Ajustar(dgvLibros, consulta);
+            string consulta = "Select L.titulo_lb, E.NombreEditorial, G.NombreGenero, L.año_publicacion_lb, L.cantidad_lb, L.sinopsis_lb " +
+            "from Libros L " +
+            "join Editorial E on E.idEditorial = L.IdEditorial "+
+            "join Genero G on G.idGenero = L.IdGenero ";
+            int f = 0, v = 0;
+            DataTable contenedor = new csConexionSQL().MostrarRegistros(consulta);
+            foreach (DataRow row in contenedor.Rows)
+            {
+                dgvLibros.Rows.Add();
+                object[] vector = row.ItemArray;
+                for (int i = 0; i < dgvLibros.ColumnCount; i++)
+                {
+                    dgvLibros.Columns[i].Width = dgvLibros.Width / dgvLibros.ColumnCount;
+                    dgvLibros.Columns[i].Resizable = DataGridViewTriState.False;
+                    if (i != 1)
+                    {
+                        dgvLibros.Rows[f].Cells[i].Value = vector[v++].ToString();
+                    }
+                    else
+                    {
+                        string autoresLibros = "";
+                        string isbn = new csConexionSQL().Extraer("Select * from Libros where titulo_lb = '" + vector[0] + "'", "isbn_lb");
+                        string[] autores = new csConexionSQL().ExtraerAutores("Select * from Autores_Libros where isbn_lb = '" + isbn + "'", "idAutor").Split(';');
+                        foreach (string autor in autores)
+                        {
+                            autoresLibros += new csConexionSQL().Extraer("Select * from Autores where idAutor = '" + autor + "'", "NombreAutor") + ", ";
+                        }
+                        dgvLibros.Rows[f].Cells[i].Value = autoresLibros;
+                    }
+                }
+                v = 0;
+                dgvLibros.Rows[f++].Height = 50;
+            }
         }
         public void CambiarImagen(PictureBox ptbxImagenLibro)
         {
@@ -43,12 +65,10 @@ namespace Proyecto_Biblioteca_Poo
                 ptbxImagenLibro.Image = Image.FromFile(Imagen.FileName);
             }
         }
-
-        public void HabilitarCampos(TextBox txtTitulo, ComboBox cbAutor, ComboBox cbEditorial, ComboBox cbCategoria,
-                                    TextBox txtPublicacion, TextBox txtCantidad, TextBox txtResume, Button btnGuardarCampos, Button btnCambiarImagen)
+        public void HabilitarCampos(TextBox txtTitulo, TextBox txtAutores, ComboBox cbEditorial, ComboBox cbCategoria,TextBox txtPublicacion, TextBox txtCantidad, TextBox txtResume, Button btnGuardarCampos, Button btnCambiarImagen)
         {
             txtTitulo.Enabled = true;
-            cbAutor.Enabled = true;
+            txtAutores.Enabled = true;
             cbEditorial.Enabled = true;
             cbCategoria.Enabled = true;
             txtPublicacion.Enabled = true;
@@ -57,7 +77,6 @@ namespace Proyecto_Biblioteca_Poo
             btnGuardarCampos.Enabled = true;
             btnCambiarImagen.Enabled = true;
         }
-        // Agregar un nuevo libro
         public void AgregarLibro(string isbn,string titulo, string autor, string editorial, string genero, string publicacion, int cantidad, string sinopsis, PictureBox ptbxImagenLibro)
         {
 
@@ -71,8 +90,6 @@ namespace Proyecto_Biblioteca_Poo
                 new csGuardarImagenDatabase().GuardarImagen(ptbxImagenLibro, $"Update Libros set imagen_lb = @imagen where isbn_lb = '{ISBN}' ");
             }
         }
-
-        // Modificar un libro existente
         public void ModificarLibro(string isbn, string titulo, string autor, string editorial, string genero, string publicacion, int cantidad, string sinopsis, PictureBox ptbxImagenLibro)
         {
             string consulta = $"Update Libros set titulo_lb = '{titulo}', autor_es_lb = '{autor}', editorial_lb = '{editorial}', genero_lb = '{genero}', " +
@@ -92,7 +109,7 @@ namespace Proyecto_Biblioteca_Poo
             frm.lbTituloVentana.Text = "Detalles del Libro";
             frm.ISBN = conexion.Extraer($"Select isbn_lb from Libros where titulo_lb = '{filaSeleccionada.Cells[0].Value.ToString().Trim()}'", "isbn_lb");
             frm.txtTitulo.Text = filaSeleccionada.Cells[0].Value.ToString().Trim();
-            frm.cbAutor.SelectedItem = filaSeleccionada.Cells[1].Value.ToString().Trim();
+            frm.txtAutores.Text = filaSeleccionada.Cells[1].Value.ToString().Trim();
             frm.cbEditorial.SelectedItem = filaSeleccionada.Cells[2].Value.ToString().Trim();
             frm.cbCategoria.SelectedItem = filaSeleccionada.Cells[3].Value.ToString().Trim();
             frm.txtPublicacion.Text = filaSeleccionada.Cells[4].Value.ToString().Trim();
@@ -101,7 +118,7 @@ namespace Proyecto_Biblioteca_Poo
 
             // Deshabilitar campos para ver detalles
             frm.txtTitulo.Enabled = false;
-            frm.cbAutor.Enabled = false;
+            frm.txtAutores.Enabled = false;
             frm.cbEditorial.Enabled = false;
             frm.cbCategoria.Enabled = false;
             frm.txtPublicacion.Enabled = false;

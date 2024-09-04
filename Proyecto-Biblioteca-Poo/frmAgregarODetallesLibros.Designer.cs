@@ -50,7 +50,7 @@
             this.btnCambiarImagen = new System.Windows.Forms.Button();
             this.cbEditorial = new System.Windows.Forms.ComboBox();
             this.cbCategoria = new System.Windows.Forms.ComboBox();
-            this.cbAutor = new System.Windows.Forms.ComboBox();
+            this.txtAutores = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.ptbxImagenLibro)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,7 +65,7 @@
             // txtCantidad
             // 
             this.txtCantidad.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCantidad.Location = new System.Drawing.Point(182, 290);
+            this.txtCantidad.Location = new System.Drawing.Point(423, 290);
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(69, 35);
             this.txtCantidad.TabIndex = 9;
@@ -77,7 +77,7 @@
             this.txtResume.Location = new System.Drawing.Point(48, 366);
             this.txtResume.Multiline = true;
             this.txtResume.Name = "txtResume";
-            this.txtResume.Size = new System.Drawing.Size(375, 129);
+            this.txtResume.Size = new System.Drawing.Size(360, 139);
             this.txtResume.TabIndex = 14;
             // 
             // label1
@@ -96,7 +96,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(275, 188);
+            this.label2.Location = new System.Drawing.Point(512, 188);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(66, 18);
             this.label2.TabIndex = 16;
@@ -118,7 +118,7 @@
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(502, 188);
+            this.label6.Location = new System.Drawing.Point(45, 269);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(60, 18);
             this.label6.TabIndex = 19;
@@ -129,7 +129,7 @@
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(179, 269);
+            this.label8.Location = new System.Drawing.Point(420, 269);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(72, 18);
             this.label8.TabIndex = 21;
@@ -155,12 +155,12 @@
             this.btnGuardarCampos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnGuardarCampos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnGuardarCampos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGuardarCampos.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardarCampos.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardarCampos.ForeColor = System.Drawing.Color.White;
-            this.btnGuardarCampos.Location = new System.Drawing.Point(604, 331);
+            this.btnGuardarCampos.Location = new System.Drawing.Point(629, 434);
             this.btnGuardarCampos.Margin = new System.Windows.Forms.Padding(0, 3, 0, 3);
             this.btnGuardarCampos.Name = "btnGuardarCampos";
-            this.btnGuardarCampos.Size = new System.Drawing.Size(125, 40);
+            this.btnGuardarCampos.Size = new System.Drawing.Size(100, 35);
             this.btnGuardarCampos.TabIndex = 23;
             this.btnGuardarCampos.Text = "Guardar";
             this.btnGuardarCampos.UseVisualStyleBackColor = false;
@@ -175,12 +175,12 @@
             this.btnEditarCampos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnEditarCampos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnEditarCampos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditarCampos.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditarCampos.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditarCampos.ForeColor = System.Drawing.Color.White;
-            this.btnEditarCampos.Location = new System.Drawing.Point(604, 285);
+            this.btnEditarCampos.Location = new System.Drawing.Point(629, 471);
             this.btnEditarCampos.Margin = new System.Windows.Forms.Padding(0, 3, 0, 3);
             this.btnEditarCampos.Name = "btnEditarCampos";
-            this.btnEditarCampos.Size = new System.Drawing.Size(125, 40);
+            this.btnEditarCampos.Size = new System.Drawing.Size(100, 35);
             this.btnEditarCampos.TabIndex = 24;
             this.btnEditarCampos.Text = "Editar";
             this.btnEditarCampos.UseVisualStyleBackColor = false;
@@ -195,14 +195,14 @@
             this.btnCerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrar.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCerrar.ForeColor = System.Drawing.Color.White;
-            this.btnCerrar.Location = new System.Drawing.Point(604, 377);
+            this.btnCerrar.Location = new System.Drawing.Point(726, 14);
             this.btnCerrar.Margin = new System.Windows.Forms.Padding(0, 3, 0, 3);
             this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(125, 40);
+            this.btnCerrar.Size = new System.Drawing.Size(35, 35);
             this.btnCerrar.TabIndex = 24;
-            this.btnCerrar.Text = "Cerrar";
+            this.btnCerrar.Text = "X";
             this.btnCerrar.UseVisualStyleBackColor = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
@@ -221,7 +221,7 @@
             // txtPublicacion
             // 
             this.txtPublicacion.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPublicacion.Location = new System.Drawing.Point(48, 290);
+            this.txtPublicacion.Location = new System.Drawing.Point(289, 290);
             this.txtPublicacion.Name = "txtPublicacion";
             this.txtPublicacion.Size = new System.Drawing.Size(118, 35);
             this.txtPublicacion.TabIndex = 8;
@@ -232,7 +232,7 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(45, 269);
+            this.label3.Location = new System.Drawing.Point(286, 269);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(121, 18);
             this.label3.TabIndex = 19;
@@ -243,7 +243,7 @@
             this.lbIsbn.AutoSize = true;
             this.lbIsbn.BackColor = System.Drawing.Color.Transparent;
             this.lbIsbn.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbIsbn.Location = new System.Drawing.Point(275, 269);
+            this.lbIsbn.Location = new System.Drawing.Point(512, 269);
             this.lbIsbn.Name = "lbIsbn";
             this.lbIsbn.Size = new System.Drawing.Size(36, 18);
             this.lbIsbn.TabIndex = 54;
@@ -252,7 +252,7 @@
             // txtIsbn
             // 
             this.txtIsbn.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIsbn.Location = new System.Drawing.Point(278, 290);
+            this.txtIsbn.Location = new System.Drawing.Point(515, 290);
             this.txtIsbn.Name = "txtIsbn";
             this.txtIsbn.Size = new System.Drawing.Size(214, 35);
             this.txtIsbn.TabIndex = 53;
@@ -260,9 +260,9 @@
             // ptbxImagenLibro
             // 
             this.ptbxImagenLibro.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ptbxImagenLibro.Location = new System.Drawing.Point(451, 366);
+            this.ptbxImagenLibro.Location = new System.Drawing.Point(423, 366);
             this.ptbxImagenLibro.Name = "ptbxImagenLibro";
-            this.ptbxImagenLibro.Size = new System.Drawing.Size(104, 129);
+            this.ptbxImagenLibro.Size = new System.Drawing.Size(139, 139);
             this.ptbxImagenLibro.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ptbxImagenLibro.TabIndex = 55;
             this.ptbxImagenLibro.TabStop = false;
@@ -276,14 +276,14 @@
             this.btnCambiarImagen.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnCambiarImagen.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnCambiarImagen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCambiarImagen.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCambiarImagen.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCambiarImagen.ForeColor = System.Drawing.Color.White;
-            this.btnCambiarImagen.Location = new System.Drawing.Point(604, 455);
+            this.btnCambiarImagen.Location = new System.Drawing.Point(576, 470);
             this.btnCambiarImagen.Margin = new System.Windows.Forms.Padding(0, 3, 0, 3);
             this.btnCambiarImagen.Name = "btnCambiarImagen";
-            this.btnCambiarImagen.Size = new System.Drawing.Size(125, 40);
+            this.btnCambiarImagen.Size = new System.Drawing.Size(37, 35);
             this.btnCambiarImagen.TabIndex = 56;
-            this.btnCambiarImagen.Text = "Cambiar";
+            this.btnCambiarImagen.Text = "...";
             this.btnCambiarImagen.UseVisualStyleBackColor = false;
             this.btnCambiarImagen.Click += new System.EventHandler(this.btnCambiarImagen_Click);
             // 
@@ -292,7 +292,7 @@
             this.cbEditorial.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbEditorial.Font = new System.Drawing.Font("Arial", 18F);
             this.cbEditorial.FormattingEnabled = true;
-            this.cbEditorial.Location = new System.Drawing.Point(278, 209);
+            this.cbEditorial.Location = new System.Drawing.Point(515, 209);
             this.cbEditorial.Name = "cbEditorial";
             this.cbEditorial.Size = new System.Drawing.Size(214, 35);
             this.cbEditorial.TabIndex = 57;
@@ -302,20 +302,18 @@
             this.cbCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCategoria.Font = new System.Drawing.Font("Arial", 18F);
             this.cbCategoria.FormattingEnabled = true;
-            this.cbCategoria.Location = new System.Drawing.Point(505, 209);
+            this.cbCategoria.Location = new System.Drawing.Point(48, 290);
             this.cbCategoria.Name = "cbCategoria";
             this.cbCategoria.Size = new System.Drawing.Size(205, 35);
             this.cbCategoria.TabIndex = 58;
             // 
-            // cbAutor
+            // txtAutores
             // 
-            this.cbAutor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbAutor.Font = new System.Drawing.Font("Arial", 18F);
-            this.cbAutor.FormattingEnabled = true;
-            this.cbAutor.Location = new System.Drawing.Point(48, 209);
-            this.cbAutor.Name = "cbAutor";
-            this.cbAutor.Size = new System.Drawing.Size(214, 35);
-            this.cbAutor.TabIndex = 59;
+            this.txtAutores.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAutores.Location = new System.Drawing.Point(48, 209);
+            this.txtAutores.Name = "txtAutores";
+            this.txtAutores.Size = new System.Drawing.Size(444, 35);
+            this.txtAutores.TabIndex = 59;
             // 
             // frmAgregarODetallesLibros
             // 
@@ -323,7 +321,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(780, 560);
-            this.Controls.Add(this.cbAutor);
+            this.Controls.Add(this.txtAutores);
             this.Controls.Add(this.cbCategoria);
             this.Controls.Add(this.cbEditorial);
             this.Controls.Add(this.btnCambiarImagen);
@@ -378,6 +376,6 @@
         public System.Windows.Forms.Button btnCambiarImagen;
         public System.Windows.Forms.ComboBox cbEditorial;
         public System.Windows.Forms.ComboBox cbCategoria;
-        public System.Windows.Forms.ComboBox cbAutor;
+        public System.Windows.Forms.TextBox txtAutores;
     }
 }
