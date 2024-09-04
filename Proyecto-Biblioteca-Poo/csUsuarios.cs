@@ -36,7 +36,7 @@ namespace Proyecto_Biblioteca_Poo
         {
             Conexion.Open();
             string consulta = "insert into Usuarios(cedula_usr,nombres_usr,apellidos_usr,fecha_nacimiento_usr,direccion_domicilio_usr,correo_usr,rol_usr,estado_usr) values" +
-                "('" + cedula + "','" + Nombre + "','" + Apellido + "','" + Fecha + "','" + Domicilio + "','" + Correo + "','" + Rol + "','" + Estado + "')";
+                "('" + Cedula + "','" + Nombre + "','" + Apellido + "','" + Fecha + "','" + Domicilio + "','" + Correo + "','" + Rol + "','" + Estado + "')";
             SqlCommand comando = new SqlCommand(consulta, Conexion);
             comando.ExecuteReader();
             Conexion.Close();
