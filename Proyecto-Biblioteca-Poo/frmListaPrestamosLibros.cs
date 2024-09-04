@@ -9,6 +9,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Proyecto_Biblioteca_Poo
 {
@@ -16,14 +17,11 @@ namespace Proyecto_Biblioteca_Poo
     {
         csPrestamos prestamo = new csPrestamos();
         csConexionSQL database = new csConexionSQL();
-        static int idPrestamo; static string cedulaLector; static string isbnLibro;
-        static string fechaPrestamo; static string fechaDevolucion;
         public bool bandera = false;
 
         public frmListaPrestamosLibros()
         {
             InitializeComponent();
-            CargarDatos();
         }
 
         private void btnAgregarPrestamo_Click(object sender, EventArgs e)
@@ -32,6 +30,7 @@ namespace Proyecto_Biblioteca_Poo
             formulario.LabelText = "AGREGAR PRESTAMO";
             formulario.GuardarOModificar = true;
             formulario.ShowDialog();
+            dgvPrestamos.Rows.Clear();
             CargarDatos();
         }
 
@@ -39,22 +38,13 @@ namespace Proyecto_Biblioteca_Poo
         {
             CargarDatos();
         }
+
         public void CargarDatos()
         {
             string sentencia = prestamo.CargarDatos();
-            dgvPrestamos.DataSource = database.MostrarRegistros(sentencia);
-        }
-
-        private void txtBuscar_TextChanged(object sender, EventArgs e)
-        {
-        }
-
-
-
-        private void dgvPrestamos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-            //this.Close();
+            dgvPrestamos = new csAjustarDataGridView().Ajustar(dgvPrestamos, sentencia);
+            //dgvPrestamos.DataSource = database.MostrarRegistros(sentencia);
+            //dgvPrestamos = new csAjustarDataGridView().AjustarDatos(dgvPrestamos);
         }
 
         private void txtBuscar_KeyUp(object sender, KeyEventArgs e)
@@ -63,9 +53,11 @@ namespace Proyecto_Biblioteca_Poo
             {
                 dgvPrestamos.DataSource = database.MostrarRegistros("SELECT id_ptm as [ID Prestamo], cedula_ltr as [Cédula Lector], isbn_lb as [ISBN Libro], fecha_prestamo as [Fecha Préstamo], fecha_devolucio_programada as [Fecha devolucion] FROM Prestamos where estado_=1 and CONVERT(varchar,cedula_ltr) like '%" + txtBuscar.Text + "%'  or isbn_lb like '%" + txtBuscar.Text + "%'");
             }
-
             if (txtBuscar.Text.Length == 0)
+            {
+                dgvPrestamos.Rows.Clear();
                 CargarDatos();
+            }
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -73,29 +65,27 @@ namespace Proyecto_Biblioteca_Poo
             this.Close();
         }
 
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         private void dgvPrestamos_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+            
             if (bandera == true)
             {
-                frmAgregarODetallesDevolucionesLibros datitos = new frmAgregarODetallesDevolucionesLibros();
-                string consulta = dgvPrestamos.Rows[e.RowIndex].Cells[2].Value.ToString();
-                string NuevaConsulta = "select L.titulo_lb,L.isbn_lb,Le.nombres_ltr,Le.cedula_ltr,D.fecha_prestamo,D.fecha_devolucion_programada from Devoluciones as D inner join[Libros] as L on D.isbn_lb=[L].isbn_lb inner join Lectores as Le  on d.cedula_ltr=[Le].cedula_ltr where D.isbn_lb='" + consulta.Trim() + "'";
-                csConexionSQL conector = new csConexionSQL();
-                SqlDataReader lector = conector.SelectLeer(NuevaConsulta);
-                this.AddOwnedForm(datitos);
-                if (lector.Read())
-                {
-                    datitos.txtTitulo.Text = lector["titulo_lb"].ToString().Trim();
-                    datitos.txtLector.Text = lector["nombres_ltr"].ToString();
-                    datitos.txtCedula.Text = lector["cedula_ltr"].ToString().Trim();
-                    datitos.txtISBN.Text = lector["isbn_lb"].ToString().Trim();
-                    datitos.txtFechaPrestamo.Text = lector["fecha_prestamo"].ToString().Trim();
-                    datitos.txtFechaDevolucion.Text = lector["fecha_devolucion_programada"].ToString().Trim();
-                    datitos.txtFechaActual.Text = DateTime.Now.ToString("yyyy-MM-dd");
-                    datitos.ShowDialog();
-                }this.Close();
+                frmAgregarODetallesDevolucionesLibros datitos = Owner as frmAgregarODetallesDevolucionesLibros;
+                datitos.txtTitulo.Text = new csConexionSQL().Extraer("Select titulo_lb From Libros where isbn_lb = '" + dgvPrestamos.Rows[e.RowIndex].Cells[2].Value.ToString() +"'", "titulo_lb");
+                datitos.txtLector.Text = new csConexionSQL().Extraer("Select cedula_ltr From Lectores where cedula_ltr = '" + dgvPrestamos.Rows[e.RowIndex].Cells[1].Value.ToString() + "'", "cedula_ltr");
+                datitos.txtCedula.Text = dgvPrestamos.Rows[e.RowIndex].Cells[1].Value.ToString();
+                datitos.txtISBN.Text = dgvPrestamos.Rows[e.RowIndex].Cells[2].Value.ToString();
+                datitos.txtFechaPrestamo.Text = dgvPrestamos.Rows[e.RowIndex].Cells[3].Value.ToString();
+                datitos.txtFechaDevolucion.Text = dgvPrestamos.Rows[e.RowIndex].Cells[4].Value.ToString();
+                datitos.txtFechaActual.Text = DateTime.Now.ToString("dd-MM-yyyy");
+                this.Close();
             }
-            else 
+            else
             {
                 if (dgvPrestamos.SelectedRows.Count > 0)
                 {
@@ -107,13 +97,10 @@ namespace Proyecto_Biblioteca_Poo
                 {
                     MessageBox.Show("Por favor, seleccione una fila primero.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
+                dgvPrestamos.Rows.Clear();
                 CargarDatos();
             }
-        }
-
-        private void btnCerrar_Click(object sender, EventArgs e)
-        {
-            this.Close();
+            
         }
     }
 }

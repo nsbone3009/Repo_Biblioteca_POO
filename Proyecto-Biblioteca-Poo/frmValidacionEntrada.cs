@@ -72,28 +72,28 @@ namespace Proyecto_Biblioteca_Poo
         }
         private void Ingreso(string usu, string contra)
         {
-            csLogin login = new csLogin();
-            csUsuarios verificador = new csUsuarios();
-            string cifrado = verificador.Encriptar(contra);
-            if (login.VerificarLogin(usu, cifrado))
-            {
-                string cedulaUsuario = login.Cedula;
-                string rol = login.ObtenerRolUsuario(cedulaUsuario.Trim());
+            //csLogin login = new csLogin();
+            //csUsuarios verificador = new csUsuarios();
+            //string cifrado = verificador.Encriptar(contra);
+            //if (login.VerificarLogin(usu, cifrado))
+            //{
+            //    string cedulaUsuario = login.Cedula;
+            //    string rol = login.ObtenerRolUsuario(cedulaUsuario.Trim());
 
                 frmPantallaPrincipal frm = new frmPantallaPrincipal();
 
-                if (rol.Trim() == "Bibliotecario")
-                {
-                    frm.btnAdministracion.Visible = false;
-                    frm.btnAdministracion.Enabled = false;
-                }
+                ////if (rol.Trim() == "Bibliotecario")
+                ////{
+                //    frm.btnAdministracion.Visible = false;
+                //    frm.btnAdministracion.Enabled = false;
+                //}
                 frm.Show();
                 this.Hide();
-            }
-            else
-            {
-                MessageBox.Show("Las credenciales ingresadas no son válidas. Por favor, revisa tu nombre de usuario y contraseña e intenta de nuevo.", "Error de Inicio de Sesión", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Las credenciales ingresadas no son válidas. Por favor, revisa tu nombre de usuario y contraseña e intenta de nuevo.", "Error de Inicio de Sesión", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
         }
         private void ValidarEnterYEspacio(KeyPressEventArgs e, TextBox siguienteControl)
         {

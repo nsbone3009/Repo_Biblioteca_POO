@@ -67,7 +67,7 @@ namespace Proyecto_Biblioteca_Poo
                         frm.lbTituloVentana.Text = "Detalles del Libro";
                         frm.ISBN = new csConexionSQL().Extraer("Select isbn_lb from Libros where titulo_lb = '" + dgvLibros.Rows[e.RowIndex].Cells[0].Value.ToString().Trim() + "'", "isbn_lb");
                         frm.txtTitulo.Text = dgvLibros.Rows[e.RowIndex].Cells[0].Value.ToString().Trim();
-                        frm.txtAutor.Text = dgvLibros.Rows[e.RowIndex].Cells[1].Value.ToString().Trim();
+                        frm.cbAutor.SelectedItem = dgvLibros.Rows[e.RowIndex].Cells[1].Value.ToString().Trim();
                         frm.cbEditorial.SelectedItem = dgvLibros.Rows[e.RowIndex].Cells[2].Value.ToString().Trim();
                         frm.cbCategoria.SelectedItem = dgvLibros.Rows[e.RowIndex].Cells[3].Value.ToString().Trim();
                         frm.txtPublicacion.Text = dgvLibros.Rows[e.RowIndex].Cells[4].Value.ToString().Trim();
@@ -75,7 +75,7 @@ namespace Proyecto_Biblioteca_Poo
                         frm.txtResume.Text = dgvLibros.Rows[e.RowIndex].Cells[6].Value.ToString().Trim();
 
                         frm.txtTitulo.Enabled = false;
-                        frm.txtAutor.Enabled = false;
+                        frm.cbAutor.Enabled = false;
                         frm.cbEditorial.Enabled = false;
                         frm.cbCategoria.Enabled = false;
                         frm.txtPublicacion.Enabled = false;

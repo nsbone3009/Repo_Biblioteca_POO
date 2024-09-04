@@ -31,11 +31,13 @@ namespace Proyecto_Biblioteca_Poo
         static int estado = 0;
         static string correo = "";
         static int aviso = 0;
+
         public frmPantallaPrincipal()
         {
             InitializeComponent();
             Confi();
         }
+
         private void Confi()
         {
             timer = new Timer();
@@ -43,10 +45,12 @@ namespace Proyecto_Biblioteca_Poo
             timer.Tick += Timer_Tick;
             timer.Start();
         }
+
         private void Timer_Tick(object sender, EventArgs e)
         {
             Comparar();
         }
+
         private void Comparar()
         {
             DateTime fechaActual = DateTime.Now.Date;
@@ -75,6 +79,7 @@ namespace Proyecto_Biblioteca_Poo
                 }
             }
         }
+
         private void EnviarCorreo(string correo, string nombre, string isbn)
         {
             frmPantallaPrincipal obj = new frmPantallaPrincipal();
@@ -85,6 +90,7 @@ namespace Proyecto_Biblioteca_Poo
             email.Con_Copia = "sanchezvera243@gmail.com";
             email.Enviar();
         }
+
         private void Menu_Load(object sender, EventArgs e)
         {
             lbListaLibros.Visible = false;
@@ -100,6 +106,7 @@ namespace Proyecto_Biblioteca_Poo
             MostrarLogoNombre();
             LlamarFormulario(frmListaLibros);
         }
+
         public void MostrarLogoNombre()
         {
             csConexionSQL conexion = new csConexionSQL();
@@ -117,6 +124,7 @@ namespace Proyecto_Biblioteca_Poo
                 catch { }
             }
         }
+
         private void btnLibros_Click(object sender, EventArgs e)
         {
             if (clickLectores) { btnLectores.PerformClick(); }
@@ -159,6 +167,7 @@ namespace Proyecto_Biblioteca_Poo
                 clickLibros = false;
             }
         }
+
         private void btnLectores_Click(object sender, EventArgs e)
         {
             if (clickLibros) { btnLibros.PerformClick(); }
@@ -177,6 +186,7 @@ namespace Proyecto_Biblioteca_Poo
                 clickLectores = false;
             }
         }
+
         private void btnAdministracion_Click(object sender, EventArgs e)
         {
             if (clickLibros) { btnLibros.PerformClick(); }
@@ -199,28 +209,40 @@ namespace Proyecto_Biblioteca_Poo
                 lbReportes.Visible = false;
             }
         }
+
         private void lbListaLibros_Click(object sender, EventArgs e)
         {
-            frmListaLibros.dgvLibros.Rows.Clear();
-            frmListaLibros.MostrarLibros();
+            //frmListaLibros.dgvLibros.Rows.Clear();
+            //frmListaLibros.MostrarLibros();
             LlamarFormulario(frmListaLibros);
         }
+
         private void lbPrestamosLibros_Click(object sender, EventArgs e)
         {
             frmListaPrestamosLibros.btnCerrar.Visible = false;
-            string sentencia = prestamo.CargarDatos();
-            frmListaPrestamosLibros.dgvPrestamos.DataSource = database.MostrarRegistros(sentencia);
+            if (frmListaPrestamosLibros.dgvPrestamos.RowCount > 0)
+            {
+                frmListaPrestamosLibros.dgvPrestamos.Rows.Clear();
+                frmListaPrestamosLibros.CargarDatos();
+            }
             LlamarFormulario(frmListaPrestamosLibros);
         }
+
         private void lbDevolucionesLibros_Click(object sender, EventArgs e)
         {
-            frmListaDevolucionesLibros.dgvDevoluciones.DataSource = database.MostrarRegistros("select id_dl as ID, cedula_ltr as [CEDULA LECTOR], isbn_lb as ISBN, fecha_prestamo AS [FECHA PRESTAMO], fecha_devolucion_programada as [FECHA DEVOLUCION PROGRAMADA], fecha_devolucion as [FECHA DEVOLUCION] FROM Devoluciones");
+            if (frmListaDevolucionesLibros.dgvDevoluciones.RowCount > 0)
+            {
+                frmListaDevolucionesLibros.dgvDevoluciones.Rows.Clear();
+                frmListaDevolucionesLibros.CargarDatos();
+            }
             LlamarFormulario(frmListaDevolucionesLibros);
         }
+
         private void lbListaLectores_Click(object sender, EventArgs e)
         {
             LlamarFormulario(frmListaLectores);
         }
+
         private void LlamarFormulario(Form formulario)
         {
             plPantalla.Controls.Clear();
@@ -228,6 +250,7 @@ namespace Proyecto_Biblioteca_Poo
             plPantalla.Controls.Add(formulario);
             formulario.Show();
         }
+
         private void lbUsuarios_Click(object sender, EventArgs e)
         {
             LlamarFormulario(frmlistaUsurs);
@@ -253,6 +276,7 @@ namespace Proyecto_Biblioteca_Poo
             new frmValidacionEntrada().Show();
             this.Hide();
         }
+
         private void lbConfiguracion_Click(object sender, EventArgs e)
         {
             plPantalla.Controls.Clear();

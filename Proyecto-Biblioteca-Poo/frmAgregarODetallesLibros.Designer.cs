@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAgregarODetallesLibros));
             this.txtTitulo = new System.Windows.Forms.TextBox();
             this.txtCantidad = new System.Windows.Forms.TextBox();
-            this.txtAutor = new System.Windows.Forms.TextBox();
             this.txtResume = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -51,6 +50,7 @@
             this.btnCambiarImagen = new System.Windows.Forms.Button();
             this.cbEditorial = new System.Windows.Forms.ComboBox();
             this.cbCategoria = new System.Windows.Forms.ComboBox();
+            this.cbAutor = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.ptbxImagenLibro)).BeginInit();
             this.SuspendLayout();
             // 
@@ -70,15 +70,6 @@
             this.txtCantidad.Size = new System.Drawing.Size(69, 35);
             this.txtCantidad.TabIndex = 9;
             this.txtCantidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCantidad_KeyPress);
-            // 
-            // txtAutor
-            // 
-            this.txtAutor.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAutor.Location = new System.Drawing.Point(48, 209);
-            this.txtAutor.Name = "txtAutor";
-            this.txtAutor.Size = new System.Drawing.Size(214, 35);
-            this.txtAutor.TabIndex = 11;
-            this.txtAutor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAutor_KeyPress);
             // 
             // txtResume
             // 
@@ -129,9 +120,9 @@
             this.label6.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(502, 188);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(78, 18);
+            this.label6.Size = new System.Drawing.Size(60, 18);
             this.label6.TabIndex = 19;
-            this.label6.Text = "Categoria";
+            this.label6.Text = "Genero";
             // 
             // label8
             // 
@@ -269,9 +260,9 @@
             // ptbxImagenLibro
             // 
             this.ptbxImagenLibro.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ptbxImagenLibro.Location = new System.Drawing.Point(443, 366);
+            this.ptbxImagenLibro.Location = new System.Drawing.Point(451, 366);
             this.ptbxImagenLibro.Name = "ptbxImagenLibro";
-            this.ptbxImagenLibro.Size = new System.Drawing.Size(137, 129);
+            this.ptbxImagenLibro.Size = new System.Drawing.Size(104, 129);
             this.ptbxImagenLibro.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ptbxImagenLibro.TabIndex = 55;
             this.ptbxImagenLibro.TabStop = false;
@@ -301,13 +292,6 @@
             this.cbEditorial.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbEditorial.Font = new System.Drawing.Font("Arial", 18F);
             this.cbEditorial.FormattingEnabled = true;
-            this.cbEditorial.Items.AddRange(new object[] {
-            "Planeta",
-            "RBA Libros",
-            "SM Ediciones",
-            "Hachette Book Group",
-            "Editorial Anagrama",
-            "Ediciones B"});
             this.cbEditorial.Location = new System.Drawing.Point(278, 209);
             this.cbEditorial.Name = "cbEditorial";
             this.cbEditorial.Size = new System.Drawing.Size(214, 35);
@@ -318,22 +302,20 @@
             this.cbCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCategoria.Font = new System.Drawing.Font("Arial", 18F);
             this.cbCategoria.FormattingEnabled = true;
-            this.cbCategoria.Items.AddRange(new object[] {
-            "Ficción",
-            "No Ficción",
-            "Misterio",
-            "Ciencia Ficción",
-            "Fantasía",
-            "Romance",
-            "Terror",
-            "Thriller",
-            "Aventura",
-            "Biografía",
-            "Historia"});
             this.cbCategoria.Location = new System.Drawing.Point(505, 209);
             this.cbCategoria.Name = "cbCategoria";
             this.cbCategoria.Size = new System.Drawing.Size(205, 35);
             this.cbCategoria.TabIndex = 58;
+            // 
+            // cbAutor
+            // 
+            this.cbAutor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbAutor.Font = new System.Drawing.Font("Arial", 18F);
+            this.cbAutor.FormattingEnabled = true;
+            this.cbAutor.Location = new System.Drawing.Point(48, 209);
+            this.cbAutor.Name = "cbAutor";
+            this.cbAutor.Size = new System.Drawing.Size(214, 35);
+            this.cbAutor.TabIndex = 59;
             // 
             // frmAgregarODetallesLibros
             // 
@@ -341,6 +323,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(780, 560);
+            this.Controls.Add(this.cbAutor);
             this.Controls.Add(this.cbCategoria);
             this.Controls.Add(this.cbEditorial);
             this.Controls.Add(this.btnCambiarImagen);
@@ -359,13 +342,13 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtResume);
-            this.Controls.Add(this.txtAutor);
             this.Controls.Add(this.txtCantidad);
             this.Controls.Add(this.txtPublicacion);
             this.Controls.Add(this.txtTitulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmAgregarODetallesLibros";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.frmAgregarODetallesLibros_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ptbxImagenLibro)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -376,7 +359,6 @@
 
         public System.Windows.Forms.TextBox txtTitulo;
         public System.Windows.Forms.TextBox txtCantidad;
-        public System.Windows.Forms.TextBox txtAutor;
         public System.Windows.Forms.TextBox txtResume;
         public System.Windows.Forms.Label label1;
         public System.Windows.Forms.Label label2;
@@ -396,5 +378,6 @@
         public System.Windows.Forms.Button btnCambiarImagen;
         public System.Windows.Forms.ComboBox cbEditorial;
         public System.Windows.Forms.ComboBox cbCategoria;
+        public System.Windows.Forms.ComboBox cbAutor;
     }
 }

@@ -30,9 +30,10 @@ namespace Proyecto_Biblioteca_Poo
         }
         public void CargarDatos()
         {
-            string consulta = "select id_dl as ID, cedula_ltr as [CEDULA LECTOR], isbn_lb as ISBN, fecha_prestamo AS [FECHA PRESTAMO], fecha_devolucion_programada as [FECHA DEVOLUCION PROGRAMADA], fecha_devolucion as [FECHA DEVOLUCION] FROM Devoluciones";
-            csConexionSQL database = new csConexionSQL();
-            dgvDevoluciones.DataSource = database.MostrarRegistros(consulta);
+            string consulta = "select id_dl, cedula_ltr, isbn_lb, fecha_prestamo, fecha_devolucion_programada, fecha_devolucion FROM Devoluciones";
+            //csConexionSQL database = new csConexionSQL();
+            //dgvDevoluciones.DataSource = database.MostrarRegistros(consulta);
+            dgvDevoluciones = new csAjustarDataGridView().Ajustar(dgvDevoluciones, consulta);
         }
     }
 }

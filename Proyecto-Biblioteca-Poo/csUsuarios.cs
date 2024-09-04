@@ -15,7 +15,6 @@ namespace Proyecto_Biblioteca_Poo
         private string cedula; private string nombre; private string apellido; private string fecha;
         private string rol; private string estado; private string domicilio; private string usuario;
         private string contra; private string correo; private int id;private string CifraClave;
-        public string Cedula { get => cedula; set => cedula = value; }
         public string Nombre { get => nombre; set => nombre = value; }
         public string Apellido { get => apellido; set => apellido = value; }
         public string Fecha { get => fecha; set => fecha = value; }

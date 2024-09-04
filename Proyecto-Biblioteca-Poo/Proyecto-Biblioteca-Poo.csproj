@@ -50,6 +50,7 @@
     <Compile Include="csGuardarImagenDatabase.cs" />
     <Compile Include="csPrestamos.cs" />
     <Compile Include="csUsuarios.cs" />
+    <Compile Include="csValidaciones.cs" />
     <Compile Include="frmAgregarODetallesAutores.cs">
       <SubType>Form</SubType>
     </Compile>

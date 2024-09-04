@@ -30,11 +30,18 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmListaDevolucionesLibros));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lbDevoluciones = new System.Windows.Forms.Label();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.btnAgregarDevolucion = new System.Windows.Forms.Button();
             this.dgvDevoluciones = new System.Windows.Forms.DataGridView();
             this.txtBuscar = new System.Windows.Forms.TextBox();
+            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cedula = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Isbn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FPrestamo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FDProgramada = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FDevolucion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDevoluciones)).BeginInit();
             this.SuspendLayout();
             // 
@@ -93,15 +100,31 @@
             this.dgvDevoluciones.AllowUserToResizeRows = false;
             this.dgvDevoluciones.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvDevoluciones.BackgroundColor = System.Drawing.Color.White;
-            this.dgvDevoluciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(6);
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvDevoluciones.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDevoluciones.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvDevoluciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDevoluciones.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Codigo,
+            this.Cedula,
+            this.Isbn,
+            this.FPrestamo,
+            this.FDProgramada,
+            this.FDevolucion});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvDevoluciones.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvDevoluciones.Location = new System.Drawing.Point(24, 186);
             this.dgvDevoluciones.Name = "dgvDevoluciones";
             this.dgvDevoluciones.ReadOnly = true;
@@ -117,6 +140,42 @@
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(643, 35);
             this.txtBuscar.TabIndex = 15;
+            // 
+            // Codigo
+            // 
+            this.Codigo.HeaderText = "Codigo";
+            this.Codigo.Name = "Codigo";
+            this.Codigo.ReadOnly = true;
+            // 
+            // Cedula
+            // 
+            this.Cedula.HeaderText = "Cedula";
+            this.Cedula.Name = "Cedula";
+            this.Cedula.ReadOnly = true;
+            // 
+            // Isbn
+            // 
+            this.Isbn.HeaderText = "Isbn";
+            this.Isbn.Name = "Isbn";
+            this.Isbn.ReadOnly = true;
+            // 
+            // FPrestamo
+            // 
+            this.FPrestamo.HeaderText = "Fecha Prestamo";
+            this.FPrestamo.Name = "FPrestamo";
+            this.FPrestamo.ReadOnly = true;
+            // 
+            // FDProgramada
+            // 
+            this.FDProgramada.HeaderText = "Fecha Devolucion Programada";
+            this.FDProgramada.Name = "FDProgramada";
+            this.FDProgramada.ReadOnly = true;
+            // 
+            // FDevolucion
+            // 
+            this.FDevolucion.HeaderText = "Fecha Devolucion";
+            this.FDevolucion.Name = "FDevolucion";
+            this.FDevolucion.ReadOnly = true;
             // 
             // frmListaDevolucionesLibros
             // 
@@ -147,5 +206,11 @@
         private System.Windows.Forms.Button btnAgregarDevolucion;
         public System.Windows.Forms.DataGridView dgvDevoluciones;
         private System.Windows.Forms.TextBox txtBuscar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cedula;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Isbn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FPrestamo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FDProgramada;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FDevolucion;
     }
 }

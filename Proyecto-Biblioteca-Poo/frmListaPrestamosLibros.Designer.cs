@@ -36,6 +36,11 @@
             this.blPrestamos = new System.Windows.Forms.Label();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.dgvPrestamos = new System.Windows.Forms.DataGridView();
+            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cedula = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Isbn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FPrestamo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FDevoluciones = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrestamos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,7 +68,6 @@
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(643, 35);
             this.txtBuscar.TabIndex = 10;
-            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             this.txtBuscar.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtBuscar_KeyUp);
             // 
             // btnAgregarPrestamo
@@ -120,29 +124,60 @@
             // 
             this.dgvPrestamos.AllowUserToAddRows = false;
             this.dgvPrestamos.AllowUserToDeleteRows = false;
-            this.dgvPrestamos.AllowUserToResizeColumns = false;
-            this.dgvPrestamos.AllowUserToResizeRows = false;
-            this.dgvPrestamos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvPrestamos.BackgroundColor = System.Drawing.SystemColors.Window;
-            this.dgvPrestamos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(6);
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvPrestamos.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvPrestamos.Location = new System.Drawing.Point(23, 196);
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPrestamos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvPrestamos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPrestamos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Codigo,
+            this.Cedula,
+            this.Isbn,
+            this.FPrestamo,
+            this.FDevoluciones});
+            this.dgvPrestamos.Location = new System.Drawing.Point(23, 201);
             this.dgvPrestamos.Name = "dgvPrestamos";
             this.dgvPrestamos.ReadOnly = true;
             this.dgvPrestamos.RowHeadersVisible = false;
-            this.dgvPrestamos.RowHeadersWidth = 50;
             this.dgvPrestamos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPrestamos.Size = new System.Drawing.Size(737, 335);
-            this.dgvPrestamos.TabIndex = 11;
+            this.dgvPrestamos.Size = new System.Drawing.Size(735, 316);
+            this.dgvPrestamos.TabIndex = 81;
             this.dgvPrestamos.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPrestamos_CellContentDoubleClick);
-            this.dgvPrestamos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPrestamos_CellDoubleClick);
+            // 
+            // Codigo
+            // 
+            this.Codigo.HeaderText = "Codigo";
+            this.Codigo.Name = "Codigo";
+            this.Codigo.ReadOnly = true;
+            // 
+            // Cedula
+            // 
+            this.Cedula.HeaderText = "Cedula";
+            this.Cedula.Name = "Cedula";
+            this.Cedula.ReadOnly = true;
+            // 
+            // Isbn
+            // 
+            this.Isbn.HeaderText = "Isbn";
+            this.Isbn.Name = "Isbn";
+            this.Isbn.ReadOnly = true;
+            // 
+            // FPrestamo
+            // 
+            this.FPrestamo.HeaderText = "Fecha Prestamo";
+            this.FPrestamo.Name = "FPrestamo";
+            this.FPrestamo.ReadOnly = true;
+            // 
+            // FDevoluciones
+            // 
+            this.FDevoluciones.HeaderText = "Fecha Devolucion";
+            this.FDevoluciones.Name = "FDevoluciones";
+            this.FDevoluciones.ReadOnly = true;
             // 
             // frmListaPrestamosLibros
             // 
@@ -150,11 +185,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(785, 640);
+            this.Controls.Add(this.dgvPrestamos);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.blPrestamos);
             this.Controls.Add(this.btnAgregarPrestamo);
             this.Controls.Add(this.btnBuscar);
-            this.Controls.Add(this.dgvPrestamos);
             this.Controls.Add(this.txtBuscar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmListaPrestamosLibros";
@@ -175,5 +210,10 @@
         public System.Windows.Forms.Button btnAgregarPrestamo;
         public System.Windows.Forms.Button btnCerrar;
         public System.Windows.Forms.DataGridView dgvPrestamos;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cedula;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Isbn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FPrestamo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FDevoluciones;
     }
 }
