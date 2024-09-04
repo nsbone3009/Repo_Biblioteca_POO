@@ -51,6 +51,7 @@
             this.cbEditorial = new System.Windows.Forms.ComboBox();
             this.cbCategoria = new System.Windows.Forms.ComboBox();
             this.txtAutores = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ptbxImagenLibro)).BeginInit();
             this.SuspendLayout();
             // 
@@ -96,7 +97,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(512, 188);
+            this.label2.Location = new System.Drawing.Point(526, 188);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(66, 18);
             this.label2.TabIndex = 16;
@@ -243,7 +244,7 @@
             this.lbIsbn.AutoSize = true;
             this.lbIsbn.BackColor = System.Drawing.Color.Transparent;
             this.lbIsbn.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbIsbn.Location = new System.Drawing.Point(512, 269);
+            this.lbIsbn.Location = new System.Drawing.Point(526, 269);
             this.lbIsbn.Name = "lbIsbn";
             this.lbIsbn.Size = new System.Drawing.Size(36, 18);
             this.lbIsbn.TabIndex = 54;
@@ -252,9 +253,9 @@
             // txtIsbn
             // 
             this.txtIsbn.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIsbn.Location = new System.Drawing.Point(515, 290);
+            this.txtIsbn.Location = new System.Drawing.Point(529, 290);
             this.txtIsbn.Name = "txtIsbn";
-            this.txtIsbn.Size = new System.Drawing.Size(214, 35);
+            this.txtIsbn.Size = new System.Drawing.Size(200, 35);
             this.txtIsbn.TabIndex = 53;
             // 
             // ptbxImagenLibro
@@ -278,7 +279,7 @@
             this.btnCambiarImagen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCambiarImagen.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCambiarImagen.ForeColor = System.Drawing.Color.White;
-            this.btnCambiarImagen.Location = new System.Drawing.Point(576, 470);
+            this.btnCambiarImagen.Location = new System.Drawing.Point(566, 470);
             this.btnCambiarImagen.Margin = new System.Windows.Forms.Padding(0, 3, 0, 3);
             this.btnCambiarImagen.Name = "btnCambiarImagen";
             this.btnCambiarImagen.Size = new System.Drawing.Size(37, 35);
@@ -292,9 +293,9 @@
             this.cbEditorial.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbEditorial.Font = new System.Drawing.Font("Arial", 18F);
             this.cbEditorial.FormattingEnabled = true;
-            this.cbEditorial.Location = new System.Drawing.Point(515, 209);
+            this.cbEditorial.Location = new System.Drawing.Point(529, 209);
             this.cbEditorial.Name = "cbEditorial";
-            this.cbEditorial.Size = new System.Drawing.Size(214, 35);
+            this.cbEditorial.Size = new System.Drawing.Size(200, 35);
             this.cbEditorial.TabIndex = 57;
             // 
             // cbCategoria
@@ -309,11 +310,32 @@
             // 
             // txtAutores
             // 
+            this.txtAutores.Enabled = false;
             this.txtAutores.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAutores.Location = new System.Drawing.Point(48, 209);
             this.txtAutores.Name = "txtAutores";
-            this.txtAutores.Size = new System.Drawing.Size(444, 35);
+            this.txtAutores.Size = new System.Drawing.Size(432, 35);
             this.txtAutores.TabIndex = 59;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(483, 209);
+            this.button1.Margin = new System.Windows.Forms.Padding(0, 3, 0, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(37, 35);
+            this.button1.TabIndex = 60;
+            this.button1.Text = "...";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // frmAgregarODetallesLibros
             // 
@@ -321,6 +343,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(780, 560);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.txtAutores);
             this.Controls.Add(this.cbCategoria);
             this.Controls.Add(this.cbEditorial);
@@ -377,5 +400,6 @@
         public System.Windows.Forms.ComboBox cbEditorial;
         public System.Windows.Forms.ComboBox cbCategoria;
         public System.Windows.Forms.TextBox txtAutores;
+        public System.Windows.Forms.Button button1;
     }
 }

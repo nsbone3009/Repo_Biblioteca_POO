@@ -13,7 +13,6 @@ namespace Proyecto_Biblioteca_Poo
     {
         // Cadena de conexión que especifica el servidor, base de datos, y las credenciales de SQL Server.
         public string cadenaConexion = @"Password=1111;Persist Security Info=True;User ID=Administrador;Initial Catalog=Biblioteca;Data Source=DESKTOP-T767FTN\KHRIZ";
-
         private SqlConnection conexion;  // Objeto SqlConnection para manejar la conexión con SQL Server.
         // Propiedad que permite acceder al objeto SqlConnection desde fuera de la clase.
         public SqlConnection Conexion { get { return conexion; } }
@@ -66,7 +65,6 @@ namespace Proyecto_Biblioteca_Poo
         {
             conexion.Open();                                          // Abre la conexión.
         }
-      
         //AGREGADO POR KHRIZ, SIRVE PARA EXTRAER UN CAMPOS EN ESPECIFICO DE UN REGISTRO
         public string Extraer(string consulta, string columna)
         {
@@ -86,12 +84,12 @@ namespace Proyecto_Biblioteca_Poo
             SqlDataReader leer = comando.ExecuteReader();
             while (leer.Read())
             {
-                resultado += leer[columna].ToString() + ";";
+                if (resultado != "") { resultado += ", " + leer[columna].ToString(); }
+                else { resultado += leer[columna].ToString(); }
             }
             conexion.Close();
             return resultado;
         }
-
         //METODO PARA LLENAR LA LISTA DE UN COMBOBOX
         public ComboBox LLenarLista(ComboBox lista, string consulta, string columna)
         {

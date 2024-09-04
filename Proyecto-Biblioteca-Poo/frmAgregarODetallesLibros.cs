@@ -16,12 +16,10 @@ namespace Proyecto_Biblioteca_Poo
     {
         public string ISBN = "";
         private csValidaciones validacion = new csValidaciones();
-
         public frmAgregarODetallesLibros()
         {
             InitializeComponent();
         }
-
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -47,7 +45,6 @@ namespace Proyecto_Biblioteca_Poo
             csLibro libro = new csLibro();
             libro.HabilitarCampos(txtTitulo, txtAutores, cbEditorial, cbCategoria, txtPublicacion, txtCantidad, txtResume, btnGuardarCampos, btnCambiarImagen);
         }
-
         private void btnGuardarCampos_Click(object sender, EventArgs e)
         {
             frmListaLibros frm = Owner as frmListaLibros;
@@ -71,32 +68,36 @@ namespace Proyecto_Biblioteca_Poo
             {
                 MessageBox.Show("Ingrese todos los datos solicitados.");
             }
+            if (frm.dgvLibros.RowCount > 0) { frm.dgvLibros.Rows.Clear(); }
+            libro.MostrarLibros(frm.dgvLibros);
         }
-
         private void btnCambiarImagen_Click(object sender, EventArgs e)
         {
             csLibro libro = new csLibro();
             libro.CambiarImagen(ptbxImagenLibro);
         }
-        
         private void txtPublicacion_KeyPress(object sender, KeyPressEventArgs e)
         {
             validacion.ValidarSoloNumeros(e);
         }
-
         private void txtCantidad_KeyPress(object sender, KeyPressEventArgs e)
         {
             validacion.ValidarSoloNumeros(e);
         }
         public void MostrarLista()
         {
-            //cbAutor = new csConexionSQL().LLenarLista(cbAutor, "Select NombreAutor from Autores where Estado = '1'", "NombreAutor");
             cbCategoria = new csConexionSQL().LLenarLista(cbCategoria, "Select NombreGenero from Genero where Estado = '1'", "NombreGenero");
             cbEditorial = new csConexionSQL().LLenarLista(cbEditorial, "Select NombreEditorial from Editorial where Estado = '1'", "NombreEditorial");
         }
         private void frmAgregarODetallesLibros_Load(object sender, EventArgs e)
         {
             MostrarLista();
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frmSeleccionAutor frm = new frmSeleccionAutor();
+            this.AddOwnedForm(frm);
+            frm.ShowDialog();
         }
     }
 }

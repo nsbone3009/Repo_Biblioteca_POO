@@ -209,3 +209,4 @@ C:\Users\Khriz\Desktop\BIBLIOTECA-REPOSITORIO\Repo_Biblioteca_POO\Proyecto-Bibli
 C:\Users\Khriz\Desktop\BIBLIOTECA-REPOSITORIO\Repo_Biblioteca_POO\Proyecto-Biblioteca-Poo\obj\Debug\Proyecto-Biblioteca-Poo.csproj.CoreCompileInputs.cache
 C:\Users\Khriz\Desktop\BIBLIOTECA-REPOSITORIO\Repo_Biblioteca_POO\Proyecto-Biblioteca-Poo\obj\Debug\Proyecto-Biblioteca-Poo.exe
 C:\Users\Khriz\Desktop\BIBLIOTECA-REPOSITORIO\Repo_Biblioteca_POO\Proyecto-Biblioteca-Poo\obj\Debug\Proyecto-Biblioteca-Poo.pdb
+C:\Users\Khriz\Desktop\BIBLIOTECA-REPOSITORIO\Repo_Biblioteca_POO\Proyecto-Biblioteca-Poo\obj\Debug\Proyecto_Biblioteca_Poo.frmSeleccionAutor.resources

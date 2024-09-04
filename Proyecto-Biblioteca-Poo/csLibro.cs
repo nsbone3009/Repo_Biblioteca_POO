@@ -43,10 +43,11 @@ namespace Proyecto_Biblioteca_Poo
                     {
                         string autoresLibros = "";
                         string isbn = new csConexionSQL().Extraer("Select * from Libros where titulo_lb = '" + vector[0] + "'", "isbn_lb");
-                        string[] autores = new csConexionSQL().ExtraerAutores("Select * from Autores_Libros where isbn_lb = '" + isbn + "'", "idAutor").Split(';');
+                        string[] autores = new csConexionSQL().ExtraerAutores("Select * from Autores_Libros where isbn_lb = '" + isbn + "'", "idAutor").Split(',');
                         foreach (string autor in autores)
                         {
-                            autoresLibros += new csConexionSQL().Extraer("Select * from Autores where idAutor = '" + autor + "'", "NombreAutor") + ", ";
+                            if (autoresLibros != "") { autoresLibros += ", " + new csConexionSQL().Extraer("Select * from Autores where idAutor = '" + autor + "'", "NombreAutor"); }
+                            else { autoresLibros += new csConexionSQL().Extraer("Select * from Autores where idAutor = '" + autor + "'", "NombreAutor"); }
                         }
                         dgvLibros.Rows[f].Cells[i].Value = autoresLibros;
                     }
@@ -77,24 +78,46 @@ namespace Proyecto_Biblioteca_Poo
             btnGuardarCampos.Enabled = true;
             btnCambiarImagen.Enabled = true;
         }
-        public void AgregarLibro(string isbn,string titulo, string autor, string editorial, string genero, string publicacion, int cantidad, string sinopsis, PictureBox ptbxImagenLibro)
+        public void AgregarLibro(string isbn,string titulo, string autores, string editorial, string genero, string publicacion, int cantidad, string sinopsis, PictureBox ptbxImagenLibro)
         {
-
-            string consulta = $"Insert into Libros(isbn_lb, titulo_lb, autor_es_lb, editorial_lb, genero_lb, año_publicacion_lb, cantidad_lb, sinopsis_lb)" +
-                              $"Values('{isbn}', '{titulo}', '{autor}', '{editorial}', '{genero}', '{publicacion}', {cantidad}, '{sinopsis}')";
+            editorial = new csConexionSQL().Extraer($"Select * from Editorial where NombreEditorial = '{editorial}'", "IdEditorial");
+            genero = new csConexionSQL().Extraer($"Select * from Genero where NombreGenero = '{genero}'", "IdGenero");
+            string consulta = $"Insert into Libros(isbn_lb, titulo_lb, IdEditorial, IdGenero, año_publicacion_lb, cantidad_lb, sinopsis_lb)" +
+                              $"Values('{isbn}', '{titulo}', '{editorial}', '{genero}', '{publicacion}', {cantidad}, '{sinopsis}')";
             conexion.Insert(consulta);
+            
+            string[] vecAutores = autores.Split(',');
+            foreach (string autor in vecAutores)
+            {
+                string IdAutor = conexion.Extraer($"Select * from Autores where NombreAutor = '{autor.Trim()}'", "idAutor");
+                string consulta1 = $"Insert into Autores_Libros(isbn_lb, idAutor)" +
+                               $"Values('{isbn}', '{IdAutor}')";
+                conexion.Insert(consulta1);
+            }
 
             // Guardar imagen del libro si se ha seleccionado
             if (ptbxImagenLibro.Image != null)
             {
                 new csGuardarImagenDatabase().GuardarImagen(ptbxImagenLibro, $"Update Libros set imagen_lb = @imagen where isbn_lb = '{ISBN}' ");
             }
+
+            MessageBox.Show("TODO EN ORDEN");
         }
-        public void ModificarLibro(string isbn, string titulo, string autor, string editorial, string genero, string publicacion, int cantidad, string sinopsis, PictureBox ptbxImagenLibro)
+        public void ModificarLibro(string isbn, string titulo, string autores, string editorial, string genero, string publicacion, int cantidad, string sinopsis, PictureBox ptbxImagenLibro)
         {
-            string consulta = $"Update Libros set titulo_lb = '{titulo}', autor_es_lb = '{autor}', editorial_lb = '{editorial}', genero_lb = '{genero}', " +
+            editorial = new csConexionSQL().Extraer($"Select * from Editorial where NombreEditorial = '{editorial}'", "IdEditorial");
+            genero = new csConexionSQL().Extraer($"Select * from Genero where NombreGenero = '{genero}'", "IdGenero");
+            string consulta = $"Update Libros set titulo_lb = '{titulo}', IdEditorial = '{editorial}', IdGenero = '{genero}', " +
                               $"año_publicacion_lb = '{publicacion}', cantidad_lb = {cantidad}, sinopsis_lb = '{sinopsis}' where isbn_lb = '{isbn}'";
             conexion.Update(consulta);
+
+            string[] vecAutores = autores.Split(',');
+            foreach (string autor in vecAutores)
+            {
+                string IdAutor = conexion.Extraer($"Select * from Autores where NombreAutor = '{autor.Trim()}'", "idAutor");
+                string consulta1 = $"Update Autores_Libros set isbn_lb = '{isbn}', idAutor = '{IdAutor}'";
+                conexion.Update(consulta1);
+            }
 
             // Actualizar imagen del libro si se ha cambiado
             if (ptbxImagenLibro.Image != null)
@@ -108,6 +131,7 @@ namespace Proyecto_Biblioteca_Poo
             frm.MostrarLista();
             frm.lbTituloVentana.Text = "Detalles del Libro";
             frm.ISBN = conexion.Extraer($"Select isbn_lb from Libros where titulo_lb = '{filaSeleccionada.Cells[0].Value.ToString().Trim()}'", "isbn_lb");
+
             frm.txtTitulo.Text = filaSeleccionada.Cells[0].Value.ToString().Trim();
             frm.txtAutores.Text = filaSeleccionada.Cells[1].Value.ToString().Trim();
             frm.cbEditorial.SelectedItem = filaSeleccionada.Cells[2].Value.ToString().Trim();
@@ -127,6 +151,7 @@ namespace Proyecto_Biblioteca_Poo
             frm.btnGuardarCampos.Enabled = false;
             frm.txtIsbn.Visible = false;
             frm.lbIsbn.Visible = false;
+            frm.btnCambiarImagen.Enabled = false;
             
             frm.PortadaLibro();// Mostrar la portada del libro
             frm.ShowDialog();
