@@ -48,6 +48,7 @@
     <Compile Include="csConexionSQL.cs" />
     <Compile Include="csEmail.cs" />
     <Compile Include="csGuardarImagenDatabase.cs" />
+    <Compile Include="csLibro.cs" />
     <Compile Include="csPrestamos.cs" />
     <Compile Include="csUsuarios.cs" />
     <Compile Include="csValidaciones.cs" />
