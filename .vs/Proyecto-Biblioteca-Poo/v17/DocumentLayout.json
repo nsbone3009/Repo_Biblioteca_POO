@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "C:\\Users\\scarl\\OneDrive\\Escritorio\\Prueba 400\\Repo_Biblioteca_POO\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{163767A6-01AB-445D-85D3-F11D798F6F92}|Proyecto-Biblioteca-Poo\\Proyecto-Biblioteca-Poo.csproj|c:\\users\\scarl\\onedrive\\escritorio\\prueba 400\\repo_biblioteca_poo\\proyecto-biblioteca-poo\\csconexionsql.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{163767A6-01AB-445D-85D3-F11D798F6F92}|Proyecto-Biblioteca-Poo\\Proyecto-Biblioteca-Poo.csproj|solutionrelative:proyecto-biblioteca-poo\\csconexionsql.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{163767A6-01AB-445D-85D3-F11D798F6F92}|Proyecto-Biblioteca-Poo\\Proyecto-Biblioteca-Poo.csproj|c:\\users\\scarl\\onedrive\\escritorio\\prueba 400\\repo_biblioteca_poo\\proyecto-biblioteca-poo\\frmvalidacionentrada.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{163767A6-01AB-445D-85D3-F11D798F6F92}|Proyecto-Biblioteca-Poo\\Proyecto-Biblioteca-Poo.csproj|solutionrelative:proyecto-biblioteca-poo\\frmvalidacionentrada.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{163767A6-01AB-445D-85D3-F11D798F6F92}|Proyecto-Biblioteca-Poo\\Proyecto-Biblioteca-Poo.csproj|c:\\users\\scarl\\onedrive\\escritorio\\prueba 400\\repo_biblioteca_poo\\proyecto-biblioteca-poo\\frmvalidacionentrada.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{163767A6-01AB-445D-85D3-F11D798F6F92}|Proyecto-Biblioteca-Poo\\Proyecto-Biblioteca-Poo.csproj|solutionrelative:proyecto-biblioteca-poo\\frmvalidacionentrada.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{163767A6-01AB-445D-85D3-F11D798F6F92}|Proyecto-Biblioteca-Poo\\Proyecto-Biblioteca-Poo.csproj|c:\\users\\scarl\\onedrive\\escritorio\\prueba 400\\repo_biblioteca_poo\\proyecto-biblioteca-poo\\frmagregarodetalleslibros.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{163767A6-01AB-445D-85D3-F11D798F6F92}|Proyecto-Biblioteca-Poo\\Proyecto-Biblioteca-Poo.csproj|solutionrelative:proyecto-biblioteca-poo\\frmagregarodetalleslibros.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -23,6 +35,44 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "csConexionSQL.cs",
+              "DocumentMoniker": "C:\\Users\\scarl\\OneDrive\\Escritorio\\Prueba 400\\Repo_Biblioteca_POO\\Proyecto-Biblioteca-Poo\\csConexionSQL.cs",
+              "RelativeDocumentMoniker": "Proyecto-Biblioteca-Poo\\csConexionSQL.cs",
+              "ToolTip": "C:\\Users\\scarl\\OneDrive\\Escritorio\\Prueba 400\\Repo_Biblioteca_POO\\Proyecto-Biblioteca-Poo\\csConexionSQL.cs",
+              "RelativeToolTip": "Proyecto-Biblioteca-Poo\\csConexionSQL.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAA4AAACRAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-03T23:45:37.568Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "frmValidacionEntrada.cs",
+              "DocumentMoniker": "C:\\Users\\scarl\\OneDrive\\Escritorio\\Prueba 400\\Repo_Biblioteca_POO\\Proyecto-Biblioteca-Poo\\frmValidacionEntrada.cs",
+              "RelativeDocumentMoniker": "Proyecto-Biblioteca-Poo\\frmValidacionEntrada.cs",
+              "ToolTip": "C:\\Users\\scarl\\OneDrive\\Escritorio\\Prueba 400\\Repo_Biblioteca_POO\\Proyecto-Biblioteca-Poo\\frmValidacionEntrada.cs",
+              "RelativeToolTip": "Proyecto-Biblioteca-Poo\\frmValidacionEntrada.cs",
+              "ViewState": "AQIAAB8AAAAAAAAAAAAgwGMAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-04T00:04:28.769Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "frmValidacionEntrada.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\scarl\\OneDrive\\Escritorio\\Prueba 400\\Repo_Biblioteca_POO\\Proyecto-Biblioteca-Poo\\frmValidacionEntrada.cs",
+              "RelativeDocumentMoniker": "Proyecto-Biblioteca-Poo\\frmValidacionEntrada.cs",
+              "ToolTip": "C:\\Users\\scarl\\OneDrive\\Escritorio\\Prueba 400\\Repo_Biblioteca_POO\\Proyecto-Biblioteca-Poo\\frmValidacionEntrada.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Proyecto-Biblioteca-Poo\\frmValidacionEntrada.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-04T00:04:26.789Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "frmAgregarODetallesLibros.cs",
               "DocumentMoniker": "C:\\Users\\scarl\\OneDrive\\Escritorio\\Prueba 400\\Repo_Biblioteca_POO\\Proyecto-Biblioteca-Poo\\frmAgregarODetallesLibros.cs",
               "RelativeDocumentMoniker": "Proyecto-Biblioteca-Poo\\frmAgregarODetallesLibros.cs",
@@ -35,7 +85,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "frmAgregarODetallesLibros.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\scarl\\OneDrive\\Escritorio\\Prueba 400\\Repo_Biblioteca_POO\\Proyecto-Biblioteca-Poo\\frmAgregarODetallesLibros.cs",
               "RelativeDocumentMoniker": "Proyecto-Biblioteca-Poo\\frmAgregarODetallesLibros.cs",
